@@ -1,0 +1,19 @@
+{
+  "name": "proyecto",
+  "version": "1.0.0",
+  "description": "//Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio.\r Somos una tienda de venta online de productos para mascotas, específicamente gatos y perro.\r Nos dedicamos a la venta de alimento, productos de estética, cuidado e higiene, juguetes, accesorios como cuchas, transportadores",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mechirv/grupo_11_petWorld.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mechirv/grupo_11_petWorld/issues"
+  },
+  "homepage": "https://github.com/Mechirv/grupo_11_petWorld#readme"
+}
