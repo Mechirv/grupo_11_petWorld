@@ -7,7 +7,9 @@ Apuntamos a todas aquellas personas que amen a sus mascotas
 
 //Links:
 https://headsupfortails.com/collections/kong?custom_constraint=custom-filter+price=0-1221000 => Elegimos esta página por el carrito de compras.
+
 https://happypets.ar/?gclid=Cj0KCQjw-LOEBhDCARIsABrC0TlUTyNe5agx4usf-Xcaj9Zewb6Y9HTKhXT33spuTHdvTEkZayBPOlEaApw7EALw_wcB => Elegimos esta página por el Home.
+
 https://www.mitiendademascotas.com/web/ => Elegimos esta página por la estética del sitio, tanto por la tipografía y por todas las opciones de colores que nos da.
 
 //Una breve descripción de los integrantes del equipo.
