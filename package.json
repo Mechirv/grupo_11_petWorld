@@ -4,7 +4,9 @@
   "description": "//Una breve descripción de la oferta de productos y/o servicios ofrecidos por su sitio.\r Somos una tienda de venta online de productos para mascotas, específicamente gatos y perro.\r Nos dedicamos a la venta de alimento, productos de estética, cuidado e higiene, juguetes, accesorios como cuchas, transportadores",
   "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node app.js",
+    "start": "nodemon app.js -e css,html,js"
+    
   },
   "repository": {
     "type": "git",
