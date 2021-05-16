@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css"/>
     <title>Document</title>
 </head>
 <body>
     <h1>LOGIN</h1>
     <form>
-        <input type="text" id="usuario"/>
-        <input type="password" id="pass"/>
-        <input type="checkbox"/>
+        <label for="usuario"></label>
+        <input type="text" id="usuario" placeholder="Email o nombre de usuario"/><br>
+        <label for="pass"></label>
+        <input type="password" id="pass" placeholder="contraseña"/><br>
+        <input type="checkbox" id="checkbox"/> <label for="checkbox">Recordarme</label><br>
+        <button type="submit">Ingresar</button><br>
     </form>
-    
+    Olvidaste tu contraseña -- recuperar contraseña
+
+    <div>No tienes cuenta? <button type="button">Crear cuenta</button></div>
+
+
+    <div class="volver-home"><a href="">Volver al Home</a></div>
 </body>
 </html>

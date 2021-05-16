@@ -1,0 +1,10 @@
+*{
+    box-sizing:border-box ;
+}
+
+body{
+    text-align: center;
+    width: 50%;
+    border-radius: 5px;
+    border: solid 1px black;
+}
