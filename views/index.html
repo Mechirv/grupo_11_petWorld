@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css"/>
     <title>Document</title>
 </head>
 <body>
     <!--Header-->
-    <header>
-        <div>Logo + nombre</div>
-        <div> <a href="login">login</a></div>
-        <div>Carrito</div>
+    <header class="header">
+        <div class="header-top">
+            <div>Logo</div>
+            <h1 class="titulo">Pet World</h1>
+            <div class="login-chart"> 
+                <a href="C:\Users\mechi\Desktop\Proyecto\views\login.html">login</a>
+                <div id="chart">Carrito</div>
+            </div>
+        </div>
 
-        <nav>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </nav>
+        <div class="header-bottom">
+            <nav class="nav-bar">
+                <ul>
+                    <li>Home</li>
+                    <li>Productos</li>
+                    <li>Marcas</li>
+                    <li>Tamaños y Pesos</li>
+                    <li>PW Blog</li>
+                    <li>Contactenos</li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input id="busqueda" type="search" name="busque" placeholder="Buscar"><i class="fas fa-search"></i>
+            </div>
+        </div>
 
     </header>
 
