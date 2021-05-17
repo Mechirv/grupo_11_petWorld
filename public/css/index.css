@@ -5,6 +5,7 @@
 }
 
 header{
+
     display: block;
     padding: 10px;
 }
@@ -19,6 +20,7 @@ header{
     list-style-type: none;
     margin: 0 5px;
     padding: 0px;
+
 }
 
 
@@ -26,8 +28,22 @@ header{
 /*-----ESTILOS DEL NAV-----*/
 
 
+/*-----ESTILOS DEL MAIN-----*/
 
 
+/*---PRODUCTOS--*/
+.producto{
+    border: solid 1px black;
+    display: inline-block;
+    margin: 15px;
+    margin-left: 10%;
+    
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+
+
+}
 
 @media (min-width:768px) {
     .header-top{
@@ -43,4 +59,9 @@ header{
         margin: 0 5px;
     }
     
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+    }
 }
