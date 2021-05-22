@@ -21,3 +21,6 @@ https://www.laika.com.uy/perros?cat=229 => Elegimos ésta página por la temáti
 Soy Mercedes Rodríguez Vivanco, tengo 35 años, soy de Gualeguay, Entre Ríos. Soy Ingeniera en Sistemas de Información y actualmente trabajo en el Poder Judicial. Si bien en la carrera ttuve programación nunca me dediqué a programar, siendo algo que me quedó pendiente, motivo por el cual decidí empezar el curso.
 
 Soy Facundo Moreno, tengo 19 años, soy de Buenos Aires, Argentina. Me adentre en este curso ya que uno de mis sueños, es programar y espero no solo hacer esto con páginas web, sino también con el mayor mercado actualmente, los videojuegos.
+
+// Link del tablero:
+https://trello.com/invite/b/uJyurSLc/58780dbcdad8cd0ba69cb90c4317b444/petworld
