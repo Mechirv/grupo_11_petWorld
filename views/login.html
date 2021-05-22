@@ -4,24 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/login.css"/>
+    <link rel="stylesheet" href="../css/general.css"/>
     <title>Document</title>
 </head>
 <body>
-    <h1>LOGIN</h1>
-    <form id="form-login">
-        <label for="usuario"></label>
-        <input type="text" id="usuario" placeholder="Email o nombre de usuario"/><br>
-        <label for="pass"></label>
-        <input type="password" id="pass" placeholder="contraseña"/><br>
-        <input type="checkbox" id="checkbox"/> <label for="checkbox">Recordarme</label><br>
-        <button type="submit">Ingresar</button><br>
-    </form>
-    Olvidaste tu contraseña -- recuperar contraseña
+    <div class="login-contenedor">
+        <h1>Login</h1>
+    
+        <form id="form-login">
+            <div class="usuario">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" placeholder="Email o nombre de usuario"/><br>
+            </div>
 
-    <div>No tienes cuenta? <a href="/register">Crear cuenta</a></button></div>
+            <div class="password">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" placeholder="contraseña"/>
+            </div>
 
+            <div id="check">
+                <input type="checkbox" id="checkbox"/> 
+                <label for="checkbox">Recordarme</label>
+            </div>
 
-    <div class="volver-home"><a href="/">Volver al Home</a></div>
+            <div id="button-login">
+                <button id="login" type="submit" >Ingresar</button>
+            </div>
+
+        </form>
+
+        <div id="options">
+            <div id="forgot-pass">
+                <a href="/">Recuperar contraseña</a>
+            </div> 
+
+            <div id="create-account">
+                No tienes cuenta?
+                <a href="/register">
+                <button type="button">Crear cuenta</button>
+                </a>
+            </div>
+
+            <div id="volver-home"><a href="/">Volver al Home</a></div>
+        </div>
+    </div>
 </body>
 </html>

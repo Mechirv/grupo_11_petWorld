@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/general.css"/>
     <title>Document</title>
 </head>
 <body>
@@ -22,40 +23,91 @@
         <div class="header-bottom">
             <nav class="nav-bar">
                 <ul>
-                    <li>Home</li>
-                    <li>Perros</li>
-                    <li>Gatos/li>
-                    <li>Tamaños y Pesos</li>
-                    <li>Marcas</li>
-                    <li>PW Blog</li>
-                    <li>Contactenos</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Perros</a>  </li>
+                        <ul class="desplegable">
+                            <li>Alimentos</li>
+                            <li>Higiene, Cuidado y Estética</li>
+                            <li>Juguetes y Accesorio</li>
+                        </ul>
+                    <li><a href="#">Gatos</a></li>
+                        <ul class="desplegable">
+                            <li>Alimentos</li>
+                            <li>Higiene, Cuidado y Estética</li>
+                            <li>Juguetes y Accesorio</li>
+                            
+                        </ul>
+                    <li><a href=""> Tamaños y Pesos</a></li>
+                        <ul class="desplegable"> 
+                            <li>Pequeños</li>
+                            <li>Mediano</li>
+                            <li>Grande</li>
+                        </ul>
+                    <li><a href="#">Marcas</a>Marcas</li>
+                        <ul class="desplegable">
+                            <li>Eukanuba</li>
+                            <li>Hi</li>
+                            <li></li>Jugu</li>
+                            <li></li>
+                        </ul>
+                    <li><a href="#">PW Blog</a></li>
+                    <li><a href="#"> Contactenos</a></li>
                 </ul>
             </nav>
             <div class="search-bar">
-                <input id="busqueda" type="search" name="busque" placeholder="Buscar"><i class="fas fa-search"></i>
+                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
             </div>
         </div>
 
     </header>
 
+    <!--MAIN-->
     <main>
-        <h2 class="destacados">PRODUCTOS DESTACADOS</h2>
-        <article class="producto">
-            <h3>Alimento Eukanuba</h3>
-        </article>
+        <div class="main-top"></div>
+            <h2 class="destacados">PRODUCTOS DESTACADOS</h2>
+            <section class="productos-destacados">
+                <article class="producto">
+                    <h3>Alimento Eukanuba</h3>
+                    <img src="">
+                    <div class="detalle-producto">
+                        <p>Alimento eukanuba para cachorros raza pequeña</p>
+                        <p>$</p>
+                        <input type="button" name="Agregar al carrito">
+                    </div>
+                </article>
+            
+                <article class="producto">
+                    <h3>Bandeja Sanitaria</h3>
+                </article>
+                <article class="producto">
+                    <h3>Bandeja Sanitaria</h3>
+                </article>
+                <article class="producto">
+                    <h3>Bandeja Sanitaria</h3>
+                </article>
+                <article class="producto">
+                    <h3>Bandeja Sanitaria</h3>
+                </article>
+            </section>
+        </div>
 
-        <article class="producto">
-            <h3>Bandeja Sanitaria</h3>
-        </article>
-        <article class="producto">
-            <h3>Bandeja Sanitaria</h3>
-        </article>
-        <article class="producto">
-            <h3>Bandeja Sanitaria</h3>
-        </article>
-        <article class="producto">
-            <h3>Bandeja Sanitaria</h3>
-        </article>
+        <div class="main-bottom">
+            <h2 class="">Nuestros Productos</h2>
+            <div class="perros-gatos">
+                <article class="perros">
+                        <img src="">
+                        <h4>PERROS</h4>
+
+                </article>
+
+                <article class="gatos">
+                    <img src="">
+                    <h4>GATOS</h4>
+
+                </article>
+            </div>
+
+        </div>
       
 
         

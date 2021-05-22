@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Knewave");
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 'sans-serif';
+    align-content: center;
+}
+.register-contenedor{
+    border-radius: 10px;
+    border: solid 1px #e2e2eb;
+    padding: 30px 30px;
+    box-shadow:5px 5px #f7f7f8;
+    font-size: 14px;
+    width: 90%;
+    align-content: center;
+}
+
+h1{
+    padding: 5px;
+    font-size: 18px;
+}
+
+
+.nombre, .confirm-pass,
+.apellido, .email,
+.usuario, .dni,
+.password, .domicilio, .telefono
+{
+    display: block;
+    margin-top: 20px; 
+    width: 100%;      
+}
+
+#nombre, #confirm-pass,
+#apellido, #email,
+#usuario, #dni,
+#pass, #domicilio, #telefono
+{
+    border-radius: 10px;
+background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: 1.5em;
+  margin: 0px;
+  padding: 20px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #5f6b74;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+
+#button-register, #cancel{
+    padding: 5px;
+    color: #FFF;
+    font-style: normal;
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    width: 30%;
+    border: 1px solid #3ac162;
+    background-color: #4bc970;
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 10px;
+  }
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.volver-home{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+
+
+/*----MEDIA QUERIES------*/
+
+@media (min-width:481px){
+    body{
+        display: flex;
+        justify-content: center;
+
+    }
+    .register-contenedor{
+        width: 400px;
+    }
+}
+
+@media (min-width:769px){
+  .register-contenedor{
+      width: 500px;
+      margin-top: 2%;
+      font-size: 18px;
+  }
+  body{
+      display: flex;
+      justify-content: center;
+      font-size: 18px;  
+      align-items: center;
+  }
+ 
+  h1{
+      font-size: 24px;
+  }
+}
+
+
+

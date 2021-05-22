@@ -1,6 +1,6 @@
 Cosas que hicimos bien en el primer sprint
 -coordinación de las tareas a realizar
-buena comunicación
+-buena comunicación
 
 
 Qué hicimos mal
