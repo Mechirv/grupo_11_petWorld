@@ -3,19 +3,20 @@
 }
 
 h1{
+    font-weight: 100;
     text-align: center;
-    font-size: 18px;
+    font-size: 24px;
 }
 body{
     align-content: center;
 }
 
 .login-contenedor{
-    border-radius: 10px;
+    border-radius: 8px;
     border: solid 1px #e2e2eb;
     padding: 60px 30px;
     margin:20px;
-    box-shadow:5px 5px #f7f7f8;
+    box-shadow:0 0 10px 5px #f7f5f5;
     font-size: 14px;
     width: 90%;
 }
@@ -52,8 +53,6 @@ body{
 }
 
 
-
-
   #button-login{
       display: flex;
       justify-content: center;
@@ -65,12 +64,12 @@ body{
     border-radius: 10px;
     border-width: 1px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
-    width: 50%;
+    width: 100%;
     border: 1px solid #3ac162;
     background-color: #4bc970;
     font-size: 14px;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 10px;
   }
 
   #forgot-pass{
@@ -78,7 +77,7 @@ body{
       font-size: 14px;
       margin-top: 5px;
       border-bottom:solid 1px #e2e2eb;
-      padding-bottom: 5px;
+      padding-bottom: 15px;
   }
 
   #create-account{
@@ -108,8 +107,8 @@ body{
 
   @media (min-width:769px){
     .login-contenedor{
-        width: 500px;
-        margin-top: 10%;
+        width: 450px;
+        margin-top: 5%;
         font-size: 18px;
     }
     body{

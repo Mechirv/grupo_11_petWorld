@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="../css/index.css"/>
     <link rel="stylesheet" href="../css/general.css"/>
     <title>Document</title>
@@ -12,92 +13,141 @@
     <!--HEADER-->
     <header class="header">
         <div class="header-top">
-            <div>Logo</div>
+            <div class="logo"><img src="../img/logo.png" alt="logo"></div>
             <h1 class="titulo">Pet World</h1>
-            <div class="login-chart"> 
-                <a href="/login" method="GET">login</a>
-                <div id="chart">Carrito</div>
+            <div class="login-cart-search"> 
+                <div id="login">
+                    <a href="/login" method="GET"><i class="fas fa-user"></i></a>
+                </div>
+                <div id="cart"><i class="fas fa-shopping-cart"></i></div>
+                <div class="search-bar">
+                    <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
+                </div>
             </div>
+            
         </div>
+        
 
+        <!--barra de navegación-->
         <div class="header-bottom">
+           
+            <input type="checkbox" id="check-menu">
+            <label for="check-menu" id="menu">
+                <i background-color="blue" class="fas fa-bars fa-1x"></i>Menu
+            </label>
+            
+
             <nav class="nav-bar">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Perros</a>  </li>
+                    <li><a href="#">Perros</a>  
                         <ul class="desplegable">
                             <li>Alimentos</li>
                             <li>Higiene, Cuidado y Estética</li>
                             <li>Juguetes y Accesorio</li>
                         </ul>
-                    <li><a href="#">Gatos</a></li>
+                    </li>
+                    <li><a href="#">Gatos</a>
                         <ul class="desplegable">
                             <li>Alimentos</li>
                             <li>Higiene, Cuidado y Estética</li>
                             <li>Juguetes y Accesorio</li>
                             
                         </ul>
-                    <li><a href=""> Tamaños y Pesos</a></li>
+                    </li>
+                    <li><a href=""> Tamaños y Pesos</a>
                         <ul class="desplegable"> 
                             <li>Pequeños</li>
                             <li>Mediano</li>
                             <li>Grande</li>
                         </ul>
-                    <li><a href="#">Marcas</a>Marcas</li>
+                    </li>
+                    <li><a href="#">Marcas</a>
                         <ul class="desplegable">
                             <li>Eukanuba</li>
-                            <li>Hi</li>
-                            <li></li>Jugu</li>
-                            <li></li>
+                            <li>Old Price</li>
+                            <li>Royal Cannin</li>
+                            <li>Gati</li>
                         </ul>
+                    </li>
                     <li><a href="#">PW Blog</a></li>
                     <li><a href="#"> Contactenos</a></li>
                 </ul>
             </nav>
-            <div class="search-bar">
-                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
-            </div>
+            
         </div>
 
     </header>
 
     <!--MAIN-->
     <main>
-        <div class="main-top"></div>
+        <section class="productos-destacados">
             <h2 class="destacados">PRODUCTOS DESTACADOS</h2>
-            <section class="productos-destacados">
+            <div class="grid-destacados">
                 <article class="producto">
                     <h3>Alimento Eukanuba</h3>
-                    <img src="">
+                    <img src="../img/eukanuba-puppi.png">
                     <div class="detalle-producto">
-                        <p>Alimento eukanuba para cachorros raza pequeña</p>
-                        <p>$</p>
-                        <input type="button" name="Agregar al carrito">
+                        <p>Alimento eukanuba para cachorros raza pequeña 3kg</p>
+                        <p>$1350</p>
+                        <form id="agregar-carrito" action="/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
                     </div>
                 </article>
             
                 <article class="producto">
-                    <h3>Bandeja Sanitaria</h3>
+                    <h3>Cepillo</h3>
+                    <img src="../img/cepillo.png">
+                    <div class="detalle-producto">
+                        <p>Cepillo para perros</p>
+                        <p>$690</p>
+                        <form id="agregar-carrito" action="/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
+                    </div>
                 </article>
                 <article class="producto">
-                    <h3>Bandeja Sanitaria</h3>
+                    <h3>Comedero</h3>
+                    <img src="../img/comedero.png">
+                    <div class="detalle-producto">
+                        <p>Comedero</p>
+                        <p>$290</p>
+                        <form id="agregar-carrito" action="/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
                 </article>
                 <article class="producto">
-                    <h3>Bandeja Sanitaria</h3>
+                    <h3>Cama</h3>
+                    <img src="../img/cama.jpg">
+                    <div class="detalle-producto">
+                        <p>Cama</p>
+                        <p>$2590</p>
+                        <form id="agregar-carrito" action="/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
                 </article>
                 <article class="producto">
-                    <h3>Bandeja Sanitaria</h3>
+                    <h3>Pipeta perros y gatos</h3>
+                    <img src="../img/pipeta.jpg">
+                    <div class="detalle-producto">
+                        <p>Cepillo para perros</p>
+                        <p>$690</p>
+                        <form id="agregar-carrito" action="/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
                 </article>
-            </section>
-        </div>
+            </div>
+        </section>
+        
 
-        <div class="main-bottom">
+        <section class="nuestros-productos">
             <h2 class="">Nuestros Productos</h2>
-            <div class="perros-gatos">
+            
+            <div class="grid-productos">
                 <article class="perros">
                         <img src="">
                         <h4>PERROS</h4>
-
                 </article>
 
                 <article class="gatos">
@@ -107,7 +157,7 @@
                 </article>
             </div>
 
-        </div>
+        </section>
       
 
         

@@ -13,16 +13,37 @@ body{
     align-content: center;
 }
 .register-contenedor{
-    border-radius: 10px;
+    border-radius: 8px;
     border: solid 1px #e2e2eb;
     padding: 30px 30px;
-    box-shadow:5px 5px #f7f7f8;
+    box-shadow:0 0 10px 5px #f7f5f5;
     font-size: 14px;
     width: 90%;
     align-content: center;
 }
+.header-top{
+    display: flex;
+}
+#logo{
+    width: 15%;
+    margin-right: 5%;
+}
+#titulo{
+    width: 80%;
+}
+
+.header-top h1{
+    font-size: 20px;
+}
+
+.header-bottom{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
 h1{
+    font-weight: 400;
     padding: 5px;
     font-size: 18px;
 }
@@ -47,9 +68,9 @@ h1{
 background: rgba(255,255,255,0.1);
   border: none;
   font-size: 16px;
-  height: 1.5em;
+  height: 1em;
   margin: 0px;
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   background-color: #e8eeef;
   color: #5f6b74;
@@ -71,7 +92,7 @@ background: rgba(255,255,255,0.1);
     background-color: #4bc970;
     font-size: 14px;
     text-align: center;
-    margin: 20px 10px;
+    margin: 20px 0px 20px 10px;
   }
 
 .buttons{

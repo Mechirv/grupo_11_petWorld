@@ -2,141 +2,252 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
 }
 
-header{
 
-    display: block;
-    padding: 10px;
+header{
+    padding: 20px 20px 0 20px;
+    width: 100%;
+    
+}
+.header-top{
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px #666;
+}
+.logo{
+    width: 40%;
+}
+.titulo{
+    width: 60%;
+    align-content: center;
+    align-self: center;
+    padding-left: 20px;
+}
+
+.logo img{
     width: 100%;
 }
 
+.login-cart-search{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+}
+
+
+
+/*-----BARRA DE NAVEGACIÓN----*/
 .header-bottom{
-    padding: 10px;
+    
+    border: solid 1px #666;
+    background-color: white;
+
 }
 
-.nav-bar ul{
-    list-style-type: none;
-    margin: 10px;
-    padding: 0px;
-}
-
-.desplegable {
+#check-menu{
     display: none;
 }
 
-.nav-bar ul li{
-    list-style-type: none;
-    margin: 0 5px;
-    padding: 0px;
+label#menu {
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    user-select: none;
+    color: white;
+    margin: 5px;
+    padding: 8px;
+    color: black;
+  }
 
+  label#menu i{
+      color: black;
+  }
+
+.nav-bar{
+    display: none;
 }
-.nav-bar ul li:hover > .desplegable{
-    display: block;
+
+#check-menu:checked + .nav-bar{
+  display: block;
+}
+.nav-bar > ul{
+  text-align: left;
+  list-style-type: none;
+}
+.nav-bar > ul > li{
+  padding: 5px;
+}
+
+.nav-bar ul li a{
+  text-decoration: none;
 }
 
 
-
-/*-----ESTILOS DEL NAV-----*/
-
-
-/*-----ESTILOS DEL MAIN-----*/
+        
+    /*-----ESTILOS DEL MAIN-----*/
 main{
     display: block;
-    width: 100%;
-    padding: 10px;
-}
-
-/*-----ESTILOS DEL FOOTER-----*/
-footer{
-    width: 100%;
-    padding: 10px;
-    display: block;
+    padding: 0 20px;
 }
 
 
+/*nuestros productos*/
 
-
-/*---MAIN TOP PRODUCTOS--*/
-.main-top´{
+.productos-destacados{
     border: dashed 1px black
 }
+
 .producto{
-    border: solid 1px black;
-    display: block;
-    margin: 15px; 
+    border: solid 1px rgb(209, 205, 205);
+    width: 90%;
+    margin: 10px; 
     padding: 10px;
     text-align: center;
-
 }
 
-main-bottom{
-    border: dashed 1px black;
-    
+.producto img{
+    width: 100%;
+}
+
+
+.nuestros-productos{
+    border: dashed 1px black; 
 }
 
 .perros, .gatos{
-    border: solid 1px black;
+    border: solid 1px rgb(218, 213, 213);
     display: inline-block;
     margin: 15px;
     padding: 10px;
     text-align: center;
+}
 
 
+/*-----ESTILOS DEL FOOTER-----*/
+footer{
+    width: 100%;
+    padding: 0px 20px;
+    display: block;
 }
 
 
 
-/*-----MEDIA QUERIES-----*/
 
-@media (min-width:768px) {
+
+
+
+
+/*-----------------------MEDIA QUERIES-----------------------*/
+
+@media (min-width:481px) {
     
     .header-top{
         display: flex;
         justify-content: space-between;
     }
+    .logo{
+        width: 20%;
+    }
+    .titulo{
+        width: 50%;
+    }
+
+    .login-cart {
+        width: 100%;
+        display: flex;
+        justify-content:flex-end;
+    }
+
     .header-bottom{
         display: flex;
         justify-content: space-between;
     }
-    .nav-bar ul{
-        display: flex;
-        margin: 0 5px;
-    }
-    .desplegable {
+
+
+    /*nav bar*/
+    #check-menu, label#menu{
         display: none;
     }
+    .nav-bar{
+       display: flex;
+       width: 100%;
+        
+    }
+    .nav-bar > ul{
+        background-color: white;
+        display: flex;
+        width: 100%;
+        list-style-type: none;
+        padding: 0px;
+        border: solid 1px rgb(209, 205, 205);
+    }
+    .nav-bar li{
+        background-color: white;
+        flex-grow: 1; 
+        text-align: center;
+        padding: 5px;
+        border: solid 1px rgb(209, 205, 205);
+    } 
+    .nav-bar ul li a{
+        text-decoration: none;
+    
+    }
+    
+    .nav-bar > ul > li > .desplegable{
+        display: none;
+        list-style-type: none;
+        width: 20%;
+    }
+    .nav-bar > ul > li:hover > .desplegable{
+        display: block;
+        position: absolute;
+        flex-grow: 1; 
+        border: solid 1px rgb(209, 205, 205);
+        background-color: white;
+        margin: 0;
+    }
+    
 
+        
+   
+
+    /*main-destacados-productos*/
+
+    .grid-destacados{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .producto{
+        max-width: 200px;
+    }
+   
+    .grid-productos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .perros, .gatos{
+        width: 30%;
+    }
+
+    /*footer*/
     .footer{
         display: flex;
         justify-content: space-between;
     }
+}
 
-    .main-top{
-        display: flex;
+@media (min-width:769px) {
+body{
+    padding:2%
+}
 
-    }
-
-    .productos-destacados{
-        display: flex;
-        justify-content: space-between;
-    }
-    .producto{
-        width: 30%;
-
-    }
-  
-    .main-bottom{
-        border: dashed 1px black;
-        display: flex;
-        flex-direction: column;
-    }
-    .perros-gatos{
-        display: flex;
-        justify-content: space-around;
-
-    }
-    .perros, .gatos{
-        width: 30%;
-    }
 }
