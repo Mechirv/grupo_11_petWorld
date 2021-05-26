@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="../css/index.css"/>
     <link rel="stylesheet" href="../css/general.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
     <title>Document</title>
 </head>
 <body>
     <!--HEADER-->
     <header class="header">
         <div class="header-top">
-            <div class="logo"><img src="../img/logo.png" alt="logo"></div>
-            <h1 class="titulo">Pet World</h1>
-            <div class="login-cart-search"> 
-                <div id="login">
-                    <a href="/login" method="GET"><i class="fas fa-user"></i></a>
-                </div>
-                <div id="cart"><i class="fas fa-shopping-cart"></i></div>
-                <div class="search-bar">
-                    <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
-                </div>
+            <div id="logo-titulo">
+                <img id="logo" src="../img/logo.png" alt="logo">
+                <h1 id="titulo">Pet World</h1>
             </div>
-            
+            <form id="search-bar">
+                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
+            </form>
+            <div id="login-cart">
+                    <div id="login">
+                        <a href="/login" method="GET">Mi cuenta</a>
+                    </div>
+                    <div id="cart"><a href="/productCart"><i class="fas fa-shopping-cart fa-2x"></a></i></div>
+                </div>  
+            </div>
         </div>
         
 
@@ -102,6 +106,7 @@
                     <div class="detalle-producto">
                         <p>Cepillo para perros</p>
                         <p>$690</p>
+                        <a href="/productDetails">Mas detalles</a>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
@@ -171,6 +176,7 @@
 
 <!--FOOTER-->    
     <footer class="footer">
+        <img id="logo-footer" src="../img/logo.png" alt="logo">
         <ul class="list-left">
             <li><a href="/">Home</a>  </li>
             <li>Sobre Nosotros</li>

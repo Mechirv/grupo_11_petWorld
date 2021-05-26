@@ -5,89 +5,7 @@
     margin: 0;
     padding: 0%;
 }
-
-
-header{
-    padding: 20px 20px 0 20px;
-    width: 100%;
     
-}
-.header-top{
-    display: flex;
-    flex-wrap: wrap;
-    border: solid 1px #666;
-}
-.logo{
-    width: 40%;
-}
-.titulo{
-    width: 60%;
-    align-content: center;
-    align-self: center;
-    padding-left: 20px;
-}
-
-.logo img{
-    width: 100%;
-}
-
-.login-cart-search{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-
-}
-
-
-
-/*-----BARRA DE NAVEGACIÓN----*/
-.header-bottom{
-    
-    border: solid 1px #666;
-    background-color: white;
-
-}
-
-#check-menu{
-    display: none;
-}
-
-label#menu {
-    display: inline-block;
-    border-radius: 4px;
-    text-align: center;
-    user-select: none;
-    color: white;
-    margin: 5px;
-    padding: 8px;
-    color: black;
-  }
-
-  label#menu i{
-      color: black;
-  }
-
-.nav-bar{
-    display: none;
-}
-
-#check-menu:checked + .nav-bar{
-  display: block;
-}
-.nav-bar > ul{
-  text-align: left;
-  list-style-type: none;
-}
-.nav-bar > ul > li{
-  padding: 5px;
-}
-
-.nav-bar ul li a{
-  text-decoration: none;
-}
-
-
-        
     /*-----ESTILOS DEL MAIN-----*/
 main{
     display: block;
@@ -98,7 +16,8 @@ main{
 /*nuestros productos*/
 
 .productos-destacados{
-    border: dashed 1px black
+    /*border: dashed 1px black;*/
+    padding: 20px 0;
 }
 
 .producto{
@@ -113,107 +32,28 @@ main{
     width: 100%;
 }
 
-
 .nuestros-productos{
-    border: dashed 1px black; 
+    padding: 20px 0;
+}
+
+.grid-productos{
+    text-align: center;
 }
 
 .perros, .gatos{
     border: solid 1px rgb(218, 213, 213);
     display: inline-block;
     margin: 15px;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    width: 30%;
 }
-
-
-/*-----ESTILOS DEL FOOTER-----*/
-footer{
-    width: 100%;
-    padding: 0px 20px;
-    display: block;
-}
-
-
-
-
-
 
 
 
 /*-----------------------MEDIA QUERIES-----------------------*/
 
 @media (min-width:481px) {
-    
-    .header-top{
-        display: flex;
-        justify-content: space-between;
-    }
-    .logo{
-        width: 20%;
-    }
-    .titulo{
-        width: 50%;
-    }
-
-    .login-cart {
-        width: 100%;
-        display: flex;
-        justify-content:flex-end;
-    }
-
-    .header-bottom{
-        display: flex;
-        justify-content: space-between;
-    }
-
-
-    /*nav bar*/
-    #check-menu, label#menu{
-        display: none;
-    }
-    .nav-bar{
-       display: flex;
-       width: 100%;
-        
-    }
-    .nav-bar > ul{
-        background-color: white;
-        display: flex;
-        width: 100%;
-        list-style-type: none;
-        padding: 0px;
-        border: solid 1px rgb(209, 205, 205);
-    }
-    .nav-bar li{
-        background-color: white;
-        flex-grow: 1; 
-        text-align: center;
-        padding: 5px;
-        border: solid 1px rgb(209, 205, 205);
-    } 
-    .nav-bar ul li a{
-        text-decoration: none;
-    
-    }
-    
-    .nav-bar > ul > li > .desplegable{
-        display: none;
-        list-style-type: none;
-        width: 20%;
-    }
-    .nav-bar > ul > li:hover > .desplegable{
-        display: block;
-        position: absolute;
-        flex-grow: 1; 
-        border: solid 1px rgb(209, 205, 205);
-        background-color: white;
-        margin: 0;
-    }
-    
-
-        
-   
 
     /*main-destacados-productos*/
 
@@ -221,7 +61,6 @@ footer{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
     }
 
     .producto{
@@ -237,17 +76,8 @@ footer{
     .perros, .gatos{
         width: 30%;
     }
-
-    /*footer*/
-    .footer{
-        display: flex;
-        justify-content: space-between;
-    }
 }
 
 @media (min-width:769px) {
-body{
-    padding:2%
-}
 
 }

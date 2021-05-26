@@ -1,0 +1,41 @@
+/*-----ESTILOS DEL FOOTER-----*/
+footer{
+    width: 100%;
+    padding: 20px 20px;
+    display: block;
+    background-color: #4bc970;
+    color: aliceblue;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer ul li{
+    font-weight: bold;
+
+}
+
+#logo-footer{
+    width: 10%;
+}
+/*-----------------------MEDIA QUERIES-----------------------*/
+
+@media (min-width:481px) {
+
+    /*footer*/
+    .footer{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    #logo-footer{
+        width: 10%;
+
+    }
+}
+
+@media (min-width:769px) {
+
+}

@@ -1,0 +1,39 @@
+/*-----ESTILOS DEL HEADER-----*/
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+
+    display: block;
+    padding: 10px;
+}
+
+.nav-bar ul{
+    list-style-type: none;
+    margin: 10px;
+    padding: 0px;
+}
+
+.nav-bar ul li{
+    list-style-type: none;
+    margin: 0 5px;
+    padding: 0px;
+
+}
+
+@media (min-width:768px) {
+    .header-top{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header-bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-bar ul{
+        display: flex;
+        margin: 0 5px;
+    }
+}
