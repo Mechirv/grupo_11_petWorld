@@ -1,7 +1,9 @@
 *{
     box-sizing:border-box ;
 }
-
+fieldset{
+    border: none;
+}
 h1{
     font-weight: 100;
     text-align: center;

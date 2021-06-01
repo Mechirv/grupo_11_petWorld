@@ -4,38 +4,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/productDetails.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/productDetails.css"/>
+    <link rel="stylesheet" href="../css/general.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <title>Product Details</title>
 </head>
 <body>
-      <!--HEADER-->
-      <header class="header">
+    <!--HEADER-->
+    <header class="header">
         <div class="header-top">
-            <div>Logo</div>
-            <h1 class="titulo">Pet World</h1>
-            <div class="login-chart"> 
-                <a href="/login" method="GET">login</a>
-                <a href="/productCart"><div id="chart">Carrito</div></a>
+            <div id="logo-titulo">
+                <img id="logo" src="../img/logo.png" alt="logo">
+                <h1 id="titulo">Pet World</h1>
             </div>
+            
+            <form id="search-bar">
+                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar productos"><i class="fas fa-search"></i>
+            </form>
+            
+            <div id="login-cart">
+                <div id="login">
+                    <a href="/login" method="GET" id="log-text">Mi cuenta</a>
+                    <a href="/login" method="GET" id="log-icon"><i class="far fa-user"></i></a>
+                </div>
+                
+                <div id="cart">
+                    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>  
+            
         </div>
+        
 
+        <!--barra de navegación-->
         <div class="header-bottom">
+            <figure id="menu"><i class="fas fa-bars fa-1x"></i>Menu</figure>
+    
             <nav class="nav-bar">
                 <ul>
-                    <li>Home</li>
-                    <li>Perros</li>
-                    <li>Gatos</li>
-                    <li>Tamaños y Pesos</li>
-                    <li>Marcas</li>
-                    <li>PW Blog</li>
-                    <li>Contactenos</li>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PERROS</a>  
+                        <ul class="desplegable">
+                            <li>Alimentos</li>
+                            <li>Higiene, Cuidado y Estética</li>
+                            <li>Juguetes y Accesorio</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">GATOS</a>
+                        <ul class="desplegable">
+                            <li>Alimentos</li>
+                            <li>Higiene, Cuidado y Estética</li>
+                            <li>Juguetes y Accesorio</li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="">TAMAÑOS Y PESOS</a>
+                        <ul class="desplegable"> 
+                            <li>Pequeños</li>
+                            <li>Mediano</li>
+                            <li>Grande</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MARCAS</a>
+                        <ul class="desplegable">
+                            <li>Eukanuba</li>
+                            <li>Old Price</li>
+                            <li>Royal Cannin</li>
+                            <li>Gati</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PW Blog</a></li>
+                    <li><a href="#"> CONTACTENOS</a></li>
                 </ul>
             </nav>
-            <div class="search-bar">
-                <input id="busqueda" type="search" name="busque" placeholder="Buscar"><i class="fas fa-search"></i>
-            </div>
+            
         </div>
 
     </header>
+
+    <!--MAIN-->
+    <main>
+    
+            <article class="det-producto">
+                <img src="../img/eukanuba-puppi.png" alt="alimento eukanuba">
+                <section class="detalle-producto">
+                    <h3>Eukanuba Puppy raza pequeña</h3>
+                    <p class="descripcion-producto">Recomendado para cachorros entre 1 y 12 meses de edad. 
+                        Alimento balanceado completo para cachorros de raza pequeña como Caniche, 
+                        Yorkshire Terrier, Chihuahua, Daschund, Maltes y otras razas o perros mestizos 
+                        que en su etapa adulta pesan menos de 10 kg.
+                    También recomendado durante la gestación y lactancia. 
+                    Durante las últimas tres semanas de gestación, 
+                    incremente la cantidad de alimento en un 25 % a 50%.
+                     Durante la lactancia ofrézcale alimento sin restricciones (generalmente de dos a cinco veces la cantidad que sugiere la guía de alimentación, dependiendo del tamaño y de la raza).</p>
+                    <p class="precio-prod">Desde $1350</p>
+                    <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
+
+                    <div class="boton-cantidad">
+                        <input type="button" value="-" class="boton-menos">
+                        <label class="ventana" for="ventana-cantidad"></label>
+                        <input type="number" id="ventana-cantidad" class="input-cantidad" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+                        <input type="button" value="+" class="boton-mas">
+                    </div>
+
+
+                    <form id="agregar-carrito" action="/productCart" method="GET">
+                        <button id="button-agregar" type="submit">Agregar al carrito</button>
+                    </form>
+                </section>
+
+            </article>
+
+            <section class="otras-desc">
+                <div id="envio">
+                    <i class="fa fa-truck"></i>
+                    <p>Envíos gratis para compras superiores a $5000. </p>
+                </div>
+                <div id="entrega"> 
+                    <i class="fa fa-map-marker"></i>
+                    <p>Consultanos los puntos de entrega</p>
+                </div>
+                <div id="formas-pago">
+                    <i class="fas fa-credit-card"></i>
+                    <p>Todas las formas de pago</p>
+                </div>
+                <div id="devoluciones">
+                    <i class="fa fa-undo"></i>
+                    <p>Devoluciones dentro de los 10 días hábiles</p>
+                </div>
+                
+            </section>
+
+        
+
+    
+    </main>
+
+
+<!--FOOTER-->    
+    <footer class="footer">
+        <img id="logo-footer" src="../img/logo.png" alt="logo">
+        
+        <ul class="list-left">
+            <li><a href="/">HOME</a>  </li>
+            <li>TIENDA</li>
+            <li>PERROS</li>
+            <li>GATOS</li>
+            <li>SERVICIOS</li>
+        </ul>
+        
+        <ul class="list-right">
+            <li>BLOG</li>
+            <li>SOBRE NOSOTROS</li>
+            <li>TÉRMINOS Y CONDICIONES</li>
+            <li>PRIVACIDAD</li>
+            <li>CONTACTENOS</li>
+        </ul>
+
+        <section id="texto">
+            2021 - Pet World - Todos los derechos reservados
+
+        </section>
+           
+        
+    </footer>
+    
 </body>
 </html>

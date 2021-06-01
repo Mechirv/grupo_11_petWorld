@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/general.css"/>
     <link rel="stylesheet" href="../css/footer.css"/>
     <link rel="stylesheet" href="../css/header.css"/>
-    <title>Document</title>
+    <title>Index</title>
 </head>
 <body>
     <!--HEADER-->
@@ -19,39 +19,40 @@
                 <img id="logo" src="../img/logo.png" alt="logo">
                 <h1 id="titulo">Pet World</h1>
             </div>
+            
             <form id="search-bar">
                 <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
             </form>
+            
             <div id="login-cart">
-                    <div id="login">
-                        <a href="/login" method="GET">Mi cuenta</a>
-                    </div>
-                    <div id="cart"><a href="/productCart"><i class="fas fa-shopping-cart fa-2x"></a></i></div>
-                </div>  
-            </div>
+                <div id="login">
+                    <a href="/login" method="GET" id="log-text">Mi cuenta</a>
+                    <a href="/login" method="GET" id="log-icon"><i class="far fa-user"></i></a>
+                </div>
+                
+                <div id="cart">
+                    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>  
+            
         </div>
         
 
         <!--barra de navegación-->
         <div class="header-bottom">
-           
-            <input type="checkbox" id="check-menu">
-            <label for="check-menu" id="menu">
-                <i background-color="blue" class="fas fa-bars fa-1x"></i>Menu
-            </label>
-            
-
+            <figure id="menu"><i class="fas fa-bars fa-1x"></i>Menu</figure>
+    
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Perros</a>  
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PERROS</a>  
                         <ul class="desplegable">
                             <li>Alimentos</li>
                             <li>Higiene, Cuidado y Estética</li>
                             <li>Juguetes y Accesorio</li>
                         </ul>
                     </li>
-                    <li><a href="#">Gatos</a>
+                    <li><a href="#">GATOS</a>
                         <ul class="desplegable">
                             <li>Alimentos</li>
                             <li>Higiene, Cuidado y Estética</li>
@@ -59,14 +60,14 @@
                             
                         </ul>
                     </li>
-                    <li><a href=""> Tamaños y Pesos</a>
+                    <li><a href="">TAMAÑOS Y PESOS</a>
                         <ul class="desplegable"> 
                             <li>Pequeños</li>
                             <li>Mediano</li>
                             <li>Grande</li>
                         </ul>
                     </li>
-                    <li><a href="#">Marcas</a>
+                    <li><a href="#">MARCAS</a>
                         <ul class="desplegable">
                             <li>Eukanuba</li>
                             <li>Old Price</li>
@@ -75,7 +76,7 @@
                         </ul>
                     </li>
                     <li><a href="#">PW Blog</a></li>
-                    <li><a href="#"> Contactenos</a></li>
+                    <li><a href="#"> CONTACTENOS</a></li>
                 </ul>
             </nav>
             
@@ -86,70 +87,76 @@
     <!--MAIN-->
     <main>
         <section class="productos-destacados">
-            <h2 class="destacados">PRODUCTOS DESTACADOS</h2>
-            <div class="grid-destacados">
+            <h2 class="destacados">DESTACADOS</h2>
+            <section class="grid-destacados">
                 <article class="producto">
                     <h3>Alimento Eukanuba</h3>
-                    <img src="../img/eukanuba-puppi.png">
-                    <div class="detalle-producto">
+                    <a href="/productDetails"><img src="../img/eukanuba-puppi.png" alt="alimento eukanuba"></a>
+                    <section class="detalle-producto">
                         <p>Alimento eukanuba para cachorros raza pequeña 3kg</p>
                         <p>$1350</p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
-                    </div>
+                    </section>
                 </article>
             
                 <article class="producto">
                     <h3>Cepillo</h3>
                     <img src="../img/cepillo.png">
-                    <div class="detalle-producto">
+                    <section class="detalle-producto">
                         <p>Cepillo para perros</p>
                         <p>$690</p>
                         <a href="/productDetails">Mas detalles</a>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
-                    </div>
+                    </section>
                 </article>
+                
                 <article class="producto">
                     <h3>Comedero</h3>
                     <img src="../img/comedero.png">
-                    <div class="detalle-producto">
+                    <section class="detalle-producto">
                         <p>Comedero</p>
                         <p>$290</p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
+                    </section>
                 </article>
+               
                 <article class="producto">
                     <h3>Cama</h3>
                     <img src="../img/cama.jpg">
-                    <div class="detalle-producto">
+                    <section class="detalle-producto">
                         <p>Cama</p>
                         <p>$2590</p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
+                    </section>
                 </article>
+                
                 <article class="producto">
                     <h3>Pipeta perros y gatos</h3>
                     <img src="../img/pipeta.jpg">
-                    <div class="detalle-producto">
+                    <section class="detalle-producto">
                         <p>Cepillo para perros</p>
                         <p>$690</p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
+                     </section>       
                 </article>
-            </div>
+            </section>
         </section>
         
 
         <section class="nuestros-productos">
             <h2 class="">Nuestros Productos</h2>
             
-            <div class="grid-productos">
+            <section class="grid-productos">
                 <article class="perros">
                         <img src="">
                         <h4>PERROS</h4>
@@ -160,42 +167,36 @@
                     <h4>GATOS</h4>
 
                 </article>
-            </div>
+            </section>
 
         </section>
-      
-
-        
-
-        
-
-        
-
     </main>
 
 
 <!--FOOTER-->    
     <footer class="footer">
         <img id="logo-footer" src="../img/logo.png" alt="logo">
+        
         <ul class="list-left">
-            <li><a href="/">Home</a>  </li>
-            <li>Sobre Nosotros</li>
-            <li>Precios</li>
-            <li>Contactenos</li>
+            <li><a href="/">HOME</a>  </li>
+            <li>TIENDA</li>
+            <li>PERROS</li>
+            <li>GATOS</li>
+            <li>SERVICIOS</li>
         </ul>
         
         <ul class="list-right">
-            <li>Blog</li>
-            <li>Búsqueda</li>
-            <li>T&C</li>
-            <li>Privacidad</li>
+            <li>BLOG</li>
+            <li>SOBRE NOSOTROS</li>
+            <li>TÉRMINOS Y CONDICIONES</li>
+            <li>PRIVACIDAD</li>
+            <li>CONTACTENOS</li>
         </ul>
-        
-        <form action="" method="POST" class="form-footer">
-            <input type="text" id="usuario" placeholder="email o nombre de usuario">
-            <input type="password" id="pass" placeholder="contraseña">
 
-        </form>
+        <section id="texto">
+            2021 - Pet World - Todos los derechos reservados
+
+        </section>
            
         
     </footer>

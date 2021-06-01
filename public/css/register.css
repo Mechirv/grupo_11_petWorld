@@ -48,6 +48,9 @@ h1{
     font-size: 18px;
 }
 
+fieldset{
+    border: none;
+}
 
 .nombre, .confirm-pass,
 .apellido, .email,

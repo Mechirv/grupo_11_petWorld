@@ -1,39 +1,122 @@
-/*-----ESTILOS DEL HEADER-----*/
-
-*{
-    box-sizing: border-box;
+main{
+    display: flex;
+    justify-content: center;
 }
-
-header{
-
-    display: block;
+.det-producto{
+    width: 90%;
+    text-align: center;
+    align-self: center;
     padding: 10px;
 }
 
-.nav-bar ul{
-    list-style-type: none;
-    margin: 10px;
-    padding: 0px;
+.det-producto img{
+    width: 80%;
+    max-width: 284px;
+    max-height: 355px;
 }
 
-.nav-bar ul li{
-    list-style-type: none;
-    margin: 0 5px;
-    padding: 0px;
+
+h3{
+    text-align: left;
+    font-size: 16px;
+}
+
+.descripcion-producto{
+    font-size: 12px;
+    text-align: justify;
+}
+
+.precio-prod{
+text-align: left;
+padding-top: 20px;
+font-size: 18px;
+}
+
+.boton-cantidad{
+    padding: 10px 0;
+}
+
+.boton-menos, .boton-mas{
+    width: 15px;
+    height: 30px;
+    margin: 0;
+}
+.input-cantidad{
+    width: 25px;
+    height: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+#button-agregar{
+
+height: 30px;
+padding: 5px;
+}
+.otras-desc{
+    padding-top: 30px;
+}
+
+#envio, #formas-pago,#devoluciones, #entrega{
+  
+    display: flex;
+    border-bottom: solid 1px rgb(212, 210, 210);
+    padding: 10px;
+}
+.otras-desc i{
+    width: 40px;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.otras-desc p{
+    text-align: left;
 
 }
 
+
+/**-----------MEDIA QUERIES---------**/
 @media (min-width:768px) {
-    .header-top{
-        display: flex;
-        justify-content: space-between;
+    main{
+        display: block;
+        
     }
-    .header-bottom{
+  
+    .det-producto{
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        padding:50px 0;
     }
-    .nav-bar ul{
-        display: flex;
-        margin: 0 5px;
+    
+    .detalle-producto{
+        width: 60%;
+        padding-left: 100px;
+        padding-top: 20px;
     }
+    .det-producto img{
+        width: 40%;
+        max-width: 300px;
+        max-height: 380px;
+    }
+    h3{
+        font-size: 24px;
+    }
+
+    .descripcion-producto{
+        padding-top: 5px;
+        font-size: 16px;
+        
+    }
+
+    .otras-desc{
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .precio-prod{
+        font-weight: bold;
+    }
+
 }

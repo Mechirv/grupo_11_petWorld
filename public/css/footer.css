@@ -5,19 +5,23 @@ footer{
     display: block;
     background-color: #4bc970;
     color: aliceblue;
+    text-align: center;
+    font-size: 14px;
 }
 
 footer ul{
     list-style-type: none;
+    padding-bottom: 10px;
 }
 
 footer ul li{
-    font-weight: bold;
+    padding: 2px;
 
 }
 
+
 #logo-footer{
-    width: 10%;
+    width: 20%;
 }
 /*-----------------------MEDIA QUERIES-----------------------*/
 

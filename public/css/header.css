@@ -8,27 +8,29 @@
 
 
 header{
-    padding: 20px 20px 0 20px;
     width: 100%;
     
 }
 .header-top{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 10px;
+    padding: 20px 30px 0 30px;
 }
+
 #logo-titulo{
     display: flex;
     align-self: center;
-
 }
+
 #logo{
     width: 30%;
 }
+
 #titulo{
     width: 67%;
     padding-left: 20px;
     align-self: center;
+    font-weight: 500;
 }
 
 .logo img{
@@ -41,23 +43,26 @@ header{
     width: 100%;
     padding:20px 0;
     justify-content: center;
+   
 }  
 
 #busqueda{
-    width: 70%;
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px rgb(221, 219, 219);
+    font-size: 16px;
+    height: 2em;
 }
 
+
 #search-bar i{
+    display: none;
     padding-left: 5px;
 }
 
 #login-cart{
-    display: flex;
-    padding: 10px 0;
+    display: none;
 }
-
-
-
 
 
 
@@ -65,16 +70,13 @@ header{
 
 /*-----BARRA DE NAVEGACIÓN----*/
 .header-bottom{
-    
-    background-color: white;
+    background-color: #4bc970;
+   
 
 }
 
-#check-menu{
-    display: none;
-}
 
-label#menu {
+figure#menu {
     display: inline-block;
     border-radius: 4px;
     text-align: center;
@@ -85,7 +87,7 @@ label#menu {
     color: black;
   }
 
-  label#menu i{
+figure#menu i{
       color: black;
   }
 
@@ -93,77 +95,132 @@ label#menu {
     display: none;
 }
 
-#check-menu:checked + .nav-bar{
-  display: block;
-}
 .nav-bar > ul{
-  text-align: left;
-  list-style-type: none;
+    text-align: left;
+    list-style-type: none;
 }
 .nav-bar > ul > li{
-  padding: 5px;
+    padding: 5px;
+    font-weight: bold;
 }
 
 .nav-bar ul li a{
-  text-decoration: none;
+    text-decoration: none;
 }
 
+.nav-bar ul li a:visited{
+    color: white;
+}
 
 
 /*-----------------------MEDIA QUERIES-----------------------*/
 
 @media (min-width:481px) {
-    
     .header-top{
+        padding-bottom: 10px;
+    }
+    #logo-titulo{
+        width: 50%;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+     }
+     #logo{
+         width: 25%;
+     }
+    
+     #titulo{
+         padding-left: 10px;
+         width: 75%;
+     }
+     #search-bar{
+         width: 30%;
+         display: flex;
+         align-items: center; 
+     }
+    
+     #busqueda{
+        height: 2em;
+         width: 80%;   
+     }
+    
+     #search-bar i{
+         width: 20%;
+         padding-left: 5px;
+     }
+    
+    #login-cart{
+        width: 20%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+     
     }
-    .logo{
-        width: 25%;
+    
+    #login{
+        width: 50%;
+        text-align: center;
+        border-right: solid 1px rgb(168, 165, 165);;
+    
     }
-    .titulo{
-        width: 40%;
+    #login a{
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 5px;
+        border: solid 1px  #4bc970;
+        padding: 5px;;
+        background-color: #4bc970;
+        color: aliceblue;
+        font-weight: bold;
     }
+    
+    #cart{
+        width: 50%;
+        text-align: center;
+    }
+    
 
-    .login-cart-search {
-        width: 30%;
-        display: flex;
-        justify-content:flex-end;
-    }
+
+    /*nav bar*/
 
     .header-bottom{
         display: flex;
         justify-content: space-between;
     }
-
-
-    /*nav bar*/
-    #check-menu, label#menu{
+    
+    figure#menu{
         display: none;
     }
     .nav-bar{
        display: flex;
        width: 100%;
+   
         
     }
     .nav-bar > ul{
-        background-color: white;
+      
         display: flex;
         width: 100%;
         list-style-type: none;
         padding: 0px;
         border: solid 1px rgb(209, 205, 205);
     }
+
+    .nav-bar > ul > li {
+        background-color: #4bc970;
+    }
     .nav-bar li{
-        background-color: white;
         flex-grow: 1; 
         text-align: center;
         padding: 5px;
-        border: solid 1px rgb(209, 205, 205);
-    } 
+        color:aliceblue;
+        
+    }
     .nav-bar ul li a{
         text-decoration: none;
-    
+    }
+    .nav-bar ul li a:visited{
+        text-decoration: none;
+        color: aliceblue;
     }
     
     .nav-bar > ul > li > .desplegable{
@@ -181,67 +238,36 @@ label#menu {
     }
     
 }
-
+/*----------NOTEBOOKS----------*/
 @media (min-width:769px) {
  #logo-titulo{
     width: 30%;
-    display: flex;
-    align-items: center;
- }
- #logo{
-     width: 25%;
  }
 
- #titulo{
-     padding-left: 10px;
-     width: 75%;
- }
  #search-bar{
-     width: 40%;
-     display: flex;
-     align-items: center;
-    
- }
-
- #busqueda{
-    height: 2em;
-     width: 80%;
-     border-radius: 10px;
-     border: solid 1px rgb(221, 219, 219);
- }
-
- #search-bar i{
-     width: 20%;
-     padding-left: 5px;
+     width: 40%;  
  }
 
 #login-cart{
-    width: 30%;
     display: flex;
-    align-items: center;
+    width: 30%;
+}
+
+#login #log-text{
+    display: block;
+}
+a#log-text{
+    width: 70%;
+}
+
+#login #log-icon{
+    display: none;
+}
+
+/*nav bar*/
+.nav-bar > ul > li {
+    
     padding: 10px;
- 
 }
 
-#login{
-    width: 50%;
-    text-align: center;
-    border-right: solid 1px rgb(168, 165, 165);;
-
-}
-#login a{
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 5px;
-    border: solid 1px  #4bc970;
-    padding: 5px;;
-    background-color: #4bc970;
-    color: aliceblue;
-    font-weight: bold;
-}
-
-#cart{
-    width: 50%;
-    text-align: center;
-}
 }
