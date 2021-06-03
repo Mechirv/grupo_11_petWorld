@@ -14,17 +14,17 @@
 <body>
     <!--HEADER-->
     <header class="header">
-        <div class="header-top">
-            <div id="logo-titulo">
+        <section class="header-top">
+            <section id="logo-titulo">
                 <img id="logo" src="../img/logo.png" alt="logo">
                 <h1 id="titulo">Pet World</h1>
-            </div>
+            </section>
             
             <form id="search-bar">
-                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar productos"><i class="fas fa-search"></i>
+                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
             </form>
             
-            <div id="login-cart">
+            <section id="login-cart">
                 <div id="login">
                     <a href="/login" method="GET" id="log-text">Mi cuenta</a>
                     <a href="/login" method="GET" id="log-icon"><i class="far fa-user"></i></a>
@@ -33,9 +33,9 @@
                 <div id="cart">
                     <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
                 </div>
-            </div>  
+            </section>  
             
-        </div>
+        </section>
         
 
         <!--barra de navegación-->
@@ -118,22 +118,28 @@
             </article>
 
             <section class="otras-desc">
-                <div id="envio">
-                    <i class="fa fa-truck"></i>
-                    <p>Envíos gratis para compras superiores a $5000. </p>
-                </div>
-                <div id="entrega"> 
-                    <i class="fa fa-map-marker"></i>
-                    <p>Consultanos los puntos de entrega</p>
-                </div>
-                <div id="formas-pago">
-                    <i class="fas fa-credit-card"></i>
-                    <p>Todas las formas de pago</p>
-                </div>
-                <div id="devoluciones">
-                    <i class="fa fa-undo"></i>
-                    <p>Devoluciones dentro de los 10 días hábiles</p>
-                </div>
+                <table>
+                    <tr>
+                        <td><i class="fa fa-truck"></i></td>
+                        <td><p>Envíos gratis para compras superiores a $5000. </p></td>    
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa fa-map-marker"></i></td>
+                        <td><p>Consultanos los puntos de entrega</p></td>    
+                    </tr>
+
+                    <tr>
+                        <td><i class="fas fa-credit-card"></i></td>
+                        <td><p>Todas las formas de pago</p></td>    
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa fa-undo"></i></td>
+                        <td><p>Devoluciones dentro de los 10 días hábiles</p></td>    
+                    </tr>
+                     
+                </table>
                 
             </section>
 

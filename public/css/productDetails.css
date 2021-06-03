@@ -1,6 +1,7 @@
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .det-producto{
     width: 90%;
@@ -53,26 +54,20 @@ font-size: 18px;
 height: 30px;
 padding: 5px;
 }
+
 .otras-desc{
-    padding-top: 30px;
-}
-
-#envio, #formas-pago,#devoluciones, #entrega{
-  
     display: flex;
-    border-bottom: solid 1px rgb(212, 210, 210);
-    padding: 10px;
-}
-.otras-desc i{
-    width: 40px;
-    font-weight: 600;
-    padding-right: 10px;
+    padding: 30px 0;
+  
 }
 
-.otras-desc p{
-    text-align: left;
-
+table{
+    border: solid 1px rgb(206, 203, 203);
 }
+
+
+
+
 
 
 /**-----------MEDIA QUERIES---------**/

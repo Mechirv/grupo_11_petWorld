@@ -4,79 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="../css/register.css"/>
     <link rel="stylesheet" href="../css/general.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
     <title>Document</title>
 </head>
 <body>
-<div class="register-contenedor">
-    <div class="header">
-        <div class="header-top">
-            <img id="logo" src="../img/logo.png">
-            <h1 id="titulo">Pet World</h1>
-        </div>
+    <header class="header">
+        <section class="header-top">
+            <section id="logo-titulo">
+                <img id="logo" src="../img/logo.png" alt="logo">
+                <h1 id="titulo">Pet World</h1>
+            </section>
+            
+            <form id="search-bar">
+                <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
+            </form>
+            
+            <section id="login-cart">
+                <div id="login">
+                    <a href="/login" method="GET" id="log-text">Mi cuenta</a>
+                    <a href="/login" method="GET" id="log-icon"><i class="far fa-user"></i></a>
+                </div>
+                
+                <div id="cart">
+                    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </section>  
+            
+        </section>
         
-        <div class="header-bottom">
-            <h1>INGRESE SUS DATOS</h1>
-        </div>
+
+        <!--barra de navegación-->
+        <section class="header-bottom">
+            <figure id="menu"><i class="fas fa-bars fa-1x"></i>Menu</figure>
+    
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PERROS</a>  
+                        <ul class="desplegable">
+                            <li>Alimentos</li>
+                            <li>Higiene, Cuidado y Estética</li>
+                            <li>Juguetes y Accesorio</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">GATOS</a>
+                        <ul class="desplegable">
+                            <li>Alimentos</li>
+                            <li>Higiene, Cuidado y Estética</li>
+                            <li>Juguetes y Accesorio</li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="">TAMAÑOS Y PESOS</a>
+                        <ul class="desplegable"> 
+                            <li>Pequeños</li>
+                            <li>Mediano</li>
+                            <li>Grande</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MARCAS</a>
+                        <ul class="desplegable">
+                            <li>Eukanuba</li>
+                            <li>Old Price</li>
+                            <li>Royal Cannin</li>
+                            <li>Gati</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PW Blog</a></li>
+                    <li><a href="#"> CONTACTENOS</a></li>
+                </ul>
+            </nav>
+            
+        </section>
+
+    </header>
+
+
+
+<main>
+    <div class="register-contenedor">
+
+            <div class="titulo-register">
+                <h3>INGRESE SUS DATOS</h3>
+            </div>
         
+
+        <form id="register"action="/index" method="POST">
+            <fieldset class=nombre-apellido>
+                <label for="nombre-apellido">Nombre:</label>
+                <input type="text" name="nombre-apellido"  id="nombre-apellido" required>
+            </fieldset>
+
+            <fieldset class="usuario">
+                <label for="usuario">Nombre de Usuario: </label>
+                <input type="text" name="usuario"  id="usuario" required>
+            </fieldset>
+
+            <fieldset class="email">
+                <label for="email">Email: </label>
+                <input type="email" name="email"  id="email" required>
+            </fieldset>
+
+            <fieldset class="password">
+                <label for="pass">Contraseña: </label>
+                <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" required>
+            </fieldset>
+
+            <fieldset class="password">
+                <label for="confirm-pass">Confirmar Contraseña: </label>
+                <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" required>
+            </fieldset>
+
+        
+            <fieldset class="buttons">
+                <button id="cancel" type="reset">Cancelar</button>
+                <button id="button-register" type="submit">Registrarse</button>
+            </fieldset>
+        </form>
+
+        <div class="volver-home"><a href="/">Volver al Home</a></div>
+
     </div>
 
+</main>
 
-    <form id="register"action="/index" method="POST">
-        <fieldset class=nombre>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre"  id="nombre">
-        </fieldset>
-
-        <fieldset class="apellido">
-            <label for="apellido">Apellido: </label>
-            <input type="text" name="apellido"  id="apellido"><br>
-        </fieldset>
-        
-        <fieldset class="usuario">
-            <label for="usuario">Nombre de Usuario: </label>
-            <input type="text" name="usuario"  id="usuario">
-        </fieldset>
-
-        <fieldset class="email">
-            <label for="email">Email: </label>
-            <input type="email" name="email"  id="email"><br>
-        </fieldset>
-        
-        <fieldset class="password">
-            <label for="pass">Contraseña: </label>
-            <input type="password" name="pass"  id="pass"><br>
-        </fieldset>
-        
-        <fieldset class="password">
-            <label for="confirm-pass">Confirmar Contraseña: </label>
-            <input type="password" name="confirm"  id="confirm-pass">
-        </fieldset>
-        
-        <fieldset class="dni">
-            <label for="dni">DNI: </label>
-            <input type="number" name="dni"  id="dni">
-        </fieldset>
-
-        <fieldset class="domicilio">
-            <label for="domicilio">Domicilio: </label>
-            <input type="text" name="domicilio"  id="domicilio">
-        </fieldset>
-        
-        <fieldset class="telefono">
-            <label for="telefono">Teléfono: </label>
-            <input type="number" name="telefono"  id="telefono">
-        </fieldset>
-
-        <fieldset class="buttons">
-            <button id="cancel" type="reset">Cancelar</button>
-            <button id="button-register" type="submit">Registrarse</button>
-        </fieldset>
-    </form>
+<!--FOOTER-->    
+<footer class="footer">
+    <img id="logo-footer" src="../img/logo.png" alt="logo">
     
-    <div class="volver-home"><a href="/">Volver al Home</a></div>
+    <ul class="list-left">
+        <li><a href="/">HOME</a>  </li>
+        <li>TIENDA</li>
+        <li>PERROS</li>
+        <li>GATOS</li>
+        <li>SERVICIOS</li>
+    </ul>
+    
+    <ul class="list-right">
+        <li>BLOG</li>
+        <li>SOBRE NOSOTROS</li>
+        <li>TÉRMINOS Y CONDICIONES</li>
+        <li>PRIVACIDAD</li>
+        <li>CONTACTENOS</li>
+    </ul>
 
-</div>
+    <section id="texto">
+        2021 - Pet World - Todos los derechos reservados
+
+    </section>
+       
+    
+</footer>
+
+
+
 </body>
 </html>

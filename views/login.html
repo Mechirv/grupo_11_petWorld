@@ -17,12 +17,12 @@
         <form id="form-login">
             <fieldset class="usuario">
                 <label for="usuario">Usuario</label>
-                <input type="text" id="usuario" placeholder="Email o nombre de usuario"/><br>
+                <input type="text" id="usuario" placeholder="Email o nombre de usuario" required/><br>
             </fieldset>
 
             <fieldset class="password">
                 <label for="pass">Contraseña</label>
-                <input type="password" id="pass" />
+                <input type="password" id="pass" placeholder="Min. 8 caracteres" minlength="8" required/>
             </fieldset>
 
             <fieldset id="check">
