@@ -22,5 +22,7 @@ Soy Mercedes Rodríguez Vivanco, tengo 35 años, soy de Gualeguay, Entre Ríos. 
 
 Soy Facundo Moreno, tengo 19 años, soy de Buenos Aires, Argentina. Me adentre en este curso ya que uno de mis sueños, es programar y espero no solo hacer esto con páginas web, sino también con el mayor mercado actualmente, los videojuegos.
 
+Soy Matías Haidbañer, tengo 38 años y soy de Buenos Aires. Me intereso el curso por la salida laboral que tiene y tambien para refrescar mis conocimientos sobre programación. Además de esto, soy periodista deportivo
+
 // Link del tablero:
 https://trello.com/invite/b/uJyurSLc/58780dbcdad8cd0ba69cb90c4317b444/petworld
