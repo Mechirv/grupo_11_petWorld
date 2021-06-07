@@ -30,7 +30,10 @@ main{
     text-align: center;
     background-color: white;
     border-radius: 10px;
-
+    transition: all 1500ms;
+}
+.producto:hover{
+    box-shadow: 0 0 10px #4bc970;
 }
 
 .producto img{
@@ -53,6 +56,32 @@ main{
     text-align: center;
     width: 30%;
 }
+.destacados:hover,
+.nuestros:hover{
+    color:#4bc970;
+    font-size: 35px;
+}
+.destacados,
+.nuestros{
+    transition: all 500ms;
+}
+#dolar{
+    color: #4bc970;
+}
+#button-agregar{
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #4bc970;
+    color: white;
+    transition: all 500ms;
+}
+#button-agregar:hover{
+    color: black;
+    border:1px solid black  
+}
+
 
 
 
@@ -88,6 +117,13 @@ main{
 @media (min-width:769px) {
     .producto{
         max-width: 230px;
+    }
+    .producto h3{
+        opacity: 0;
+        transition: all 1500ms;
+    }
+    .producto h3:hover{
+        opacity: 1;
     }
 
 }

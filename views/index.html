@@ -44,7 +44,7 @@
     
             <nav class="nav-bar">
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="/">HOME</a></li>
                     <li><a href="#">PERROS</a>  
                         <ul class="desplegable">
                             <li>Alimentos</li>
@@ -60,7 +60,7 @@
                             
                         </ul>
                     </li>
-                    <li><a href="">TAMAÑOS Y PESOS</a>
+                    <li><a href="#">TAMAÑOS Y PESOS</a>
                         <ul class="desplegable"> 
                             <li>Pequeños</li>
                             <li>Mediano</li>
@@ -94,7 +94,7 @@
                     <a href="/productDetails"><img src="../img/eukanuba-puppi.png" alt="alimento eukanuba"></a>
                     <section class="detalle-producto">
                         <p>Alimento eukanuba para cachorros raza pequeña 3kg</p>
-                        <p>$1350</p>
+                        <p> <span id="dolar">$</span>1350 </p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
@@ -106,8 +106,7 @@
                     <img src="../img/cepillo.png" alt="cepillo">
                     <section class="detalle-producto">
                         <p>Cepillo para perros</p>
-                        <p>$690</p>
-                        <a href="/productDetails">Mas detalles</a>
+                        <p> <span id="dolar">$</span>690 </p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
@@ -119,7 +118,7 @@
                     <img src="../img/comedero.png" alt="comedero perros gatos">
                     <section class="detalle-producto">
                         <p>Comedero</p>
-                        <p>$290</p>
+                        <p> <span id="dolar">$</span>290 </p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
@@ -131,7 +130,7 @@
                     <img src="../img/cama.jpg" alt="cama">
                     <section class="detalle-producto">
                         <p>Cama</p>
-                        <p>$2590</p>
+                        <p> <span id="dolar">$</span>2590 </p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
@@ -143,7 +142,7 @@
                     <img src="../img/pipeta.jpg" alt="pipeta perros y gatos">
                     <section class="detalle-producto">
                         <p>Cepillo para perros</p>
-                        <p>$690</p>
+                        <p> <span id="dolar">$</span>690 </p>
                         <form id="agregar-carrito" action="/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
@@ -154,17 +153,18 @@
         
 
         <section class="nuestros-productos">
-            <h2 class="">Nuestros Productos</h2>
+            <h2 class="nuestros">Nuestros Productos</h2>
             
             <section class="grid-productos">
                 <article class="perros">
                         <img src="">
                         <h4>PERROS</h4>
+                        <img src="../img/dog.jpg" alt="Perros">
                 </article>
 
                 <article class="gatos">
-                    <img src="">
                     <h4>GATOS</h4>
+                    <img src="../img/cat.png" alt="Gatos">
 
                 </article>
             </section>

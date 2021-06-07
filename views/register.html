@@ -95,28 +95,28 @@
 
         <form id="register"action="/index" method="POST">
             <fieldset class=nombre-apellido>
-                <label for="nombre-apellido">Nombre:</label>
-                <input type="text" name="nombre-apellido"  id="nombre-apellido" required>
+                <label for="nombre-apellido">Nombre y Apellido:</label>
+                <input type="text" name="nombre-apellido"  id="nombre-apellido" placeholder="Su Nombre y Apellido" required >
             </fieldset>
 
             <fieldset class="usuario">
                 <label for="usuario">Nombre de Usuario: </label>
-                <input type="text" name="usuario"  id="usuario" required>
+                <input type="text" name="usuario"  id="usuario" placeholder="Min. 6 caracteres" minlength="6" required>
             </fieldset>
 
             <fieldset class="email">
                 <label for="email">Email: </label>
-                <input type="email" name="email"  id="email" required>
+                <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" required>
             </fieldset>
 
             <fieldset class="password">
                 <label for="pass">Contraseña: </label>
-                <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" required>
+                <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" minlength="8" required>
             </fieldset>
 
             <fieldset class="password">
                 <label for="confirm-pass">Confirmar Contraseña: </label>
-                <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" required>
+                <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8" required>
             </fieldset>
 
         

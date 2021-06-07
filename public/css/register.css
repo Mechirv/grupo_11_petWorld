@@ -22,7 +22,14 @@ main{
     width: 90%;
     align-content: center;
 }
-
+.titulo-register h3{
+    font-family: 'Knewave', cursive;
+    transition: all 500ms;
+}
+.titulo-register h3:hover{
+color: #4bc970;
+font-size: 20px;
+}
 
 #titulo{
     width: 80%;
@@ -83,6 +90,12 @@ background: rgba(255,255,255,0.1);
     font-size: 14px;
     text-align: center;
     margin: 20px 0px 20px 10px;
+    transition: all 500ms;
+  }
+  #button-register:hover,
+  #cancel:hover{
+      color: black;
+      border: 1px solid black;
   }
 
 .buttons{
@@ -97,7 +110,14 @@ background: rgba(255,255,255,0.1);
     padding: 10px;
     text-decoration: none;
 }
-
+.volver-home a{
+    color: black;
+    transition: all 500ms;
+}
+.volver-home a:hover{
+    color:#4bc970 ;
+    font-size: 20px;
+}
 
 
 /*----MEDIA QUERIES------*/

@@ -20,6 +20,16 @@ header{
 #logo-titulo{
     display: flex;
     align-self: center;
+    animation: aumentar 1200ms linear infinite alternate;
+}
+
+@keyframes aumentar {
+    0%{
+        transform: scale(0.8);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 #logo{
@@ -43,7 +53,6 @@ header{
     width: 100%;
     padding:20px 0;
     justify-content: center;
-   
 }  
 
 #busqueda{
@@ -52,8 +61,12 @@ header{
     border: solid 1px rgb(221, 219, 219);
     font-size: 16px;
     height: 2em;
+    transition: all 400ms;
 }
 
+#busqueda:hover{
+    border: 2px #4bc970 solid;
+}
 
 #search-bar i{
     display: none;
@@ -64,9 +77,22 @@ header{
     display: none;
 }
 
+#login a{
+    transition: all 500ms;
+}
 
+#login a:hover{
+    color: black;
+    border: black 1px solid;
+}
 
+#cart a i:hover{
+color:#4bc970 ;
+}
 
+#cart a i{
+    transition: all 500ms;
+}
 
 /*-----BARRA DE NAVEGACIÓN----*/
 .header-bottom{
@@ -112,7 +138,6 @@ figure#menu i{
 .nav-bar ul li a:visited{
     color: white;
 }
-
 
 /*-----------------------MEDIA QUERIES-----------------------*/
 
@@ -161,7 +186,7 @@ figure#menu i{
         width: 60%;
         text-align: center;
         border-right: solid 1px rgb(168, 165, 165);;
-    
+         
     }
     #login a{
         text-decoration: none;
@@ -183,7 +208,9 @@ figure#menu i{
         font-size: 2em;
         color: #666;
     }
-
+    #login #log-text{
+        display: none;
+    }
 
     /*nav bar*/
 

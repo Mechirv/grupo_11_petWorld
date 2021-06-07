@@ -23,6 +23,10 @@ footer ul li{
 #logo-footer{
     width: 20%;
 }
+.list-left li a{
+    color: aliceblue;
+    text-decoration: none   ;
+}
 /*-----------------------MEDIA QUERIES-----------------------*/
 
 @media (min-width:481px) {
