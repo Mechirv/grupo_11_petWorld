@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="abmProduct" action="/index" method="POST">
+        <fieldset class=nombreProducto>
+            <label for="nombre-producto">Nombre del Producto:</label>
+            <input type="text" name="nombre-producto"  id="nombre-producto" placeholder="Nombre del producto" required >
+        </fieldset>
+
+        <fieldset class="descripcionProducto">
+            <label for="descripcionProducto">Descripcion del PRoducto: </label>
+            <input type="text" name="descripcionProducto"  id="descripcionProducto" required>
+        </fieldset>
+
+        <fieldset class="email">
+            <label for="email">Email: </label>
+            <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" required>
+        </fieldset>
+
+        <fieldset class="password">
+            <label for="pass">Contraseña: </label>
+            <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" minlength="8" required>
+        </fieldset>
+
+        <fieldset class="password">
+            <label for="confirm-pass">Confirmar Contraseña: </label>
+            <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8" required>
+        </fieldset>
+
+    
+        <fieldset class="buttons">
+            <button id="cancel" type="reset">Cancelar</button>
+            <button id="button-register" type="submit">Registrarse</button>
+        </fieldset>
+    </form>
+
+    
+</body>
+</html>

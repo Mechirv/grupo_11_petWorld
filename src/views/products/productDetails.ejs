@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <!--HEADER-->
+    
+    <%- include('./partials/header.ejs') %>
+
+    <!--MAIN-->
+    <main>
+    
+            <article class="det-producto">
+                <img src="../img/eukanuba-puppi.png" alt="alimento eukanuba">
+                <section class="detalle-producto">
+                    <h3>Eukanuba Puppy raza pequeña</h3>
+                    <p class="descripcion-producto">Recomendado para cachorros entre 1 y 12 meses de edad. 
+                        Alimento balanceado completo para cachorros de raza pequeña como Caniche, 
+                        Yorkshire Terrier, Chihuahua, Daschund, Maltes y otras razas o perros mestizos 
+                        que en su etapa adulta pesan menos de 10 kg.
+                    También recomendado durante la gestación y lactancia. 
+                    Durante las últimas tres semanas de gestación, 
+                    incremente la cantidad de alimento en un 25 % a 50%.
+                     Durante la lactancia ofrézcale alimento sin restricciones (generalmente de dos a cinco veces la cantidad que sugiere la guía de alimentación, dependiendo del tamaño y de la raza).</p>
+                    <p class="precio-prod">Desde $1350</p>
+                    <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
+
+                    <div class="boton-cantidad">
+                        <input type="button" value="-" class="boton-menos">
+                        <label class="ventana" for="ventana-cantidad"></label>
+                        <input type="number" id="ventana-cantidad" class="input-cantidad" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+                        <input type="button" value="+" class="boton-mas">
+                    </div>
+
+
+                    <form id="agregar-carrito" action="/productCart" method="GET">
+                        <button id="button-agregar" type="submit">Agregar al carrito</button>
+                    </form>
+                </section>
+
+            </article>
+
+            <section class="otras-desc">
+                <table>
+                    <tr>
+                        <td><i class="fa fa-truck"></i></td>
+                        <td><p>Envíos gratis para compras superiores a $5000. </p></td>    
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa fa-map-marker"></i></td>
+                        <td><p>Consultanos los puntos de entrega</p></td>    
+                    </tr>
+
+                    <tr>
+                        <td><i class="fas fa-credit-card"></i></td>
+                        <td><p>Todas las formas de pago</p></td>    
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa fa-undo"></i></td>
+                        <td><p>Devoluciones dentro de los 10 días hábiles</p></td>    
+                    </tr>
+                     
+                </table>
+                
+            </section>
+
+        
+
+    
+    </main>
+
+
+<!--FOOTER-->    
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>
