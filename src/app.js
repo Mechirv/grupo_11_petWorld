@@ -5,15 +5,33 @@ const methodOverride = require('method-override');
 
 
 app.use(methodOverride('_method'));
-app.use(express.static(path.resolve(__dirname,'./public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
-app.listen(3030, () => console.log("sever start in http://localhost:3030"));
+app.use(express.static(path.resolve(__dirname,'../public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
+
+
+//puerto
+app.set("port", process.env.PORT || 3030)
+app.listen(app.get("port"), () => console.log("sever start in http://localhost:3030"));
+
 
 app.set('view engine', 'ejs');
-app.set('views', path.resolve(__dirname, './views'));
+app.set('views', path.resolve(__dirname, './src/views'));
 
 
-app.get("/", (req,res)=>res.sendFile(path.resolve(__dirname,"./src/views","index.ejs")));
-app.get("/login", (req,res)=>res.sendFile(path.resolve(__dirname,"./views/users","login.ejs")));
-app.get("/register", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/users","register.ejs")));
-app.get("/productCart", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productCart.ejs")));
-app.get("/productDetails", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productDetails.ejs")));
+
+//Rutas
+const rutasIndex = require('./routes/index');
+app.use("/", rutasIndex);
+
+
+const rutasUser = require('./routes/users.js');
+
+//app.get("/", (req,res)=>res.sendFile(path.resolve(__dirname,"./src/views","index.ejs")));
+app.use("/login", rutasUser);
+app.use("/register", rutasUser);
+
+
+
+//app.get("/productCart", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productCart.ejs")));
+//app.get("/productDetails", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productDetails.ejs")));
+
+module.exports = app;
