@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <%- include('../partials/head.ejs') %>
+    
 <body>
     <!--HEADER-->
     
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
 
     <!--MAIN-->
-    <main>
+    <main id=product-detail>
     
-            <article class="det-producto">
+            <article class="det-producto-detail">
                 <img src="../img/eukanuba-puppi.png" alt="alimento eukanuba">
-                <section class="detalle-producto">
+                <section class="detalle-producto-detail">
                     <h3>Eukanuba Puppy raza pequeña</h3>
-                    <p class="descripcion-producto">Recomendado para cachorros entre 1 y 12 meses de edad. 
+                    <p class="descripcion-producto-detail">Recomendado para cachorros entre 1 y 12 meses de edad. 
                         Alimento balanceado completo para cachorros de raza pequeña como Caniche, 
                         Yorkshire Terrier, Chihuahua, Daschund, Maltes y otras razas o perros mestizos 
                         que en su etapa adulta pesan menos de 10 kg.
@@ -21,7 +23,7 @@
                     Durante las últimas tres semanas de gestación, 
                     incremente la cantidad de alimento en un 25 % a 50%.
                      Durante la lactancia ofrézcale alimento sin restricciones (generalmente de dos a cinco veces la cantidad que sugiere la guía de alimentación, dependiendo del tamaño y de la raza).</p>
-                    <p class="precio-prod">Desde $1350</p>
+                    <p class="precio-prod-detail">Desde $1350</p>
                     <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
 
                     <div class="boton-cantidad">
@@ -39,7 +41,7 @@
 
             </article>
 
-            <section class="otras-desc">
+            <section class="otras-desc-detail">
                 <table>
                     <tr>
                         <td><i class="fa fa-truck"></i></td>
@@ -72,7 +74,7 @@
 
 
 <!--FOOTER-->    
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>
