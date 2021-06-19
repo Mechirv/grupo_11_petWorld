@@ -11,3 +11,11 @@ Que deberíamos comenzar a hacer-
 
 
 Que debemos dejar de hacer
+
+SPRINT 3
+Qué hicimos mal
+-Pocas reuniones
+-
+
+Que mejoramos:
+-organizacion y división de tareas
