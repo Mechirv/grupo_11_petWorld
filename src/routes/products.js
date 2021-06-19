@@ -4,9 +4,9 @@ const productosController = require('../controllers/productosController');
 
 router.get("/productCart",productosController.cart);
 
-router.get("/detail",productosController.detalle);
+router.get("/productDetails",productosController.detalle);
 
-router.get("/detail/:id",productosController.detalle);
+router.get("/productDetails/:id",productosController.detalle);
 
 router.get("/create",productosController.crear)
 
