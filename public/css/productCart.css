@@ -2,12 +2,12 @@
     box-sizing: border-box;
 }
 /***************************HEADER-TOP**************************/
-body{
+#productCart{
     display: flex;
     justify-content: center;
     background-color: white;
 }
-.header-top{
+.header-top-cart{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -17,18 +17,18 @@ body{
     box-shadow: 0 0 10px #ebebeb;
 }
 
-header{
+#header-cart{
     width: 50%;
     padding-top:100px;
     padding-bottom: 100px;
 }
-.titulo1{
+#titulo-carrito{
     font-family: 'Knewave', cursive;
     color:black;
     transition: all 500ms;
     font-size: 16px;
 }
-.titulo1:hover{
+#titulo-carrito:hover{
     color: #4bc970;
 }    
 .cart i{
@@ -50,20 +50,20 @@ header{
     color:red;
 }
 /***************************HEADER-BOTTOM**************************/
-.header-bottom{
+.header-bottom-cart{
     border: solid #ebebeb 4px;
     border-radius: 8px;
     text-align: center;
     width: 100%;
     box-shadow: 0 0 10px #ebebeb;
 }
-.contenido{
+#contenido-carrito{
     display: flex;
     flex-direction: column;
     align-items:center;
     padding-bottom: 100px;
 }
-.titulo2{
+#titulo2{
     font-family: 'Knewave', cursive;
     color: black;
     margin-top: 25%;
@@ -72,11 +72,11 @@ header{
     transition: all 500ms;
 }
 
-.titulo2:hover{
+#titulo2:hover{
 color:#4bc970;
 }
 
-.button{
+.button-comprar{
     background-color:#4bc970;
     border-radius: 8px;
     padding: 10px;
@@ -86,15 +86,15 @@ color:#4bc970;
     transition: all 500ms;
     font-size: 10px;
 }
-.button:hover{
+.button-comprar:hover{
     color: black;
     border: 1px solid black;
 }
 
 /***************************MEDIAS**************************/
 @media(min-width:481px){
-    .titulo1,
-    .titulo2{
+    #titulo-carrito,
+    #titulo2{
         font-size: 20px;
     }
     .cart i{
@@ -105,24 +105,24 @@ color:#4bc970;
     }
 }
 @media(min-width:769px){
-    .titulo1:hover,
-    .titulo2:hover{
+    #titulo-carrito:hover,
+    #titulo2:hover{
         font-size: 25px;
     }
-    .button{
+    .button-comprar{
         font-size: 16px;
     }
 }
 @media(min-width:992px){
-.contenido{
+#contenido-carrito{
     padding-bottom: 20%;
 }
-.titulo1,
-.titulo2{
+#titulo-carrito,
+    #titulo2{
     font-size: 30px;
 }
-.titulo1:hover,
-.titulo2:hover{
+#titulo-carrito:hover,
+    #titulo2:hover{
     font-size: 35px;
 }
 .cart i{

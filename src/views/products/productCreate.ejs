@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/head.ejs') %>
     <title>Product-create</title>
 </head>
 <body>
+ 
+    <%- include('../partials/header.ejs') %>
+   
 
-    <form id="abmProduct" action="/index" method="POST">
-        <fieldset class=nombreProducto>
-            <label for="nombre-producto">Nombre del Producto:</label>
-            <input type="text" name="nombre-producto"  id="nombre-producto" placeholder="Nombre del producto" required >
-        </fieldset>
+<main id="formCreate">
+    <div class="productCreateModify">
 
-        <fieldset class="descripcionProducto">
-            <label for="descripcionProducto">Descripcion del PRoducto: </label>
-            <input type="text" name="descripcionProducto"  id="descripcionProducto" required>
-        </fieldset>
+        <div class="titulo-create-modify">
+            <h3>INGRESE UN NUEVO PRODUCTO</h3>
+        </div>
 
-        <fieldset class="email">
-            <label for="email">Email: </label>
-            <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" required>
-        </fieldset>
+        <form id="abmProduct" action="/index" method="GET">
+            <fieldset class=idProducto>
+                <label for="idProducto">Nombre del Producto:</label>
+                <input type="text" name="idProducto"  id="idProducto" > <!--identificador unico-->
+            </fieldset>
 
-        <fieldset class="password">
-            <label for="pass">Contraseña: </label>
-            <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" minlength="8" required>
-        </fieldset>
+            <fieldset class=nombreProducto>
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input type="text" name="nombreProducto"  id="nombreProducto" placeholder="Nombre del producto" required >
+            </fieldset>
 
-        <fieldset class="password">
-            <label for="confirm-pass">Confirmar Contraseña: </label>
-            <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8" required>
-        </fieldset>
+            <fieldset class="descripcionProducto">
+                <label for="descripcionProducto">Descripcion del PRoducto: </label>
+                <input type="text" name="descripcionProducto"  id="descripcionProducto" required>
+            </fieldset>
 
-    
-        <fieldset class="buttons">
-            <button id="cancel" type="reset">Cancelar</button>
-            <button id="button-register" type="submit">Registrarse</button>
-        </fieldset>
-    </form>
+            <fieldset class="imagenProducto">
+                <label for="imagenProducto">Imagen: </label>
+                <input type="file" name="imagenProducto"  id="imagenProducto" >
+            </fieldset>
 
-    
+            <fieldset class="categoriaProducto">
+                <label for="categoria">Categoria: </label>
+                <input type="text" name="categoria"  id="categoria" >
+            </fieldset>
+
+            <fieldset class="precioProducto">
+                <label for="confirm-pass">Confirmar Contraseña: </label>
+                <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8" required>
+            </fieldset>
+
+        
+            <fieldset class="buttons-form-cm">
+                <button id="cancel-create" type="reset">Cancelar</button>
+                <button id="accept-create" type="submit">Aceptar</button>
+            </fieldset>
+        </form>
+
+    </div>
+</main>
+    <footer class="footer">
+        <%- include('../partials/footer.ejs') %>
+    </footer>
 </body>
 </html>

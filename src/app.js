@@ -28,8 +28,10 @@ app.use(rutasIndex);
 
 const rutasUser = require('./routes/users');
 app.use("/", rutasUser);
-app.use("/", rutasUser);
 
+
+const rutasProducts = require("./routes/products");
+app.use("/products",rutasProducts);
 //app.get("/", (req,res)=>res.sendFile(path.resolve(__dirname,"./src/views","index.ejs")));
 //app.get("/productCart", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productCart.ejs")));
 //app.get("/productDetails", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productDetails.ejs")));

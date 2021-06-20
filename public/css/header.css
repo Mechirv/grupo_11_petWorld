@@ -77,11 +77,11 @@ header{
     display: none;
 }
 
-#login a{
+#button-login-header a{
     transition: all 500ms;
 }
 
-#login a:hover{
+#lbutton-login-header a:hover{
     color: black;
     border: black 1px solid;
 }
@@ -182,13 +182,13 @@ figure#menu i{
      
     }
     
-    #login{
+    #button-login-header{
         width: 60%;
         text-align: center;
         border-right: solid 1px rgb(168, 165, 165);;
          
     }
-    #login a{
+    #button-login-header a{
         text-decoration: none;
         font-size: 14px;
         border-radius: 5px;
@@ -208,7 +208,7 @@ figure#menu i{
         font-size: 2em;
         color: #666;
     }
-    #login #log-text{
+    #button-login-header #log-text{
         display: none;
     }
 
@@ -285,14 +285,14 @@ figure#menu i{
     width: 30%;
 }
 
-#login #log-text{
+#button-login-header #log-text{
     display: block;
 }
 a#log-text{
     width: 70%;
 }
 
-#login #log-icon{
+#button-login-header #log-icon{
     display: none;
 }
 

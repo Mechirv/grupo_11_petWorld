@@ -14,7 +14,7 @@ h1:hover{
     color:#4bc970;
     font-size: 25px;
 }
-body{
+#login{
     align-content: center;
 }
 
@@ -64,7 +64,7 @@ body{
       display: flex;
       justify-content: center;
   }
-  #login{
+  #button-login-id{
     padding: 5px;
     color: #FFF;
     font-style: normal;
@@ -136,7 +136,7 @@ body{
   }
 
   @media (min-width:481px){
-      body{
+      #login{
           display: flex;
           justify-content: center;
 
@@ -152,7 +152,7 @@ body{
         margin-top: 5%;
         font-size: 18px;
     }
-    body{
+    #login{
         display: flex;
         justify-content: center;
         font-size: 18px;  
