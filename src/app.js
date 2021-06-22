@@ -27,7 +27,7 @@ app.use(rutasIndex);
 
 
 const rutasUser = require('./routes/users');
-app.use("/", rutasUser);
+app.use("/users", rutasUser);
 
 
 const rutasProducts = require("./routes/products");
