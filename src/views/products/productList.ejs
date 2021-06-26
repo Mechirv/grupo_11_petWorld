@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('./partials/head.ejs',{css: [ "index","footer", "header"]}) %> 
+
+    </head>
+       
+  
+
+<body>
+    
+    <%- include('./partials/header.ejs') %>
+ 
+    <!--MAIN-->
+    <main>
+        <section class="productos-destacados">
+            <h2 class="destacados">DESTACADOS</h2>
+            <section class="grid-destacados">
+                
+                <article class="producto">
+                    <h3>Alimento Eukanuba</h3>
+                    <a href="/products/productDetails"><img src="../img/eukanuba-puppi.png" alt="alimento eukanuba"></a>
+                    <section class="detalle-producto">
+                        <p>Alimento eukanuba para cachorros raza pequeña 3kg</p>
+                        <p> <span id="dolar">$</span>1350 </p>
+                        <form id="agregar-carrito" action="products/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
+                    </section>
+                </article>
+
+            
+            </section>
+        </section>
+        
+
+
+    <!--FOOTER -->
+    <%- include('./partials/footer.ejs') %>
+    
+</body>
+</html>
