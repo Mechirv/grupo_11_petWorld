@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head.ejs',{css: [ "productCreateModify","footer", "header"]}) %> 
+    <%- include('../partials/head.ejs',{css: [ "productCreateModify","footer", "header"]}) %> 
     
     <title>Modify</title>
 </head>
@@ -18,13 +18,11 @@
 
         <form id="abmProduct" action="/index" method="GET">
             <fieldset class=idProducto>
-                <label for="idProducto">Nombre del Producto:</label>
-                <input type="text" name="idProducto"  id="idProducto" > <!--identificador unico-->
+                <label for="idProducto">Id: <%=product.id%></label>
             </fieldset>
 
             <fieldset class=nombreProducto>
-                <label for="nombreProducto">Nombre del Producto:</label>
-                <input type="text" name="nombreProducto"  id="nombreProducto" placeholder="Nombre del producto" required >
+                <label for="nombreProducto">Nombre del Producto: <%=product.name%></label>
             </fieldset>
 
             <fieldset class="descripcionProducto">
@@ -43,8 +41,8 @@
             </fieldset>
 
             <fieldset class="precioProducto">
-                <label for="confirm-pass">Confirmar Contraseña: </label>
-                <input type="number" name="precioProducto"  id="precioProducto" >
+                <label for="precioProducto">Precio: </label>
+                <input type="number" name="price"  id="precioProducto" >
             </fieldset>
 
         

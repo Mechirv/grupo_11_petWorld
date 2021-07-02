@@ -19,12 +19,9 @@ app.set('views', path.resolve(__dirname, './views'));
 
 
 
-
-
 //Rutas
 const rutasIndex = require('./routes/index');
 app.use(rutasIndex);
-
 
 const rutasUser = require('./routes/users');
 app.use("/users", rutasUser);
@@ -32,8 +29,6 @@ app.use("/users", rutasUser);
 
 const rutasProducts = require("./routes/products");
 app.use("/products",rutasProducts);
-//app.get("/", (req,res)=>res.sendFile(path.resolve(__dirname,"./src/views","index.ejs")));
-//app.get("/productCart", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productCart.ejs")));
-//app.get("/productDetails", (req,res)=> res.sendFile(path.resolve(__dirname,"./src/views/products","productDetails.ejs")));
+
 
 module.exports = app;

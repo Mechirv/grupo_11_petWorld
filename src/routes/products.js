@@ -5,6 +5,7 @@ const productosController = require('../controllers/productosController');
 //listado de productos
 router.get("/", productosController.listar);
 
+//carrito
 router.get("/productCart",productosController.cart);
 
 //detalle de un producto en particular
@@ -12,7 +13,7 @@ router.get("/:id",productosController.detalle);
 
 //creación de un producto
 router.get("/create",productosController.crear);
-router.post("", productosController.accionCrear);
+router.post("/", productosController.accionCrear);
 
 //edicion de un producto
 

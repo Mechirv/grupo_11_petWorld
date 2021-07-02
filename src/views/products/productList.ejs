@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('./partials/head.ejs',{css: [ "index","footer", "header"]}) %> 
+        <%- include('../partials/head.ejs',{css: [ "index","footer", "header"]}) %> 
 
     </head>
        
@@ -9,7 +9,7 @@
 
 <body>
     
-    <%- include('./partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
  
     <!--MAIN-->
     <main>
@@ -17,17 +17,20 @@
             <h2 class="destacados">DESTACADOS</h2>
             <section class="grid-destacados">
                 
+                <% for(i=0;i<products.length;i++){ %>
                 <article class="producto">
-                    <h3>Alimento Eukanuba</h3>
-                    <a href="/products/productDetails"><img src="../img/eukanuba-puppi.png" alt="alimento eukanuba"></a>
+                    <h3><%=products[i].name%></h3>
+                    <a href="/products/<%=products[i].id%>"><img src="../img/<%=products.image%>>" alt="<%=products[i].name%>"></a>
                     <section class="detalle-producto">
-                        <p>Alimento eukanuba para cachorros raza pequeña 3kg</p>
-                        <p> <span id="dolar">$</span>1350 </p>
+                        <p><%=products[i].description %></p>
+                        <p> <span id="dolar"></span><%=products[i].price %></p>
+                        <p> <span id="category"><%=products[i].category %></span> </p>
                         <form id="agregar-carrito" action="products/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
                     </section>
                 </article>
+                <% }%>
 
             
             </section>
@@ -36,7 +39,7 @@
 
 
     <!--FOOTER -->
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
     
 </body>
 </html>
