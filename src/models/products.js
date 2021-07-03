@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 const model = {
-    all: function(){
+    todos: function(){
         const directory = path.resolve(__dirname, '../data/products.json');
         const file = fs.readFileSync(directory, 'utf-8');
         const convert = JSON.parse(file);
@@ -10,7 +10,7 @@ const model = {
     },
 
     buscar: function(id){
-        let productos = this.all();
+        let productos = this.todos();
         let producto = productos.find((prod) => prod.id == id);
         return producto;
 
@@ -18,7 +18,7 @@ const model = {
 
     nuevo : function(data, file){
         const directory = path.resolve(__dirname, '../data/products.json');
-        let productos = this.all();
+        let productos = this.todos();
         let id = () => {
 			if(productos.length > 0){
 				id = productos.length + 1;
@@ -41,6 +41,23 @@ const model = {
         fs.writeFileSync('products.json',nuevoProducto);
         return true;
     },
+    editar: function(data,file,id){
+        const directory = path.resolve(__dirname,"../data/products.json")
+        let productos = this.todos();
+        productos.map(function(producto){
+            if(producto.id == id ){
+                    producto.name= data.name,
+                    producto.description= data.price,
+                    producto.category= data.category,
+                    producto.price= data.description,
+                    producto.image= file.image
+                    }
+                return producto
+            })
+        fs.writeFileSync(directory,JSON.stringify(productos));
+        return true;
+
+    }
 
 
 

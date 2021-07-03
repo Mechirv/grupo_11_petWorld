@@ -5,13 +5,13 @@ const product = require('../models/products');
 
 let productosController = {
     //listado de todos los productos de la base json
-    listar: (req,res) => {res.render("products/productList", {products: product.all() })},
+    listar: (req,res) => {res.render("products/productList", {products: product.todos() })},
 
     //muestra el detalle de un solo producto cuyo id se pasa como parametro
     detalle:(req,res) => {
         res.render("products/productDetail", {product: product.buscar(req.params.id)})},
         
-    crear: (req,res) => {res.render("products/productCreate", {product : product.all()})},
+    crear: (req,res) => {res.render("products/productCreate", {product : product.todos()})},
 
     accionCrear: (req,res) => {
         let resultado = product.nuevo(req.body,req.file); 
@@ -20,9 +20,16 @@ let productosController = {
 
     cart:(req,res) => {res.render("products/productCart")},
 
+    //renderiza vista para editar un producto    
     editar: (req,res) => {res.render("products/productModify",{product: product.buscar(req.params.id)})},
 
-    modificar:(req,res) => {res.render("products/productModify")},
+    //accion de modificar un producto
+    modificar:(req,res) => {
+        let resultado = product.editar(req.body,req.file,req.params.id);
+		return resultado == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+    },
+        
+    
     eliminar: (req,res) => {},
 };
 

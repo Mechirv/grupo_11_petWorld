@@ -32,6 +32,11 @@
                     </form>
                 </section>
 
+                <a href="/products/<%=product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
+						<form action="/products/<%=product.id %>" method="POST">
+							<button type="submit">ELIMINAR</button>
+						</form>
+
             </article>
 
             <section class="otras-desc-detail">

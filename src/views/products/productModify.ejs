@@ -16,7 +16,7 @@
             <h3>INGRESE UN NUEVO PRODUCTO</h3>
         </div>
 
-        <form id="abmProduct" action="/index" method="GET">
+        <form id="abmProduct" action="/?_method=PUT" method="POST">
             <fieldset class=idProducto>
                 <label for="idProducto">Id: <%=product.id%></label>
             </fieldset>
@@ -26,18 +26,22 @@
             </fieldset>
 
             <fieldset class="descripcionProducto">
-                <label for="descripcionProducto">Descripcion del PRoducto: </label>
-                <input type="text" name="descripcionProducto"  id="descripcionProducto" required>
+                <label for="descripcionProducto">Descripcion del Producto: </label>
+                <input type="text" name="description"  id="descripcionProducto" required>
             </fieldset>
 
             <fieldset class="imagenProducto">
                 <label for="imagenProducto">Imagen: </label>
-                <input type="file" name="imagenProducto"  id="imagenProducto" >
+                <input type="file" name="image"  id="imagenProducto" >
             </fieldset>
 
             <fieldset class="categoriaProducto">
                 <label for="categoria">Categoria: </label>
-                <input type="text" name="categoria"  id="categoria" >
+						<select name="category" id="category">
+							<option value="">Elegí una opción</option>
+							<option value="perros">Perros</option>
+							<option value="gatos">Gatos</option>
+						</select>
             </fieldset>
 
             <fieldset class="precioProducto">

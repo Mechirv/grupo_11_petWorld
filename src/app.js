@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
+const multer = require('multer');
 
 
 app.use(methodOverride('_method'));
