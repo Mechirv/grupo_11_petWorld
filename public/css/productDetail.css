@@ -55,6 +55,23 @@ height: 30px;
 padding: 5px;
 }
 
+.botones-editar-emininar{
+    display: flex;
+    padding-top: 20px;
+    align-content: space-around;
+}
+
+/*#button-editar{
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    border: solid 1px rgb(177, 182, 178);
+    padding: 5px;
+    background-color: #b6b8b6;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}*/
+
 .otras-desc-detail{
     display: flex;
     padding: 30px 0;

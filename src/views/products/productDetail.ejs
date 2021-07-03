@@ -30,12 +30,16 @@
                     <form id="agregar-carrito" action="/productCart" method="GET">
                         <button id="button-agregar" type="submit">Agregar al carrito</button>
                     </form>
+
+                   <div class="botones-editar-emininar">
+                    <a href="/products/<%=product.id %>/edit" id="button-editar">EDITAR</a>
+						<form action="/products/<%=product.id %>" method="POST">
+							<button type="submit" id="button-eliminar">ELIMINAR</button>
+						</form>
+                    </div>
                 </section>
 
-                <a href="/products/<%=product.id %>/edit" class="action-button edit">EDITAR PRODUCTO</a>
-						<form action="/products/<%=product.id %>" method="POST">
-							<button type="submit">ELIMINAR</button>
-						</form>
+                
 
             </article>
 

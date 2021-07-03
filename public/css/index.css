@@ -118,12 +118,7 @@ main{
     .producto{
         max-width: 230px;
     }
-    .producto h3{
-        opacity: 0;
-        transition: all 1500ms;
-    }
-    .producto h3:hover{
-        opacity: 1;
-    }
+    
+    
 
 }

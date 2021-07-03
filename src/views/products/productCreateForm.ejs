@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs',{css: [ "productCreateModify","footer", "header"]}) %> 
+    
+    <title>Create</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main id="formCreate">
+    
+        <div class="productCreateModify">
+    
+            <div class="titulo-create-modify">
+                <h3>INGRESE UN NUEVO PRODUCTO</h3>
+            </div>
+    
+            <form id="abmProduct" action="/products/" method="POST">
+                <fieldset class=idProducto>
+                    <label for="idProducto">Id: <%=product.id%></label>
+                </fieldset>
+    
+                <fieldset class=nombreProducto>
+                    <label for="nombreProducto">Nombre del Producto: <%=product.name%></label>
+                </fieldset>
+    
+                <fieldset class="descripcionProducto">
+                    <label for="descripcionProducto">Descripcion del Producto: </label>
+                    <input type="text" name="description"  id="descripcionProducto" required>
+                </fieldset>
+    
+                <fieldset class="imagenProducto">
+                    <label for="imagenProducto">Imagen: </label>
+                    <input type="file" name="image"  id="imagenProducto" >
+                </fieldset>
+    
+                <fieldset class="categoriaProducto">
+                    <label for="categoria">Categoria: </label>
+                            <select name="category" id="category">
+                                <option value="">Elegí una opción</option>
+                                <option value="perros">Perros</option>
+                                <option value="gatos">Gatos</option>
+                            </select>
+                </fieldset>
+    
+                <fieldset class="precioProducto">
+                    <label for="precioProducto">Precio: </label>
+                    <input type="number" name="price"  id="precioProducto" >
+                </fieldset>
+    
+            
+                <fieldset class="buttons">
+                    <button id="cancel" type="reset">Cancelar</button>
+                    <button id="button-register" type="submit">Guardar</button>
+                </fieldset>
+            </form>
+        </div>
+    
+    </main>
+        <%- include('../partials/footer.ejs') %>
+    
+</body>
+</html>

@@ -48,7 +48,7 @@ fieldset{
 .nombreProducto, .idProducto,
 .descripcionProducto, .imagenProducto,
 .categoriaProducto,
-.precioProducto
+.precioProducto, .destacado
 {
     display: block;
     margin-top: 20px; 
@@ -56,7 +56,7 @@ fieldset{
 }
 
 #nombreProducto, #idProducto,
-#descripcionProducto, #imagenProducto,
+#descripcionProducto, 
 #categoriaProducto,
 #precioProducto
 {
@@ -75,6 +75,21 @@ background: rgba(255,255,255,0.1);
   margin-top: 5px;
 }
 
+#imagenProducto{
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+      border: none;
+      font-size: 16px;
+      height: 1.5em;
+      margin: 0px;
+      padding: 15px;
+      width: 100%;
+      background-color: #e8eeef;
+      color: #5f6b74;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+      margin-bottom: 0px;
+      margin-top: 5px;
+}
 
 #accept-create, #cancel-create,
 #accept-modify, #cancel-modify{

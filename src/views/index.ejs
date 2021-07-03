@@ -14,67 +14,23 @@
     <!--MAIN-->
     <main>
         <section class="productos-destacados">
+            
             <h2 class="destacados">DESTACADOS</h2>
             <section class="grid-destacados">
+                <% for(i=0;i<products.length;i++){ %>
                 <article class="producto">
-                    <h3>Alimento Eukanuba</h3>
-                    <a href="/products/productDetails"><img src="../img/eukanuba-puppi.png" alt="alimento eukanuba"></a>
+                    
+                    <a href="/products/<%=products[i].id%>"><img src="../img/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
                     <section class="detalle-producto">
-                        <p>Alimento eukanuba para cachorros raza pequeña 3kg</p>
-                        <p> <span id="dolar">$</span>1350 </p>
+                        <p><%=products[i].name%></p>
+                        <p> <span id="dolar"><%=products[i].price%></span></p>
                         <form id="agregar-carrito" action="products/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
                     </section>
                 </article>
+                <%}%>
             
-                <article class="producto">
-                    <h3>Cepillo</h3>
-                    <img src="../img/cepillo.png" alt="cepillo">
-                    <section class="detalle-producto">
-                        <p>Cepillo para perros</p>
-                        <p> <span id="dolar">$</span>690 </p>
-                        <form id="agregar-carrito" action="products/productCart" method="GET">
-                            <button id="button-agregar" type="submit">Agregar al carrito</button>
-                        </form>
-                    </section>
-                </article>
-                
-                <article class="producto">
-                    <h3>Comedero</h3>
-                    <img src="../img/comedero.png" alt="comedero perros gatos">
-                    <section class="detalle-producto">
-                        <p>Comedero</p>
-                        <p> <span id="dolar">$</span>290 </p>
-                        <form id="agregar-carrito" action="products/productCart" method="GET">
-                            <button id="button-agregar" type="submit">Agregar al carrito</button>
-                        </form>
-                    </section>
-                </article>
-               
-                <article class="producto">
-                    <h3>Cama</h3>
-                    <img src="../img/cama.jpg" alt="cama">
-                    <section class="detalle-producto">
-                        <p>Cama</p>
-                        <p> <span id="dolar">$</span>2590 </p>
-                        <form id="agregar-carrito" action="products/productCart" method="GET">
-                            <button id="button-agregar" type="submit">Agregar al carrito</button>
-                        </form>
-                    </section>
-                </article>
-                
-                <article class="producto">
-                    <h3>Pipeta perros y gatos</h3>
-                    <img src="../img/pipeta.jpg" alt="pipeta perros y gatos">
-                    <section class="detalle-producto">
-                        <p>Cepillo para perros</p>
-                        <p> <span id="dolar">$</span>690 </p>
-                        <form id="agregar-carrito" action="products/productCart" method="GET">
-                            <button id="button-agregar" type="submit">Agregar al carrito</button>
-                        </form>
-                     </section>       
-                </article>
             </section>
         </section>
         
@@ -84,14 +40,14 @@
             
             <section class="grid-productos">
                 <article class="perros">
-                        <img src="">
+                        <a href="/products/:perros"><img src=""></a>
                         <h4>PERROS</h4>
                         <!--<img src="../img/dog.jpg" alt="Perros">-->
                 </article>
 
                 <article class="gatos">
                     <h4>GATOS</h4>
-                    <!--<img src="../img/cat.png" alt="Gatos">-->
+                    <a href="/products/:gatos"><img src=""></a>
 
                 </article>
             </section>

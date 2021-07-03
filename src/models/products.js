@@ -2,11 +2,24 @@ const path = require('path');
 const fs = require('fs');
 
 const model = {
+
+    //devuelve un array de todos los productos
     todos: function(){
         const directory = path.resolve(__dirname, '../data/products.json');
         const file = fs.readFileSync(directory, 'utf-8');
         const convert = JSON.parse(file);
         return convert;
+    },
+
+    destacados: function(){
+        let productos = this.todos();
+        let destacados = productos.filter(function(prod){
+            if(prod.destacado = true){
+                return prod;
+            }
+        });
+        return destacados;
+
     },
 
     buscar: function(id){

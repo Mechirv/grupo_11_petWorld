@@ -18,6 +18,7 @@ const upload = multer({almacenamiento : almacenamiento});
 
 //listado de productos
 router.get("/", productosController.listar);
+router.get("/:category", productosController.listarCategoria);
 
 //carrito
 router.get("/productCart",productosController.cart);
@@ -26,7 +27,7 @@ router.get("/productCart",productosController.cart);
 router.get("/:id",productosController.detalle);
 
 //creación de un producto
-router.get("/create",productosController.crear);
+router.get("/create/", productosController.crear);
 router.post("/",upload.single('image'), productosController.accionCrear);
 
 //edicion de un producto

@@ -1,6 +1,10 @@
 const path = require('path');
+const product = require('../models/products');
 const indexControlador = {
-    home: (req,res)=>res.render("index")
+    home: (req,res)=>{
+    let products = product.destacados();
+    res.render("index", {products:products})
+    }
 }
 
 

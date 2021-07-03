@@ -7,11 +7,16 @@ let productosController = {
     //listado de todos los productos de la base json
     listar: (req,res) => {res.render("products/productList", {products: product.todos() })},
 
+    listarCategoria: (req,res) =>
+    {
+        res.render("products/productList", {products: product.listarCategoria(req.params.category)})
+    },
+
     //muestra el detalle de un solo producto cuyo id se pasa como parametro
     detalle:(req,res) => {
         res.render("products/productDetail", {product: product.buscar(req.params.id)})},
         
-    crear: (req,res) => {res.render("products/productCreate", {product : product.todos()})},
+    crear: (req,res) => {res.render("products/productCreateForm")},
 
     accionCrear: (req,res) => {
         let resultado = product.nuevo(req.body,req.file); 
@@ -21,7 +26,7 @@ let productosController = {
     cart:(req,res) => {res.render("products/productCart")},
 
     //renderiza vista para editar un producto    
-    editar: (req,res) => {res.render("products/productModify",{product: product.buscar(req.params.id)})},
+    editar: (req,res) => {res.render("products/productEditForm",{product: product.buscar(req.params.id)})},
 
     //accion de modificar un producto
     modificar:(req,res) => {
