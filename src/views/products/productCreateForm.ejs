@@ -19,18 +19,17 @@
                 <h3>INGRESE UN NUEVO PRODUCTO</h3>
             </div>
     
-            <form id="abmProduct" action="/products/" method="POST">
-                <fieldset class=idProducto>
-                    <label for="idProducto">Id: <%=product.id%></label>
-                </fieldset>
+            <form id="abmProduct" action="/products/" method="POST" enctype="multipart/form-data">
+    
     
                 <fieldset class=nombreProducto>
-                    <label for="nombreProducto">Nombre del Producto: <%=product.name%></label>
+                    <label for="nombreProducto">Nombre del Producto: </label>
+                    <input type="text" name="name" id="nombreProducto">
                 </fieldset>
     
                 <fieldset class="descripcionProducto">
                     <label for="descripcionProducto">Descripcion del Producto: </label>
-                    <input type="text" name="description"  id="descripcionProducto" required>
+                    <input type="text" name="description"  id="descripcionProducto">
                 </fieldset>
     
                 <fieldset class="imagenProducto">

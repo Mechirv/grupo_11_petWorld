@@ -31,7 +31,7 @@ let productosController = {
     //accion de modificar un producto
     modificar:(req,res) => {
         let resultado = product.editar(req.body,req.file,req.params.id);
-		return resultado == true ? res.redirect("/") : res.send("Error al cargar la informacion");
+		return resultado == true ? res.redirect("/products/") : res.send("Error al cargar la informacion");
     },
         
     

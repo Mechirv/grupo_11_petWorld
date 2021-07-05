@@ -20,7 +20,7 @@
                 <% for(i=0;i<products.length;i++){ %>
                 <article class="producto">
                     
-                    <a href="/products/<%=products[i].id%>"><img src="../img/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
+                    <a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
                     <section class="detalle-producto">
                         <p><%=products[i].name%></p>
                         <p> <span id="dolar"><%=products[i].price%></span></p>
@@ -40,14 +40,14 @@
             
             <section class="grid-productos">
                 <article class="perros">
-                        <a href="/products/:perros"><img src=""></a>
+                        <a href="/products/category/perros"><img src="../img/dog.jpg"></a>
                         <h4>PERROS</h4>
                         <!--<img src="../img/dog.jpg" alt="Perros">-->
                 </article>
 
                 <article class="gatos">
+                    <a href="/products/category/gatos"><img src="../img/cat.png"></a>
                     <h4>GATOS</h4>
-                    <a href="/products/:gatos"><img src=""></a>
 
                 </article>
             </section>

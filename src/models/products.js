@@ -14,11 +14,20 @@ const model = {
     destacados: function(){
         let productos = this.todos();
         let destacados = productos.filter(function(prod){
-            if(prod.destacado = true){
+            if(prod.destacado == true){
                 return prod;
             }
         });
         return destacados;
+
+    },
+
+    listarCategoria: function(category){
+        let productos = this.todos();
+        let categoria = productos.filter((prod) =>
+        prod.category == category
+        );
+        return categoria;
 
     },
 
@@ -59,11 +68,10 @@ const model = {
         let productos = this.todos();
         productos.map(function(producto){
             if(producto.id == id ){
-                    producto.name= data.name,
-                    producto.description= data.price,
+                    producto.description= data.description,
                     producto.category= data.category,
-                    producto.price= data.description,
-                    producto.image= file.image
+                    producto.price= data.price,
+                    producto.image= file.filename
                     }
                 return producto
             })

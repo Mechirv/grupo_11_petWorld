@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs',{css: [ "productDetail","footer", "header"]}) %> 
+    <%- include('../partials/head.ejs',{css: ["productDetail","footer","header"]}) %> 
     
 <body>
     <!--HEADER-->
@@ -12,7 +12,7 @@
     <main id= "product-detail">
     
             <article class="det-producto-detail">
-                <img src="../img/<%= product.image%>" alt="alimento eukanuba">
+                <img src="/img/products/<%= product.image %>" alt="<%=product.name%>">
                 <section class="detalle-producto-detail">
                     <h3><%= product.name %></h3>
                     <p class="descripcion-producto-detail"><%= product.description %></p>
@@ -32,8 +32,8 @@
                     </form>
 
                    <div class="botones-editar-emininar">
-                    <a href="/products/<%=product.id %>/edit" id="button-editar">EDITAR</a>
-						<form action="/products/<%=product.id %>" method="POST">
+                    <a href="/products/edit/<%=product.id %>" id="button-editar">EDITAR</a>
+						<form action="/products/delete/<%=product.id %>" method="POST">
 							<button type="submit" id="button-eliminar">ELIMINAR</button>
 						</form>
                     </div>

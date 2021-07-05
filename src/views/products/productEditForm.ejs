@@ -13,26 +13,27 @@
     <div class="productCreateModify">
 
         <div class="titulo-create-modify">
-            <h3>INGRESE UN NUEVO PRODUCTO</h3>
+            <h3> EDICIÓN DE UN PRODUCTO</h3>
         </div>
 
-        <form id="abmProduct" action="/?_method=PUT" method="POST">
+        <form id="abmProduct" action="/products/update/<%=product.id%>/?_method=PUT" method="POST" enctype="multipart/form-data">
             <fieldset class=idProducto>
                 <label for="idProducto">Id: <%=product.id%></label>
             </fieldset>
 
             <fieldset class=nombreProducto>
-                <label for="nombreProducto">Nombre del Producto: <%=product.name%></label>
+                <label for="nombreProducto">Nombre del Producto:</label>
+                <input type="text" name="name"  id="nombreProducto">
             </fieldset>
 
             <fieldset class="descripcionProducto">
                 <label for="descripcionProducto">Descripcion del Producto: </label>
-                <input type="text" name="description"  id="descripcionProducto" required>
+                <input type="text" name="description"  id="descripcionProducto" >
             </fieldset>
 
             <fieldset class="imagenProducto">
                 <label for="imagenProducto">Imagen: </label>
-                <input type="file" name="image"  id="imagenProducto" >
+                <input type="file" name="image"  id="imagenProducto" height="2em">
             </fieldset>
 
             <fieldset class="categoriaProducto">
