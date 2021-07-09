@@ -1,1 +1,129 @@
-[{"id":1,"name":"Alimento Eukanuba","description":"Recomendado para cachorros entre 1 y 12 meses de edad. Alimento balanceado completo para cachorros de raza pequeña como Caniche, Yorkshire Terrier, Chihuahua, Daschund, Maltes y otras razas o perros mestizos que en su etapa adulta pesan menos de 10 kg. ","type":"perros","price":"1490","image":"eukanuba-puppi.png","destacado":true},{"id":2,"name":"Cepillo","description":"cepillo suave para perros pequeños, con cabo de goma. Super resistente","type":"perros","price":"790","image":"cepillo.png","destacado":true},{"id":3,"name":"Comedero","description":"Comemero de plástico ultra resistente, 20 cm","type":"perros","price":"790","image":"comedero.png","destacado":true},{"id":4,"name":"cama","description":"Cama con funda lavable","type":"perros","price":"$2150","image":"cama.jpg","destacado":true},{"id":5,"name":"Pipeta","description":"Pipeta para perros y gatos. Para pulgas","category":"3","price":"490","destacado":"true","type":"perros-gatos"},{"id":6,"name":"Buzo","description":"Buzo para perros de raza pequeña de hasta 5 kg. Confeccinado en micropolar.","type":"perros","category":"3","destacado":"true","price":"1550"},{"id":7,"name":"Pelota pinches","description":"Pelota de goma, con luces. ","type":"perros-gatos","category":"3","destacado":"false","price":"290"},{"id":8,"name":"Hueso de goma","description":"Hueso de goma, resistente, para perros pequeños","type":"perros","category":"3","destacado":"false","price":"450"},{"id":9,"name":"mmmm","description":"mmmmmmmmmmmmmmmmmmm","type":"perros","category":"2","destacado":"false","price":"250", "image":"cama.jpg"}]
+[
+  {
+    "id": 1,
+    "name": "Alimento Eukanuba",
+    "description": "Recomendado para cachorros entre 1 y 12 meses de edad. Alimento balanceado completo para cachorros de raza pequeña como Caniche, Yorkshire Terrier, Chihuahua, Daschund, Maltes y otras razas o perros mestizos que en su etapa adulta pesan menos de 10 kg. ",
+    "type": "perros",
+    "price": "1490",
+    "image": "eukanuba-puppi.png",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "name": "Cepillo",
+    "description": "cepillo suave para perros pequeños, con cabo de goma. Super resistente",
+    "type": "perros",
+    "price": "790",
+    "image": "cepillo.png",
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "name": "Comedero",
+    "description": "Comemero de plástico ultra resistente, 20 cm",
+    "type": "perros",
+    "price": "790",
+    "image": "comedero.png",
+    "destacado": true
+  },
+  {
+    "id": 5,
+    "name": "Pipeta",
+    "description": "Pipeta para perros y gatos. Para pulgas",
+    "category": "2",
+    "price": "490",
+    "destacado": true,
+    "type": "perros-gatos",
+    "image": "pipeta.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Buzo",
+    "description": "Buzo para perros de raza pequeña de hasta 5 kg. Confeccinado en micropolar.",
+    "type": "perros",
+    "category": "3",
+    "destacado": true,
+    "price": "1550",
+    "image": "techno_2.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Pelota pinches",
+    "description": "Pelota de goma, con luces. ",
+    "type": "perros-gatos",
+    "category": "3",
+    "destacado": false,
+    "price": "290",
+    "image": "pa6414_1.png"
+  },
+  {
+    "id": 8,
+    "name": "Hueso de goma",
+    "description": "Hueso de goma, resistente, para perros pequeños",
+    "type": "perros",
+    "category": "3",
+    "destacado": false,
+    "price": "450",
+    "image": "pa6564_1.png"
+  },
+  {
+    "id": 9,
+    "name": "Pipeta",
+    "description": "Pipeta para perros y gatos. Para pulgas",
+    "type": "perros-gatos",
+    "category": "2",
+    "destacado": "false",
+    "price": "490",
+    "image": "image-1625840667102.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Rodillo",
+    "description": "Rodillo de goma para sacar pelos de gatos",
+    "type": "gatos",
+    "category": "2",
+    "destacado": "false",
+    "image": "image-1625841813591.png",
+    "price": "750"
+  },
+  {
+    "id": 11,
+    "name": "Jaula",
+    "description": "Jaula transportadora de gatos, ultra resistente",
+    "type": "gatos",
+    "category": "3",
+    "destacado": "false",
+    "image": "image-1625841867753.jpg",
+    "price": "2550"
+  },
+  {
+    "id": 12,
+    "name": "Guante Felplast",
+    "description": "Guante para remoción de pelos y masajes ",
+    "type": "perros",
+    "category": "2",
+    "destacado": "false",
+    "image": "image-1625841935953.jpg",
+    "price": "1950"
+  },
+  {
+    "id": 13,
+    "name": "Comida Excellent",
+    "description": "Comida para gatos excellent",
+    "type": "gatos",
+    "category": "1",
+    "destacado": "false",
+    "image": "image-1625842042537.jpg",
+    "price": "390"
+  },
+  {
+    "id": 14,
+    "name": "ProPlan Gato Adulto",
+    "description": "Alimento para gatos adultos  proplan. Desarrollado por Veterinarios y Nutricionistas de Purina, PURINA® PRO PLAN® Adult Optiprebio ofrece una nutrición específica para gatos adultos promoviendo salud óptima y bienestar general.",
+    "type": "gatos",
+    "category": "1",
+    "destacado": "false",
+    "image": "image-1625842155575.jpg",
+    "price": "490"
+  }
+]

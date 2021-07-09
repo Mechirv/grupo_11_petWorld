@@ -11,6 +11,7 @@ const multer = require('multer');
 app.use(express.static(path.resolve(__dirname,'../public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
 
 
+
 //Servidor
 app.set("port", process.env.PORT || 3030)
 app.listen(app.get("port"), () => console.log("sever start in http://localhost:" + app.get("port")));

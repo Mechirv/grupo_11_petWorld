@@ -58,7 +58,7 @@ const model = {
 				
 		};
 		productos.push(producto);
-		let nuevoProducto = JSON.stringify(productos);
+		let nuevoProducto = JSON.stringify(productos,null,2);
         fs.writeFileSync(directory,nuevoProducto);
         return true;
     },
@@ -79,7 +79,7 @@ const model = {
                     }
                 return producto
             })
-        fs.writeFileSync(directory,JSON.stringify(productos));
+        fs.writeFileSync(directory,JSON.stringify(productos, null,2));
         return true;
 
     },
@@ -98,7 +98,7 @@ const model = {
                 return prod;
             }
         });
-        fs.writeFileSync(directory,JSON.stringify(productos));
+        fs.writeFileSync(directory,JSON.stringify(productos,null,2));
         return true;
     }
 

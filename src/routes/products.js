@@ -14,7 +14,7 @@ const almacenamiento = multer.diskStorage({
     }
 })
 
-const upload = multer({almacenamiento : almacenamiento});
+const upload = multer({storage: almacenamiento});
 
 
 //listado de productos

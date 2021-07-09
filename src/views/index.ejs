@@ -23,7 +23,7 @@
                     <a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
                     <section class="detalle-producto">
                         <p><%=products[i].name%></p>
-                        <p> <span id="dolar"><%=products[i].price%></span></p>
+                        <p> <span id="dolar">$ <%=products[i].price%></span></p>
                         <form id="agregar-carrito" action="products/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>

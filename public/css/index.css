@@ -65,9 +65,7 @@ main{
 .nuestros{
     transition: all 500ms;
 }
-#dolar{
-    color: #4bc970;
-}
+
 #button-agregar{
     border-radius: 8px;
     border: none;
