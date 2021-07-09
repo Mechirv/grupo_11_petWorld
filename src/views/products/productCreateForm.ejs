@@ -19,7 +19,7 @@
                 <h3>INGRESE UN NUEVO PRODUCTO</h3>
             </div>
     
-            <form id="abmProduct" action="/products/" method="POST" enctype="multipart/form-data">
+            <form id="abmProduct" action="/products/save" method="POST" enctype="multipart/form-data">
     
     
                 <fieldset class=nombreProducto>
@@ -31,24 +31,43 @@
                     <label for="descripcionProducto">Descripcion del Producto: </label>
                     <input type="text" name="description"  id="descripcionProducto">
                 </fieldset>
-    
-                <fieldset class="imagenProducto">
-                    <label for="imagenProducto">Imagen: </label>
-                    <input type="file" name="image"  id="imagenProducto" >
-                </fieldset>
-    
-                <fieldset class="categoriaProducto">
-                    <label for="categoria">Categoria: </label>
-                            <select name="category" id="category">
+
+                <fieldset class="tipoProducto">
+                    <label for="tipo">Tipo: </label>
+                            <select name="type" id="type">
                                 <option value="">Elegí una opción</option>
                                 <option value="perros">Perros</option>
                                 <option value="gatos">Gatos</option>
+                                <option value="perros-gatos">Gatos y Perros</option>
                             </select>
                 </fieldset>
-    
+
+                <fieldset class="categoriaProducto">
+                    <label for="categoriaProducto">Categoría</label>
+                        <select name="category" id="category">
+                            <% categories.forEach(categorie => { %>
+                                <option value="<%=categorie.id%>">
+                                    <%=categorie.name%>
+                                </option>
+                            <% })%>
+                            
+                        </select>
+                </fieldset>
+                
+                <fieldset class="destacado">
+                    <label for="destacado">Destacado</label>
+                    <label><input type="radio" name="destacado" value="true"> Si </label>
+                    <input type="radio" name="destacado" value="false"> No
+                </fieldset>
+
                 <fieldset class="precioProducto">
                     <label for="precioProducto">Precio: </label>
                     <input type="number" name="price"  id="precioProducto" >
+                </fieldset>
+    
+                <fieldset class="imagenProducto">
+                    <label for="imagenProducto">Imagen: </label>
+                    <input type="file" name="image"  id="imagenProducto">
                 </fieldset>
     
             

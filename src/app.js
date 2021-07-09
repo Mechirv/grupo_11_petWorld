@@ -5,11 +5,13 @@ const methodOverride = require('method-override');
 const multer = require('multer');
 
 
-app.use(methodOverride('_method'));
+
+
+//acceso pub
 app.use(express.static(path.resolve(__dirname,'../public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
 
 
-//puerto
+//Servidor
 app.set("port", process.env.PORT || 3030)
 app.listen(app.get("port"), () => console.log("sever start in http://localhost:" + app.get("port")));
 
@@ -19,6 +21,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
 
+//config. de datos
+app.use(express.urlencoded({extended:false})) // Not fund req.body
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 //Rutas
 const rutasIndex = require('./routes/index');

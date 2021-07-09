@@ -1,10 +1,11 @@
 #product-detail{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    width: 80%;
 }
 .det-producto-detail{
-    width: 90%;
+    width: 100%;
     text-align: center;
     align-self: center;
     padding: 10px;
@@ -23,7 +24,7 @@ h3{
 }
 
 .descripcion-producto-detail{
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
 }
 
@@ -58,19 +59,21 @@ padding: 5px;
 .botones-editar-emininar{
     display: flex;
     padding-top: 20px;
-    align-content: space-around;
+    justify-content: flex-end;
+    width: 100%;
 }
 
-/*#button-editar{
+*#button-editar, #button-eliminar{
+    margin: 10px;
     text-decoration: none;
+    border-radius: 2px;
     font-size: 14px;
-    border-radius: 5px;
-    border: solid 1px rgb(177, 182, 178);
-    padding: 5px;
-    background-color: #b6b8b6;
+    border: solid 1px rgb(136, 135, 135);
+    background-color: rgb(224, 221, 221);
     color: rgb(0, 0, 0);
-    font-weight: bold;
-}*/
+    padding: 2PX;
+ 
+}
 
 .otras-desc-detail{
     display: flex;
@@ -91,28 +94,38 @@ table{
 @media (min-width:768px) {
     #product-detail{
         display: block;
+        width: 100%;
+        padding: 0 5%;
+
         
     }
   
     .det-producto-detail{
         display: flex;
         align-items: center;
-        justify-content: center;
-        padding:50px 0;
+        justify-content: space-around;
+        padding:50px 5%;
+        width: 100%;
+
     }
     
     .detalle-producto-detail{
-        width: 60%;
+        width: 50%;
         padding-left: 100px;
         padding-top: 20px;
     }
     .det-producto-detail img{
-        width: 40%;
+        width: 50%;
         max-width: 300px;
         max-height: 380px;
     }
     h3{
         font-size: 24px;
+    }
+
+    .boton-cantidad{
+        text-align: center;
+
     }
 
     .descripcion-producto-detail{
@@ -121,10 +134,17 @@ table{
         
     }
 
-    .otras-desc-detail{
-        width: 50%;
-        text-align: center;
+    .otras-desc-detail {
+        display: flex;
+        width: 100%;
         justify-content: center;
+    }
+    table{
+        text-align: center;
+    }
+    table td
+    {
+        padding: 5px;
     }
     
     .precio-prod-detail{

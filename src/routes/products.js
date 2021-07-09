@@ -24,21 +24,20 @@ router.get("/category/:category", productosController.listarCategoria);
 //carrito
 router.get("/productCart",productosController.cart);
 
-//detalle de un producto en particular
-router.get("/:id",productosController.detalle);
-
 //creación de un producto
 router.get("/create", productosController.crear);
-router.post("/save",upload.single('image'), productosController.accionCrear);
+router.post("/save",[upload.single('image')], productosController.accionCrear);
 
 //edicion de un producto
 
 router.get("/edit/:id",productosController.editar);
-router.put("/update/:id",upload.single('image'), productosController.modificar);
+router.put("/update/:id",[upload.single('image')], productosController.modificar);
 
 //eliminación de un producto
-router.delete("delete/:id", productosController.eliminar);
+router.delete("/delete/:id", productosController.eliminar);
 
+//detalle de un producto en particular
+router.get("/:id",productosController.detalle);
 
 
 module.exports=router

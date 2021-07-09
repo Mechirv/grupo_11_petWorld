@@ -19,3 +19,16 @@ Qué hicimos mal
 
 Que mejoramos:
 -organizacion y división de tareas
+
+
+SPRINT 4:
+Que hicimos mal:
+estuvimos mas desconectados que en los sprint anteriores
+
+Que hicimos bien:
+trabajamos mas en forma ocnjunta, aprovechamos las clases para adelantar trabajo
+
+Que deberíamos comenzar a hacer:
+mas reuniones, organizar mejor el trabajo
+
+

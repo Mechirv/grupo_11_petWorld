@@ -13,30 +13,32 @@
  
     <!--MAIN-->
     <main>
-        <a href="/products/crear">crear un producto</a>
+        
         <section class="productos-destacados">
             <h2 class="destacados">Nuestros Productos</h2>
             <section class="grid-destacados">
-                
+                                
                 <% for(i=0;i<products.length;i++){ %>
                 <article class="producto">
                     <h3><%=products[i].name%></h3>
                     <a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
                     <section class="detalle-producto">
                         <p> <span id="description"></span><%=products[i].name %></p>
-                        <p> <span id="dolar"></span><%=products[i].price %></p>
-                        <p> <span id="category"><%=products[i].category %></span> </p>
+                        <p> <span id="dolar">$</span><%=products[i].price %></p>
+                        <p> <span id="category">Producto para <%=products[i].type%></span> </p>
                         <form id="agregar-carrito" action="products/productCart" method="GET">
                             <button id="button-agregar" type="submit">Agregar al carrito</button>
                         </form>
                     </section>
                 </article>
                 <% }%>
-
+                
             
             </section>
+            <span id="crear-producto"><a href="/products/create/">crear un producto</a></span>
         </section>
         
+      </main>  
 
 
     <!--FOOTER -->

@@ -16,7 +16,7 @@
                 <section class="detalle-producto-detail">
                     <h3><%= product.name %></h3>
                     <p class="descripcion-producto-detail"><%= product.description %></p>
-                    <p class="precio-prod-detail"><%= product.price %></p>
+                    <p class="precio-prod-detail">$ <%= product.price %></p>
                     <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
 
                     <div class="boton-cantidad">
@@ -33,7 +33,7 @@
 
                    <div class="botones-editar-emininar">
                     <a href="/products/edit/<%=product.id %>" id="button-editar">EDITAR</a>
-						<form action="/products/delete/<%=product.id %>" method="POST">
+						<form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
 							<button type="submit" id="button-eliminar">ELIMINAR</button>
 						</form>
                     </div>
