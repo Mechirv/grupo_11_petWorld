@@ -2,8 +2,7 @@
 
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0%;
+ 
 }
 
 
@@ -65,7 +64,7 @@ header{
 }
 
 #busqueda:hover{
-    border: 2px #4bc970 solid;
+    border: 2px #3b9757 solid;
 }
 
 #search-bar i{
@@ -87,7 +86,7 @@ header{
 }
 
 #cart a i:hover{
-color:#4bc970 ;
+color:#3b9757 ;
 }
 
 #cart a i{
@@ -96,7 +95,7 @@ color:#4bc970 ;
 
 /*-----BARRA DE NAVEGACIÓN----*/
 .header-bottom{
-    background-color: #4bc970;
+    background-color: #3b9757;
    
 
 }
@@ -192,9 +191,9 @@ figure#menu i{
         text-decoration: none;
         font-size: 14px;
         border-radius: 5px;
-        border: solid 1px  #4bc970;
+        border: solid 1px  #3b9757;
         padding: 5px;;
-        background-color: #4bc970;
+        background-color: #3b9757;
         color: aliceblue;
         font-weight: bold;
     }
@@ -238,7 +237,8 @@ figure#menu i{
     }
 
     .nav-bar > ul > li {
-        background-color: #4bc970;
+       
+        background-color: #3b9757;
     }
     .nav-bar li{
         flex-grow: 1; 

@@ -21,13 +21,13 @@
                 <% for(i=0;i<products.length;i++){ %>
                 <article class="producto">
                     <h3><%=products[i].name%></h3>
-                    <a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
+                    <figure><a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a></figure>
                     <section class="detalle-producto">
                         <p> <span id="description"></span><%=products[i].name %></p>
                         <p> <span id="dolar">$ <%=products[i].price %></span></p>
                         <p> <span id="category">Producto para <%=products[i].type%></span> </p>
                         <form id="agregar-carrito" action="products/productCart" method="GET">
-                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                            <button id="button-agregar" type="submit">AGREGAR AL CARRITO</button>
                         </form>
                     </section>
                 </article>
@@ -35,7 +35,9 @@
                 
             
             </section>
-            <span id="crear-producto"><a href="/products/create/">crear un producto</a></span>
+            <section id="button-crear">
+                <button id="crear-producto"><a href="/products/create/">AGREGAR UN PRODUCTO</a></button>
+            </section>
         </section>
         
       </main>  

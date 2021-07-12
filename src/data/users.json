@@ -1,76 +1,30 @@
 [
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-    {
-        "id": 1,
-        "fullName": ,
-        "username": ,
-        "email": ,
-        "password": ,
-        "category": ,
-    },
-
-
+  {
+    "id": 1,
+    "usuario": "Mechirv",
+    "email": "mercedesrvivanco@gmail.com",
+    "password": "mefa2405",
+    "image": "image-1626036110192.png"
+  },
+  {
+    "id": 2,
+    "usuario": "Mechirv",
+    "email": "mechivivanco@hotmail.com",
+    "password": "mefamefa2405",
+    "image": "image-1626036283969.png"
+  },
+  {
+    "id": 3,
+    "usuario": "Mechirv",
+    "email": "mercedesrvivanco@gmail.com",
+    "password": "mefa2405",
+    "image": "image-1626036624422.png"
+  },
+  {
+    "id": 4,
+    "usuario": "Mechirv",
+    "email": "mercedesrvivanco@gmail.com",
+    "password": "mefa2405",
+    "image": "image-1626036852831.png"
+  }
 ]

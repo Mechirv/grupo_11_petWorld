@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('../partials/head.ejs',{css: ["productDetail","footer","header"]}) %> 
+    <%- include('../partials/head.ejs',{css: ["productDetail","footer","header", "general"]}) %> 
     
 <body>
     <!--HEADER-->
@@ -9,27 +9,34 @@
     <%- include('../partials/header.ejs') %>
 
     <!--MAIN-->
+    <a href="src\views\products\productDetail.ejs"></a>
     <main id= "product-detail">
     
             <article class="det-producto-detail">
                 <img src="/img/products/<%= product.image %>" alt="<%=product.name%>">
+                
                 <section class="detalle-producto-detail">
-                    <h3><%= product.name %></h3>
+                    <h1><%= product.name %></h1>
                     <p class="descripcion-producto-detail"><%= product.description %></p>
                     <p class="precio-prod-detail">$ <%= product.price %></p>
                     <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
 
-                    <div class="boton-cantidad">
-                        <input type="button" value="-" class="boton-menos">
-                        <label class="ventana" for="ventana-cantidad"></label>
-                        <input type="number" id="ventana-cantidad" class="input-cantidad" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
-                        <input type="button" value="+" class="boton-mas">
-                    </div>
+                    <section class="boton-carrito">
+                        <div class="boton-cantidad">
+                            <input type="button" value="-" class="boton-menos">
+                            <label class="ventana" for="ventana-cantidad"></label>
+                            <input type="number" id="ventana-cantidad" class="input-cantidad" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric">
+                            <input type="button" value="+" class="boton-mas">
+                        </div>
+
+                        
+                        <form id="agregar-carrito" action="/productCart" method="GET">
+                            <button id="button-agregar" type="submit">Agregar al carrito</button>
+                        </form>
 
 
-                    <form id="agregar-carrito" action="/productCart" method="GET">
-                        <button id="button-agregar" type="submit">Agregar al carrito</button>
-                    </form>
+                    </section>
+
 
                    <div class="botones-editar-emininar">
                     <a href="/products/edit/<%=product.id %>" id="button-editar">EDITAR</a>
@@ -37,37 +44,46 @@
 							<button type="submit" id="button-eliminar">ELIMINAR</button>
 						</form>
                     </div>
+
+
+                    <section class="otras-desc-detail">
+                        <table>
+                            <tr>
+                                <td><i class="fa fa-truck"></i></td>
+                                <td><p>Envíos gratis para compras superiores a $5000. </p></td>    
+                            </tr>
+        
+                            <tr>
+                                <td><i class="fa fa-map-marker"></i></td>
+                                <td><p>Consultanos los puntos de entrega</p></td>    
+                            </tr>
+        
+                            <tr>
+                                <td><i class="fas fa-credit-card"></i></td>
+                                <td><p>Todas las formas de pago</p></td>    
+                            </tr>
+        
+                            <tr>
+                                <td><i class="fa fa-undo"></i></td>
+                                <td><p>Devoluciones dentro de los 10 días hábiles</p></td>    
+                            </tr>
+                             
+                        </table>
+                        
+                    </section>
+
+
+
                 </section>
 
+
+
+                
                 
 
             </article>
 
-            <section class="otras-desc-detail">
-                <table>
-                    <tr>
-                        <td><i class="fa fa-truck"></i></td>
-                        <td><p>Envíos gratis para compras superiores a $5000. </p></td>    
-                    </tr>
-
-                    <tr>
-                        <td><i class="fa fa-map-marker"></i></td>
-                        <td><p>Consultanos los puntos de entrega</p></td>    
-                    </tr>
-
-                    <tr>
-                        <td><i class="fas fa-credit-card"></i></td>
-                        <td><p>Todas las formas de pago</p></td>    
-                    </tr>
-
-                    <tr>
-                        <td><i class="fa fa-undo"></i></td>
-                        <td><p>Devoluciones dentro de los 10 días hábiles</p></td>    
-                    </tr>
-                     
-                </table>
-                
-            </section>
+            
 
         
 

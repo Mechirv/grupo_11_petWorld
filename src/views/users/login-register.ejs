@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs',{css: [ "login-register","header","footer"]}) %> 
+
+
+<body id="login">
+
+    <%- include('../partials/header.ejs') %>
+
+    <main>
+        <h1 id="titulo">Inicio de Sesión</h1>
+
+        <section class="login-contenedor">
+            
+            <section id="block-login">
+                <h1>CLIENTES REGISTRADOS</h1>
+                <form id="form-login" method="POST" action="/index">
+                    <fieldset class="usuario">
+                        <label for="usuario">Usuario</label>
+                        <input type="text"  name="user" id="usuario" placeholder="Email o nombre de usuario" required/><br>
+                    </fieldset>
+
+                    <fieldset class="password">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" name="pass" id="pass" placeholder="Min. 8 caracteres" minlength="8" required/>
+                    </fieldset>
+
+                    <fieldset id="check">
+                        <input type="checkbox" id="checkbox"/> 
+                        <label for="checkbox">Recordarme</label>
+                    </fieldset>
+
+                    <fieldset id="button-login">
+                        <button id="button-login-id" type="submit" >INGRESAR</button>
+                    </fieldset>
+
+                </form>
+
+                <section id="options">
+                    <div id="forgot-pass">
+                        <a href="/">Recuperar contraseña</a>
+                    </div> 
+                </section>
+
+            </section>
+
+            <section id="block-register">
+                <h1>NUEVOS CLIENTES</h1>
+                <p>Al crear una cuenta podrás navegar mas rapidamente, acceder a la tienda online, 
+                    a descuentos exclusivos para clientes.
+                Además accederás a nuestro programa de beneficios</p> 
+                <div id="create-account">
+                    <a href="/users/register">
+                    <button type="button">REGISTRARSE</button>
+                    </a>
+                </div>
+
+            </section>
+
+        </section>
+    </main>
+    <footer>
+        <%- include('../partials/footer.ejs') %>
+    </footer>
+
+</body>
+</html>

@@ -3,61 +3,80 @@
 
     <%- include('../partials/head.ejs',{css: [ "register","footer", "header"]}) %> 
 
-<body>
+<body id="register">
     
     <%- include('../partials/header.ejs') %>
 
 
-<main id="main-register">
+<main>
+
+    <h1 id="titulo">INGRESE SUS DATOS</h1>
+    
     <div class="register-contenedor">
 
-            <div class="titulo-register">
-                <h3>INGRESE SUS DATOS</h3>
-            </div>
-        
+        <form id="register" action="/users/save" method="POST" enctype="multipart/form-data">
+            
+            <fieldset id="datos">
+                <fieldset class="datos-acceso">
 
-        <form id="register" action="/index" method="GET">
-            <fieldset class=nombre-apellido>
-                <label for="nombre-apellido">Nombre y Apellido:</label>
-                <input type="text" name="nombre-apellido"  id="nombre-apellido" placeholder="Su Nombre y Apellido" required >
+                    <legend>DATOS DE ACCESO</legend>
+                    <fieldset class="datos">
+                        <label class="label" for="usuario">Nombre de Usuario: </label>
+                        <input type="text" name="usuario"  id="usuario" placeholder="Min. 6 caracteres" minlength="6">
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <label class="label"for="email">Email: </label>
+                        <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" >
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <label class="label" for="pass">Contraseña: </label>
+                        <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" minlength="8">
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <label class="label" for="confirm-pass">Confirmar Contraseña: </label>
+                        <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8">
+                    </fieldset>
+                </fieldset>
+
+                <fieldset class="info-personal">
+                    <legend>INFORMACIÓN PERSONAL</legend>
+                    <fieldset class="datos">
+                        <label  class="label" for="nombre">Nombre</label>
+                        <input type="text" name="nombre"  id="nombre" placeholder="Su Nombre y Apellido">
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <label class="label" for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido">
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <label class="label" for="imagenUsuario">Imagen: </label>
+                        <input type="file" name="image"  id="imagenUsuario">
+                    </fieldset>
+                </fieldset>
             </fieldset>
 
-            <fieldset class="usuario">
-                <label for="usuario">Nombre de Usuario: </label>
-                <input type="text" name="usuario"  id="usuario" placeholder="Min. 6 caracteres" minlength="6" required>
-            </fieldset>
-
-            <fieldset class="email">
-                <label for="email">Email: </label>
-                <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" required>
-            </fieldset>
-
-            <fieldset class="password">
-                <label for="pass">Contraseña: </label>
-                <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" minlength="8" required>
-            </fieldset>
-
-            <fieldset class="password">
-                <label for="confirm-pass">Confirmar Contraseña: </label>
-                <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8" required>
-            </fieldset>
-
-        
             <fieldset class="buttons">
                 <button id="cancel" type="reset">Cancelar</button>
                 <button id="button-register" type="submit">Registrarse</button>
             </fieldset>
         </form>
 
-        <div class="volver-home"><a href="/">Volver al Home</a></div>
+       
 
     </div>
 
 </main>
 
 <!--FOOTER-->    
+<footer>
+    <%- include('../partials/footer.ejs') %>
+</footer>
 
-<%- include('../partials/footer.ejs') %>
 
 
 </body>

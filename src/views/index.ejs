@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include('./partials/head.ejs',{css: [ "index","footer", "header"]}) %> 
+        <%- include('./partials/head.ejs',{css: [ "index","footer", "header", "general"]}) %> 
 
     </head>
        
@@ -20,7 +20,7 @@
                 <% for(i=0;i<products.length;i++){ %>
                 <article class="producto">
                     
-                    <a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a>
+                    <figure><a href="/products/<%=products[i].id%>"><img src="/img/products/<%=products[i].image%>" alt="<%=products[i].name%>"></a></figure>
                     <section class="detalle-producto">
                         <p><%=products[i].name%></p>
                         <p> <span id="dolar">$ <%=products[i].price%></span></p>

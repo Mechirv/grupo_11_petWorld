@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/head.ejs',{css: ["footer","header"]}) %> 
+    
+<body>
+    <!--HEADER-->
+    
+    <%- include('../partials/header.ejs') %>
+
+    <!--MAIN-->
+    <main id= "profile">
+    
+            <article class="user-profile">
+                <img src="/img/users/<%= user.image %>" alt="<%=user.name%>">
+                <section class="detalle-producto-detail">
+                    <h3><%= user.name %></h3>
+                    <p class="descripcion-producto-detail"><%= product.description %></p>
+                    <p class="precio-prod-detail">$ <%= product.price %></p>
+                    <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
+
+                
+
+
+                   <div class="botones-editar-emininar">
+                    <a href="/users/edit/<%=user.id %>" id="button-editar">Editar</a>
+						<form action="/users/delete/<%=user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+							<button type="submit" id="button-eliminar">Eliminar cuenta</button>
+						</form>
+                    </div>
+                </section>
+
+  
+
+    
+    </main>
+
+
+<!--FOOTER-->    
+<footer class="footer">
+    <%- include('../partials/footer.ejs') %>
+</footer>
+    
+</body>
+</html>

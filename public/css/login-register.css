@@ -1,35 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Knewave");
+
 *{
     box-sizing:border-box ;
+            margin: 0;
+            padding: 0%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+#login{
+    display: block;
+}
+
 fieldset{
     border: none;
 }
+#titulo{
+    margin: 20px 0px 10px;
+    transition: all 500ms;
+
+}
 h1{
     font-weight: 100;
-    text-align: center;
     font-size: 24px;
-    transition: all 500ms;
+    
 }
 h1:hover{
-    color:#4bc970;
+    color:#a59c93;
     font-size: 25px;
-}
-#login{
-    align-content: center;
 }
 
 .login-contenedor{
-    border-radius: 8px;
-    border: solid 1px #e2e2eb;
+    border-top: solid 5px #7c756b;
+    /*border: solid 1px #e2e2eb;*/
     padding: 60px 30px;
-    margin:20px;
     box-shadow:0 0 10px 5px #f7f5f5;
     font-size: 14px;
-    width: 90%;
+    margin-bottom: 20px;
+    
 }
 
 #checkbox{
     text-align: left;
+}
+
+label{
+    width: 100%;
 }
 .usuario, .password{
     display: block;
@@ -38,16 +54,15 @@ h1:hover{
 
 
 #usuario, #pass{
-    border-radius: 10px;
-    background: rgba(255,255,255,0.1);
-  border: none;
+background:white;
+  border: solid 1px gray;
   font-size: 16px;
   height: 1.5em;
   margin: 0px;
   padding: 20px;
   width: 100%;
-  background-color: #e8eeef;
-  color: #5f6b74;
+  background-color: white;
+  color:black;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 0px;
   margin-top: 5px;
@@ -65,16 +80,15 @@ h1:hover{
       justify-content: center;
   }
   #button-login-id{
-    padding: 5px;
+    padding: 10px;
     color: #FFF;
+    font-size: 16px;
     font-style: normal;
-    border-radius: 10px;
     border-width: 1px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     width: 100%;
-    border: 1px solid #3ac162;
-    background-color: #4bc970;
-    font-size: 14px;
+    border: 1px solid #7c756b;
+    background-color: #7c756b;
     text-align: center;
     margin: 20px 0 10px;
     transition: all 500ms;
@@ -93,16 +107,22 @@ h1:hover{
       padding-bottom: 15px;
   }
 
-  #forgot-pass a,
-  #volver-home a{
+  #forgot-pass a{
       color:black;
       transition: all 500ms;
   }
   #forgot-pass a:hover{
-      color:#4bc970;
+      color:#866a50;
       font-size: 16px;
   }
 
+  #block-register{
+      padding-top: 30px;
+  }
+  #block-register p{
+    padding-top: 20px;
+    font-size: 20px;
+}
 
   #create-account{
       display: block;
@@ -110,56 +130,55 @@ h1:hover{
   }
 
   #create-account button{
-      border-radius: 10px;
-      background-color:#4bc970 ;
+      background-color:#7c756b ;
       color: white;
+      font-size: 16px;
       border: none;
-      padding: 5px;
-      transition: all 500ms;
-  }
-  #create-account button:hover{
-      color: black;
-      border: black 1px solid;
-  }
-
-  #volver-home{
-      display: block;
-      text-align: center;
-      margin-top: 10px;
       padding: 10px;
-      text-decoration: none;
+     
+      width: 100%;
   }
+ 
 
-  #volver-home a:hover{
-      color:#4bc970;
-      font-size: 20px;
-  }
 
   @media (min-width:481px){
-      #login{
-          display: flex;
-          justify-content: center;
-
+      main{
+          align-content: center;
+          padding: 0 5%;
       }
+     
       .login-contenedor{
-          width: 400px;
+          display: flex;
+          
       }
+      #usuario, #pass{
+          width: 90%;
+      }
+
+      #block-login, #block-register{
+          width: 50%;
+          padding: 0 50px;
+      }
+
+      #button-login, #create-account{
+        display: flex;
+        justify-content: left;
+    }
+
+
+    
+    #button-login-id{
+        width: 50%;
+    
+      }
+
+     
   }
 
   @media (min-width:769px){
     .login-contenedor{
-        width: 450px;
-        margin-top: 5%;
+      
         font-size: 18px;
     }
-    #login{
-        display: flex;
-        justify-content: center;
-        font-size: 18px;  
-        align-items: center;
-    }
-   
-    h1{
-        font-size: 24px;
-    }
+  
 }
