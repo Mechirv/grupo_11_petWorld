@@ -20,20 +20,24 @@ const model = {
 
     },
 
-    nuevo: function(data, file){
+    buscarPorEmail: function(email){
+        let usuarios = this.todos();
+        let usuario = usuarios.find((user) => user.email == email);
+        return usuario
+    },
+
+    nuevo: function(data){
         const directory = path.resolve(__dirname, '../data/users.json');
         let usuarios = this.todos();
 
-
 		let usuario = {
 			id: usuarios.length > 0 ? usuarios[usuarios.length -1].id + 1: 1,
-
-            
-			fullname: data.fullname,
+			nombre: data.nombre,
+            apellido: data.apellido,
            usuario: data.usuario,
            email: data.email,
            password: data.pass,
-			image: file.filename, 	
+			image: null, 	
 		};
 		usuarios.push(usuario);
 		let nuevoUsuario = JSON.stringify(usuarios,null,2);

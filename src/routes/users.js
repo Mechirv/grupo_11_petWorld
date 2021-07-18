@@ -1,6 +1,8 @@
 const express = require('express');
 const routes = express.Router();
 const usersController = require('../controllers/usersController');
+const validaLogin = require('../middlewares/validaLogin');
+const validaRegister = require('../middlewares/validaRegister')
 const path = require('path');
 const multer = require('multer');
 
@@ -9,7 +11,7 @@ const almacenamiento = multer.diskStorage({
     destination: function(req,file,cb){
         cb(null, path.resolve(__dirname,"../../public/img","users"))
     },
-    filename:function(req,file,cb){
+    filename: function(req,file,cb){
         cb(null,file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
     }
 })
@@ -18,10 +20,10 @@ const upload = multer({storage: almacenamiento});
 
 
 routes.get("/login", usersController.login);
-
+//routes.post("",validaLogin,userController.logueado);
 
 routes.get("/register", usersController.register);
-routes.post("/save", [upload.single('image')], usersController.guardar);
+routes.post("/save", validaRegister, usersController.guardar);
 
 
 

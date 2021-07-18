@@ -26,5 +26,19 @@
     "email": "mercedesrvivanco@gmail.com",
     "password": "mefa2405",
     "image": "image-1626036852831.png"
+  },
+  {
+    "id": 5,
+    "usuario": "Mechirv",
+    "email": "mercedesrvivanco@gmail.com",
+    "password": "",
+    "image": "image-1626639950309.jpg"
+  },
+  {
+    "id": 6,
+    "usuario": "Mechirv",
+    "email": "mercedesrvivanco@gmail.com",
+    "password": "",
+    "image": "image-1626640335493.jpg"
   }
 ]

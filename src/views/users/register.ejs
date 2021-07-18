@@ -13,8 +13,12 @@
     <h1 id="titulo">INGRESE SUS DATOS</h1>
     
     <div class="register-contenedor">
-
-        <form id="register" action="/users/save" method="POST" enctype="multipart/form-data">
+        <% if(locals && locals.errores){ %>
+            <% for(let error in errores) { %>
+                <p> <%=errores[error].msg %></p>
+            <% } %>
+        <% } %>
+        <form id="register" action="save" method="POST" >
             
             <fieldset id="datos">
                 <fieldset class="datos-acceso">
@@ -22,22 +26,22 @@
                     <legend>DATOS DE ACCESO</legend>
                     <fieldset class="datos">
                         <label class="label" for="usuario">Nombre de Usuario: </label>
-                        <input type="text" name="usuario"  id="usuario" placeholder="Min. 6 caracteres" minlength="6">
+                        <input type="text" name="usuario"  id="usuario" value="<%= locals.old && old.usuario ? old.usuario : '' %>">
                     </fieldset>
 
                     <fieldset class="datos">
                         <label class="label"for="email">Email: </label>
-                        <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" >
+                        <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" value="<%= locals.old && old.email ? old.email : '' %>">
                     </fieldset>
 
                     <fieldset class="datos">
                         <label class="label" for="pass">Contraseña: </label>
-                        <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" minlength="8">
+                        <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" >
                     </fieldset>
 
                     <fieldset class="datos">
                         <label class="label" for="confirm-pass">Confirmar Contraseña: </label>
-                        <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña" minlength="8">
+                        <input type="password" name="confirm"  id="confirm-pass" placeholder="Repita su contraseña">
                     </fieldset>
                 </fieldset>
 
@@ -45,7 +49,7 @@
                     <legend>INFORMACIÓN PERSONAL</legend>
                     <fieldset class="datos">
                         <label  class="label" for="nombre">Nombre</label>
-                        <input type="text" name="nombre"  id="nombre" placeholder="Su Nombre y Apellido">
+                        <input type="text" name="nombre"  id="nombre">
                     </fieldset>
 
                     <fieldset class="datos">
