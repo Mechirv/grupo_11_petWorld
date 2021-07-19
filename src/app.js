@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const methodOverride = require('method-override');
 const multer = require('multer');
+const session = require('express-session');
 
 
 
@@ -24,10 +25,10 @@ app.set('views', path.resolve(__dirname, './views'));
 
 
 //config. de datos
-
 app.use(express.urlencoded({extended:false})) // add req.body
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({secret: "Mensaje"}));
 
 
 //Rutas

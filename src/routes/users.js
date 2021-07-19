@@ -21,11 +21,13 @@ const upload = multer({storage: almacenamiento});
 
 
 routes.get("/login", usersController.login);
-//routes.post("",validaLogin,userController.logueado);
+routes.post("/login",validaLogin,userController.procesarLoguin);
 
 
 routes.get("/register", usersController.register);
-routes.post("/save", validaRegister, usersController.guardar);
+routes.post("/save", [upload.single('image')],validaRegister, usersController.guardar);
+
+routes.get("/perfil",usersController.perfil);
 
 
 

@@ -15,7 +15,12 @@
         <h1 class="titulo-create-modify">INGRESE UN NUEVO PRODUCTO</h1>
 
         <div class="productCreateModify">
-           
+            <% if(locals && locals.errores){ %>
+                <% for(let error in errores) { %>
+                    <p> <%=errores[error].msg %></p>
+                <% } %>
+            <% } %>
+
             <form id="abmProduct" action="/products/save" method="POST" enctype="multipart/form-data">
                 
                 <fieldset id="datos">
@@ -43,13 +48,16 @@
                             <label for="imagenProducto">Imagen: </label>
                             <input type="file" name="image"  id="imagenProducto">
                         </fieldset>
+
                         <fieldset class="tipoProducto">
                             <label for="tipo">Tipo: </label>
                                     <select name="type" id="type">
                                         <option value="">Elegí una opción</option>
-                                        <option value="perros">Perros</option>
-                                        <option value="gatos">Gatos</option>
-                                        <option value="perros-gatos">Gatos y Perros</option>
+                                     <% types.forEach(type => { %>
+                                        <option value="<%=type.id%>">
+                                            <%=type.name%>
+                                        </option>
+                                    <% })%>
                                     </select>
                         </fieldset>
                     
@@ -57,9 +65,9 @@
                             <label for="categoriaProducto">Categoría</label>
                                 <select name="category" id="category">
                                     <option value="">Elegí una opción</option>
-                                    <% categories.forEach(categorie => { %>
-                                        <option value="<%=categorie.id%>">
-                                            <%=categorie.name%>
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%=category.id%>">
+                                            <%=category.name%>
                                         </option>
                                     <% })%>
                                     

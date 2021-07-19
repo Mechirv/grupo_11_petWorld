@@ -13,11 +13,6 @@
     <h1 id="titulo">INGRESE SUS DATOS</h1>
     
     <div class="register-contenedor">
-        <% if(locals && locals.errores){ %>
-            <% for(let error in errores) { %>
-                <p> <%=errores[error].msg %></p>
-            <% } %>
-        <% } %>
         <form id="register" action="/users/save" method="POST" enctype="multipart/form-data">
             
             <fieldset id="datos">
@@ -27,16 +22,25 @@
                     <fieldset class="datos">
                         <label class="label" for="usuario">Nombre de Usuario: </label>
                         <input type="text" name="usuario"  id="usuario" value="<%= locals.old && old.usuario ? old.usuario : '' %>">
+                        <% if(locals.errors && errors.usuario) { %>
+                            <p class="msg-error"><%= errors.usuario.msg %></p>
+                        <% } %>
                     </fieldset>
 
                     <fieldset class="datos">
                         <label class="label"for="email">Email: </label>
                         <input type="email" name="email"  id="email" placeholder="TuEmail@gmail.com" value="<%= locals.old && old.email ? old.email : '' %>">
+                        <% if(locals.errors && errors.email) { %>
+                            <p class="msg-error"><%= errors.email.msg %></p>
+                        <% } %>
                     </fieldset>
 
                     <fieldset class="datos">
                         <label class="label" for="pass">Contraseña: </label>
                         <input type="password" name="pass"  id="pass" placeholder="Min. 8 caracteres" >
+                        <% if(locals.errors && errors.pass) { %>
+                            <p class="msg-error"><%= errors.pass.msg %></p>
+                        <% } %>
                     </fieldset>
 
                     <fieldset class="datos">
@@ -49,12 +53,18 @@
                     <legend>INFORMACIÓN PERSONAL</legend>
                     <fieldset class="datos">
                         <label  class="label" for="nombre">Nombre</label>
-                        <input type="text" name="nombre"  id="nombre">
+                        <input type="text" name="nombre"  id="nombre" value="<%= locals.old && old.nombre ? old.nombre : '' %>">
+                        <% if(locals.errors && errors.nombre) { %>
+                            <p class="msg-error"><%= errors.nombre.msg %></p>
+                        <% } %>
                     </fieldset>
 
                     <fieldset class="datos">
                         <label class="label" for="apellido">Apellido</label>
-                        <input type="text" name="apellido" id="apellido">
+                        <input type="text" name="apellido" id="apellido" value="<%= locals.old && old.apellido ? old.apellido : '' %>">
+                        <% if(locals.errors && errors.apellido) { %>
+                            <p class="msg-error"><%= errors.apellido.msg %></p>
+                        <% } %>
                     </fieldset>
 
                     <fieldset class="datos">
@@ -68,6 +78,7 @@
                 <button id="cancel" type="reset">Cancelar</button>
                 <button id="button-register" type="submit">Registrarse</button>
             </fieldset>
+        
         </form>
 
        

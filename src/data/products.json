@@ -108,59 +108,12 @@
   },
   {
     "id": 13,
-    "name": "Comida Excellent",
-    "description": "Comida para gatos excellent",
-    "type": "gatos",
-    "category": "1",
-    "destacado": "false",
-    "image": "image-1625842042537.jpg",
-    "price": "390"
-  },
-  {
-    "id": 14,
-    "name": "ProPlan Gato Adulto",
-    "description": "Alimento para gatos adultos  proplan. Desarrollado por Veterinarios y Nutricionistas de Purina, PURINA® PRO PLAN® Adult Optiprebio ofrece una nutrición específica para gatos adultos promoviendo salud óptima y bienestar general.",
-    "type": "gatos",
-    "category": "1",
-    "destacado": "false",
-    "image": "image-1625842155575.jpg",
-    "price": "490"
-  },
-  {
-    "id": 15,
-    "name": "Pipeta",
-    "description": "Comedero grande, de plástico resistente.",
+    "name": "Pelota de Goma ",
+    "description": "pelota de goma azul",
     "type": "perros",
-    "category": "2",
+    "category": "3",
     "destacado": "false",
-    "image": "image-1626649239733.png",
-    "price": "450450451"
-  },
-  {
-    "id": 16,
-    "name": "PipetaPipeta",
-    "description": "",
-    "type": "",
-    "category": "",
-    "image": "image-1626650030430.png",
-    "price": ""
-  },
-  {
-    "id": 17,
-    "name": "Hueso de goma",
-    "description": "",
-    "type": "",
-    "category": "",
-    "image": "image-1626650055919.png",
-    "price": ""
-  },
-  {
-    "id": 18,
-    "name": "Pipeta",
-    "description": "ssss",
-    "type": "",
-    "category": "",
-    "image": "image-1626650164013.png",
-    "price": ""
+    "image": "image-1626696146110.png",
+    "price": "450"
   }
 ]

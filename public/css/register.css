@@ -91,6 +91,11 @@ fieldset{
     margin-bottom: 0px;
     margin-top: 5px;
 }
+.msg-error{
+    color: red;
+    margin-top: 0;
+}
+
 
 #button-register, #cancel{
     padding: 5px;

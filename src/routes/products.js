@@ -27,7 +27,7 @@ router.get("/productCart",productosController.cart);
 
 //creación de un producto
 router.get("/create", productosController.crear);
-router.post("/save",[upload.single('image')], [validarProducto], productosController.accionCrear);
+router.post("/save",[upload.single('image')], validarProducto, productosController.accionCrear);
 
 //edicion de un producto
 

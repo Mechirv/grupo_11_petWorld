@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const product = require('../models/products');
-const categories = require('../models/categories');
+const category = require('../models/categories');
+const type = require('../models/types');
 const { validationResult } = require('express-validator');
 
 
@@ -18,16 +19,17 @@ let productosController = {
     detalle:(req,res) => {
         res.render("products/productDetail", {product: product.buscar(req.params.id)})},
         
-    crear: (req,res) => {res.render("products/productCreateForm", {categories:categories.todas()})},
+    crear: (req,res) => {res.render("products/productCreateForm", {categories:category.todos(), types:type.todos()})},
 
     accionCrear: (req,res) => {
-        let errores = validationResult(req);
-        console.log(errores);
+        const errores = validationResult(req);
+        
         if(errores.isEmpty()){
+            console.log(req.body);
             let resultado = product.nuevo(req.body,req.file); 
 		    return resultado == true? res.redirect("/products/") : res.send("Error al cargar la informacion");
         }else{
-            return res.render("products/productCreateForm", {errores: errors.mapped(), old: req.body})
+            return res.render("products/productCreateForm", {errores: errores.mapped(), old: req.body})
 
         }
     },

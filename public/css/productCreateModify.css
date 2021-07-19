@@ -114,6 +114,10 @@ fieldset{
       border: 1px solid black;
   }
 
+  .msg-error{
+      color: red;
+  }
+
 .buttons-form-cm{
     display: flex;
     justify-content: flex-end;
