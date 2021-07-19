@@ -7,6 +7,7 @@ const multer = require('multer');
 
 
 
+
 //acceso pub
 app.use(express.static(path.resolve(__dirname,'../public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
 
@@ -23,9 +24,11 @@ app.set('views', path.resolve(__dirname, './views'));
 
 
 //config. de datos
-app.use(express.urlencoded({extended:false})) // Not fund req.body
+
+app.use(express.urlencoded({extended:false})) // add req.body
 app.use(express.json());
 app.use(methodOverride('_method'));
+
 
 //Rutas
 const rutasIndex = require('./routes/index');

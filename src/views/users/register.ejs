@@ -18,7 +18,7 @@
                 <p> <%=errores[error].msg %></p>
             <% } %>
         <% } %>
-        <form id="register" action="save" method="POST" >
+        <form id="register" action="/users/save" method="POST" enctype="multipart/form-data">
             
             <fieldset id="datos">
                 <fieldset class="datos-acceso">

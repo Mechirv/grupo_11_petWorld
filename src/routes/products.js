@@ -3,6 +3,7 @@ const path = require('path');
 const router = express.Router();
 const productosController = require('../controllers/productosController');
 const multer = require('multer');
+const validarProducto = require('../middlewares/validaProducto');
 
 //disco de almacenamiento de imagenes
 const almacenamiento = multer.diskStorage({
@@ -10,7 +11,7 @@ const almacenamiento = multer.diskStorage({
         cb(null, path.resolve(__dirname,"../../public/img","products"))
     },
     filename:function(req,file,cb){
-        cb(null,file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
+        cb(null, file.fieldname + '-' + Date.now()+ path.extname(file.originalname))
     }
 })
 
@@ -26,7 +27,7 @@ router.get("/productCart",productosController.cart);
 
 //creación de un producto
 router.get("/create", productosController.crear);
-router.post("/save",[upload.single('image')], productosController.accionCrear);
+router.post("/save",[upload.single('image')], [validarProducto], productosController.accionCrear);
 
 //edicion de un producto
 

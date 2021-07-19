@@ -1,10 +1,11 @@
 const express = require('express');
 const routes = express.Router();
+const path = require('path');
+const multer = require('multer');
 const usersController = require('../controllers/usersController');
 const validaLogin = require('../middlewares/validaLogin');
 const validaRegister = require('../middlewares/validaRegister')
-const path = require('path');
-const multer = require('multer');
+
 
 //disco de almacenamiento de imagenes
 const almacenamiento = multer.diskStorage({
@@ -22,8 +23,10 @@ const upload = multer({storage: almacenamiento});
 routes.get("/login", usersController.login);
 //routes.post("",validaLogin,userController.logueado);
 
+
 routes.get("/register", usersController.register);
 routes.post("/save", validaRegister, usersController.guardar);
+
 
 
 

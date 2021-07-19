@@ -40,5 +40,9 @@
     "email": "mercedesrvivanco@gmail.com",
     "password": "",
     "image": "image-1626640335493.jpg"
+  },
+  {
+    "id": 7,
+    "image": null
   }
 ]

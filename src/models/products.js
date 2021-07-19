@@ -53,7 +53,9 @@ const model = {
             type: data.type,
             category: data.category,
             destacado: data.destacado,
-			image: file.filename,
+			image: file.filename
+            
+            ,
             price: data.price,
 				
 		};

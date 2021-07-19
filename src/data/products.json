@@ -125,5 +125,42 @@
     "destacado": "false",
     "image": "image-1625842155575.jpg",
     "price": "490"
+  },
+  {
+    "id": 15,
+    "name": "Pipeta",
+    "description": "Comedero grande, de plástico resistente.",
+    "type": "perros",
+    "category": "2",
+    "destacado": "false",
+    "image": "image-1626649239733.png",
+    "price": "450450451"
+  },
+  {
+    "id": 16,
+    "name": "PipetaPipeta",
+    "description": "",
+    "type": "",
+    "category": "",
+    "image": "image-1626650030430.png",
+    "price": ""
+  },
+  {
+    "id": 17,
+    "name": "Hueso de goma",
+    "description": "",
+    "type": "",
+    "category": "",
+    "image": "image-1626650055919.png",
+    "price": ""
+  },
+  {
+    "id": 18,
+    "name": "Pipeta",
+    "description": "ssss",
+    "type": "",
+    "category": "",
+    "image": "image-1626650164013.png",
+    "price": ""
   }
 ]
