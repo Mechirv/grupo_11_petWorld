@@ -31,4 +31,15 @@ trabajamos mas en forma ocnjunta, aprovechamos las clases para adelantar trabajo
 Que deberíamos comenzar a hacer:
 mas reuniones, organizar mejor el trabajo
 
+SPRINT 5:
+Que hicimos mal: 
+nuevamente estuvimos menos coordinados y mas desconectados que en los sprint anteriores.
+
+Que hicimos bien:
+aprovechar las clases prácticas
+
+Que deberíamos comenzar a hacer:
+-hacer mas reuniones
+ytabajar de manera colaborativa
+mejorar la división de tareas
 
