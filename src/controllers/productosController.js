@@ -40,7 +40,7 @@ let productosController = {
     cart:(req,res) => {res.render("products/productCart")},
 
     //renderiza vista para editar un producto    
-    editar: (req,res) => {res.render("products/productEditForm",{product: product.buscar(req.params.id), categories:categories.todas()})},
+    editar: (req,res) => {res.render("products/productEditForm",{product: product.buscar(req.params.id), categorias:category.todos(), tipos:types.todos() })},
 
     //accion de modificar un producto
     modificar:(req,res) => {

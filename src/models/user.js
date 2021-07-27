@@ -28,7 +28,7 @@ const model = {
         return usuario;
     },
 
-    nuevo: function(data){
+    nuevo: function(data,file){
         const directory = path.resolve(__dirname, '../data/users.json');
         let usuarios = this.todos();
 
@@ -38,21 +38,14 @@ const model = {
             apellido: data.apellido,
            email: data.email,
            password: bcrypt.hashSync(data.pass,10),
-			image: null, 	
+			image: file.filename, 
+            admin: 	data.email.indexOf("@petworld") !=-1 ? true: false,
 		};
 		usuarios.push(usuario);
 		let nuevoUsuario = JSON.stringify(usuarios,null,2);
         fs.writeFileSync(directory,nuevoUsuario);
         return true;
     },
-
-    //edita un producto cuyo id se recibe como parametro
-    editar: function(data,file,id){
-
-
-    },
-
- 
 
 }
 

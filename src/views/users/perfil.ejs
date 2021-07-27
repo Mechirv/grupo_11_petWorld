@@ -8,57 +8,56 @@
 <body>
         <!--HEADER-->
     
-        <%- include('../partials/header.ejs') %>
+        <%- include('../partials/header.ejs'); %>
 
         <!--MAIN-->
         <main id= "profile">
-    
                 
                           <h1 id="titulo">MI PERFIL</h1>
         
                           <div class="perfil-contenedor">
                               <form id="mi-perfil" action="/user/update?method=PUT" method="POST" enctype="multipart/form-data">
                                   
+                                <% if(usuario){ %>
                                   <fieldset id="datos">
                                       <fieldset class="datos-perfil">
-                                
-                      
-                                          <legend>BIENVENNIDO </legend>
+                            
+                                            <legend>BIENVENNIDO <%=usuario.nombre%> <%=usuario.apellido%></legend>
     
-                                          
-                                          <fieldset class="datos">
-                                            <!--<%=usuario.image"%>-->
-                                        </fieldset>
+                                            <fieldset class="datos">
+                                                <img src="/img/users/<%= usuario.image %>" alt="<%=usuario.nombre%>">
+                                           
+                                            </fieldset>
                                          
                                       </fieldset>
                       
                                       <fieldset class="info-personal">
                                          
-                                          <fieldset class="datos">
-                                            <label class="label"for="email">Usuario <%=usuario.user%></label>
-                                            
-                                        </fieldset>
+                                            <fieldset class="datos">
+                                                <label class="label"for="email">Cambiar la contraseña</label>
+
+                                            </fieldset>
                     
-                                        <fieldset class="datos">
-                                            <label class="label" for="pass">Contraseña: </label>
-                                            <input type="password" name="pass"  id="pass" >
-                                        </fieldset>
+                                            <fieldset class="datos">
+                                                <label class="label" for="pass">Contraseña: </label>
+                                                <input type="password" name="pass"  id="pass" />
+                                            </fieldset>
                     
-                                        <fieldset class="datos">
-                                            <label class="label" for="new-pass">Nueva Contraseña: </label>
-                                            <input type="password" name="new-pass"  id="new-pass" >
-                                        </fieldset>
-                                        
+                                            <fieldset class="datos">
+                                                <label class="label" for="new-pass">Nueva Contraseña: </label>
+                                                <input type="password" name="new-pass"  id="new-pass" />
+                                            </fieldset>
                       
                                       </fieldset>
+
                                   </fieldset>
                       
-                                  <fieldset class="buttons">
-                                    <button type="button" id="logout"><a href="/users/logout">Cerrar sesión</a></button>
-                                      <button  type="submit" id="button-update">Modificar</button>
-                                  </fieldset>
+                                    <fieldset class="buttons">
+                                        <button type="button" id="logout"><a href="/users/logout">Cerrar sesión</a></button>
+                                        <button  type="submit" id="button-update">Modificar</button>
+                                    </fieldset>
                                 
-                              
+                              <%}%>
                               </form>
                       
                              
@@ -74,7 +73,7 @@
     
     <!--FOOTER-->    
     <footer class="footer">
-        <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/footer.ejs'); %>
     </footer>
 </body>
 </html>

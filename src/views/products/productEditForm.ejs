@@ -44,20 +44,23 @@
                         <label for="tipo">Tipo: </label>
                                 <select name="type" id="type">
                                     <option value="">Elegí una opción</option>
-                                    <option value="perros">Perros</option>
-                                    <option value="gatos">Gatos</option>
-                                    <option value="perros-gatos">Gatos y Perros</option>
+                                    <% tipos.forEach(tipo => { %>
+                                        <option value="<%=tipo.id%>">
+                                            <%=tipo.name%>
+                                        </option>
+                                    <% }) %>
                                 </select>
                     </fieldset>
                 
                     <fieldset class="categoriaProducto">
                         <label for="categoriaProducto">Categoría</label>
                             <select name="category" id="category">
-                                <% categories.forEach(categorie => { %>
-                                    <option value="<%=categorie.id%>">
-                                        <%=categorie.name%>
+                                <option value="">Elegí una opción</option>
+                                <% categorias.forEach(cat => { %>
+                                    <option value="<%=cat.id%>">
+                                        <%=cat.name%>
                                     </option>
-                                <% })%>
+                                <% }) %>
                                 
                             </select>
                     </fieldset>

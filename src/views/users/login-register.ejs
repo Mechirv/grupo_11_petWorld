@@ -16,9 +16,9 @@
                 <h1>CLIENTES REGISTRADOS</h1>
                 <form id="form-login" method="POST" action="/users/login">
                     <fieldset class="usuario">
-                        <label for="usuario">Usuario</label>
+                        <label for="user">Usuario</label>
                         <input type="text"  name="user" id="usuario" placeholder="Email o nombre de usuario" value="<%= locals.old && old.user ? old.user : '' %>"/><br>
-                        <% if(locals.errors && errors.user) { %>
+                         <% if(locals.errors && errors.user) { %>
                             <p class="msg-error"><%= errors.user.msg %></p>
                         <% } %>
                     </fieldset>
@@ -32,7 +32,7 @@
                     </fieldset>
 
                     <fieldset id="check">
-                        <input type="checkbox" id="checkbox"/> 
+                        <input type="checkbox" id="checkbox" name="recordarme"/> 
                         <label for="checkbox">Recordarme</label>
                     </fieldset>
 

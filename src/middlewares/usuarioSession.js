@@ -1,9 +1,15 @@
+const userModel = require('../models/user');
 module.exports = (req,res, next) => {
-    let usuario = req.session.usuario;
-    if(usuario){
-        res.locals.usuario = usuario;
-    }else{
-        res.locals.usuario = null;
+    
+    let usuario = null;
+   
+    if(req.cookies && req.cookies.user){
+        usuario = userModel.buscarPorEmail(req.cookies.user);
+    }else if(req.session && req.session.usuario){
+        usuario = req.session.usuario
     }
-    next();
+    res.locals.usuario = usuario; 
+     next();
+   
 }
+

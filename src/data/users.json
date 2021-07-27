@@ -6,16 +6,18 @@
     "usuario": "Mechirv",
     "email": "mechivivanco@hotmail.com",
     "password": "$2a$10$qJUKK/K7o0LHOvPw2lEm0uEOcViXHQ6NDI2/JRiwbk14uckWllUou",
-    "image": null
+    "image": null,
+    "admin": false
   },
   {
     "id": 2,
-    "nombre": "Admin",
-    "apellido": "Admin",
+    "nombre": "Mercedes",
+    "apellido": "Vivanco",
     "usuario": "administrador",
     "email": "admin@petworld.com.ar",
     "password": "$2a$10$.vyeiVg03vJcVwcICdbsC.pISG.x/jtLLJd1Wk/ImHlf7mbc4IKVK",
-    "image": null
+    "image": null,
+    "admin": true
   },
   {
     "id": 3,
@@ -23,7 +25,8 @@
     "apellido": "Gianini",
     "email": "fausto@gmail.com",
     "password": "$2a$10$P/kh99z7qG6VxYdYAODj9Ozzq/dtdm46FPAOoilh0nyHscu6XZNka",
-    "image": null
+    "image": null,
+    "admin": false
   },
   {
     "id": 4,
@@ -31,6 +34,34 @@
     "apellido": "Berisso",
     "email": "maruberisso@gmail.com",
     "password": "$2a$10$t3Rf6XLR/eJIrWkKtJ9/COVJW1RGc.xqhAKSfjjA9l7vQT8p7IA8O",
-    "image": null
+    "image": null,
+    "admin": false
+  },
+  {
+    "id": 5,
+    "nombre": "Feliciano",
+    "apellido": "Vivanco",
+    "email": "felicianorv@gmail.com",
+    "password": "$2a$10$DNBrQxQFq2yIpSsKtNGdKuFfCwr0ApzwyvYLXF/KDdNIToIXRlOBG",
+    "image": null,
+    "admin": false
+  },
+  {
+    "id": 6,
+    "nombre": "Mercedes",
+    "apellido": "Vivanco",
+    "email": "mercedesrvivanco@gmail.com",
+    "password": "$2a$10$NqoJZcOvoh3xUbrgi9kJfeNvyQRjRl.SJWH9Ym/gXoLvqzuxowXNG",
+    "image": "image-1627423975260.png",
+    "admin": false
+  },
+  {
+    "id": 7,
+    "nombre": "Facu",
+    "apellido": "Moreno",
+    "email": "facumoreno@petworld.com.ar",
+    "password": "$2a$10$kO5HuP95GGc1XN6g5UbYh.hFVpq1w5ui1Gyh/mjdyEGOsTscKj4gK",
+    "image": "image-1627427272070.png",
+    "admin": true
   }
 ]

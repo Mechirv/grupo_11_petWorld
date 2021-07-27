@@ -13,14 +13,12 @@ const usersController = {
             return res.render("users/login-register", {errors: errors.mapped(), old: req.body});
         }else{
             let usuario = userModel.buscarPorEmail(req.body.user);
+            if(req.body.recordarme){
+                res.cookie("user",req.body.user,{maxAge:300000});
+            }
+        
+            req.session.usuario = usuario;
             
-            req.body.nombre = usuario.nombre;
-            req.body.apellido = usuario.apellido;
-            req.body.image = usuario.image;
-
-            req.session.usuario = req.body;
-            console.log(req.session.usuario);
-            console.log(req.body);
             return  res.redirect("/");
         }
     },
@@ -40,7 +38,7 @@ const usersController = {
         if(!errors.isEmpty()){
             return res.render("users/register", {errors: errors.mapped(), old: req.body});
         }else{
-            const resultado = userModel.nuevo(req.body); 
+            const resultado = userModel.nuevo(req.body,req.file); 
              return resultado == true?  res.redirect("/users/login") : res.send("Error al cargar la informacion");
        
         }
