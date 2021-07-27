@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%- include('../partials/head.ejs',{css: ["footer","header"]}) %> 
-    
+<head>
+   
+    <%- include('../partials/head.ejs',{css: ["footer","header","perfil"]}); %> 
+    <title>Perfil</title>
+</head>
 <body>
-    <!--HEADER-->
+        <!--HEADER-->
     
-    <%- include('../partials/header.ejs') %>
+        <%- include('../partials/header.ejs') %>
 
-    <!--MAIN-->
-    <main id= "profile">
+        <!--MAIN-->
+        <main id= "profile">
     
-            <article class="user-profile">
-                <img src="/img/users/<%= user.image %>" alt="<%=user.name%>">
-                <section class="detalle-producto-detail">
-                    <h3><%= user.name %></h3>
-                    <p class="descripcion-producto-detail"><%= product.description %></p>
-                    <p class="precio-prod-detail">$ <%= product.price %></p>
-                    <img src="../img/Logos-01.png" style="clear: both;display: block;margin: 10px 0;">
-
                 
-
-
-                   <div class="botones-editar-emininar">
-                    <a href="/users/edit/<%=user.id %>" id="button-editar">Editar</a>
-						<form action="/users/delete/<%=user.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-							<button type="submit" id="button-eliminar">Eliminar cuenta</button>
-						</form>
-                    </div>
-                </section>
-
-  
-
+                          <h1 id="titulo">MI PERFIL</h1>
+        
+                          <div class="perfil-contenedor">
+                              <form id="mi-perfil" action="/user/update?method=PUT" method="POST" enctype="multipart/form-data">
+                                  
+                                  <fieldset id="datos">
+                                      <fieldset class="datos-perfil">
+                                
+                      
+                                          <legend>BIENVENNIDO </legend>
     
-    </main>
-
-
-<!--FOOTER-->    
-<footer class="footer">
-    <%- include('../partials/footer.ejs') %>
-</footer>
+                                          
+                                          <fieldset class="datos">
+                                            <!--<%=usuario.image"%>-->
+                                        </fieldset>
+                                         
+                                      </fieldset>
+                      
+                                      <fieldset class="info-personal">
+                                         
+                                          <fieldset class="datos">
+                                            <label class="label"for="email">Usuario <%=usuario.user%></label>
+                                            
+                                        </fieldset>
+                    
+                                        <fieldset class="datos">
+                                            <label class="label" for="pass">Contraseña: </label>
+                                            <input type="password" name="pass"  id="pass" >
+                                        </fieldset>
+                    
+                                        <fieldset class="datos">
+                                            <label class="label" for="new-pass">Nueva Contraseña: </label>
+                                            <input type="password" name="new-pass"  id="new-pass" >
+                                        </fieldset>
+                                        
+                      
+                                      </fieldset>
+                                  </fieldset>
+                      
+                                  <fieldset class="buttons">
+                                    <button type="button" id="logout"><a href="/users/logout">Cerrar sesión</a></button>
+                                      <button  type="submit" id="button-update">Modificar</button>
+                                  </fieldset>
+                                
+                              
+                              </form>
+                      
+                             
+                      
+                          </div>
+                      
     
+      
+    
+        
+        </main>
+    
+    
+    <!--FOOTER-->    
+    <footer class="footer">
+        <%- include('../partials/footer.ejs') %>
+    </footer>
 </body>
 </html>

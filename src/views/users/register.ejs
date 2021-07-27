@@ -19,13 +19,6 @@
                 <fieldset class="datos-acceso">
 
                     <legend>DATOS DE ACCESO</legend>
-                    <fieldset class="datos">
-                        <label class="label" for="usuario">Nombre de Usuario: </label>
-                        <input type="text" name="usuario"  id="usuario" value="<%= locals.old && old.usuario ? old.usuario : '' %>">
-                        <% if(locals.errors && errors.usuario) { %>
-                            <p class="msg-error"><%= errors.usuario.msg %></p>
-                        <% } %>
-                    </fieldset>
 
                     <fieldset class="datos">
                         <label class="label"for="email">Email: </label>

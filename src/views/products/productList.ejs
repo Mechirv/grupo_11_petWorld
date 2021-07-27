@@ -35,9 +35,14 @@
                 
             
             </section>
+            <% if(usuario){ %>
+                <%if(usuario.admin){ %>
+
             <section id="button-crear">
                 <button id="crear-producto"><a href="/products/create/">AGREGAR UN PRODUCTO</a></button>
             </section>
+            <%}}%>
+        
         </section>
         
       </main>  

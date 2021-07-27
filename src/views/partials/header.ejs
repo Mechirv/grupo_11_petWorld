@@ -12,10 +12,15 @@
             <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
         </form>
         
+       
         <section id="login-cart">
             <div id="button-login-header">
+                <%if(usuario) {%>
+                    <a href="/users/perfil" method=GET id="log-text"><%=usuario.nombre %></a>
+                <% }else{ %>
                 <a href="/users/login" method="GET" id="log-text">Mi cuenta</a>
                 <a href="/users/login" method="GET" id="log-icon"><i class="far fa-user"></i></a>
+                <%}%>
             </div>
             
             <div id="cart">
@@ -29,8 +34,19 @@
     <!--barra de navegación-->
     <section class="header-bottom">
         <figure id="menu"><i class="fas fa-bars fa-1x"></i>Menu</figure>
-
+        
         <nav class="nav-bar">
+
+            <%if(usuario && usuario.admin){%>
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                
+                    <li><a href="/products/create/">AGREGAR PRODUCTO</a>
+                        
+                </ul>
+
+
+            <%} else{%>
             <ul>
                 <li><a href="/">HOME</a></li>
                 <li><a href="/products/category/perros">PERROS</a>  
@@ -64,6 +80,7 @@
                 <li><a href="#">PW Blog</a></li>
                 <li><a href="#"> CONTACTENOS</a></li>
             </ul>
+            <%}%>
         </nav>
         
     </section>

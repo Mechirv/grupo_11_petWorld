@@ -1,114 +1,36 @@
 [
   {
     "id": 1,
+    "nombre": "Mercedes",
+    "apellido": "Vivanco",
     "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "mefa2405",
-    "image": "image-1626036110192.png"
+    "email": "mechivivanco@hotmail.com",
+    "password": "$2a$10$qJUKK/K7o0LHOvPw2lEm0uEOcViXHQ6NDI2/JRiwbk14uckWllUou",
+    "image": null
   },
   {
     "id": 2,
-    "usuario": "Mechirv",
-    "email": "mechivivanco@hotmail.com",
-    "password": "mefamefa2405",
-    "image": "image-1626036283969.png"
+    "nombre": "Admin",
+    "apellido": "Admin",
+    "usuario": "administrador",
+    "email": "admin@petworld.com.ar",
+    "password": "$2a$10$.vyeiVg03vJcVwcICdbsC.pISG.x/jtLLJd1Wk/ImHlf7mbc4IKVK",
+    "image": null
   },
   {
     "id": 3,
-    "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "mefa2405",
-    "image": "image-1626036624422.png"
+    "nombre": "Fausto",
+    "apellido": "Gianini",
+    "email": "fausto@gmail.com",
+    "password": "$2a$10$P/kh99z7qG6VxYdYAODj9Ozzq/dtdm46FPAOoilh0nyHscu6XZNka",
+    "image": null
   },
   {
     "id": 4,
-    "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "mefa2405",
-    "image": "image-1626036852831.png"
-  },
-  {
-    "id": 5,
-    "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "",
-    "image": "image-1626639950309.jpg"
-  },
-  {
-    "id": 6,
-    "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "",
-    "image": "image-1626640335493.jpg"
-  },
-  {
-    "id": 7,
-    "image": null
-  },
-  {
-    "id": 8,
-    "image": null
-  },
-  {
-    "id": 9,
-    "image": null
-  },
-  {
-    "id": 10,
-    "image": null
-  },
-  {
-    "id": 11,
-    "nombre": "Mercedes",
-    "apellido": "Vivanco",
-    "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "",
-    "image": null
-  },
-  {
-    "id": 12,
-    "nombre": "Fausto",
-    "apellido": "Gianini",
-    "usuario": "Fau",
-    "email": "fausto@gmail.com",
-    "password": "fausto",
-    "image": null
-  },
-  {
-    "id": 13,
-    "nombre": "Mercedes",
-    "apellido": "Vivanco",
-    "usuario": "Merce",
-    "email": "mer@gmail.com",
-    "password": "mefa2405",
-    "image": null
-  },
-  {
-    "id": 14,
-    "nombre": "",
-    "apellido": "",
-    "usuario": "Mechirv",
-    "email": "",
-    "password": "",
-    "image": null
-  },
-  {
-    "id": 15,
-    "nombre": "",
-    "apellido": "",
-    "usuario": "Maru",
+    "nombre": "Maria Eugenia",
+    "apellido": "Berisso",
     "email": "maruberisso@gmail.com",
-    "password": "",
-    "image": null
-  },
-  {
-    "id": 16,
-    "nombre": "Mercedes",
-    "apellido": "Vivanco",
-    "usuario": "Mechirv",
-    "email": "mercedesrvivanco@gmail.com",
-    "password": "mefa2405",
+    "password": "$2a$10$t3Rf6XLR/eJIrWkKtJ9/COVJW1RGc.xqhAKSfjjA9l7vQT8p7IA8O",
     "image": null
   }
 ]

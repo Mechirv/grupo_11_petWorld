@@ -5,6 +5,7 @@ const productosController = require('../controllers/productosController');
 const multer = require('multer');
 const validarProducto = require('../middlewares/validaProducto');
 
+
 //disco de almacenamiento de imagenes
 const almacenamiento = multer.diskStorage({
     destination: function(req,file,cb){
@@ -27,7 +28,7 @@ router.get("/productCart",productosController.cart);
 
 //creación de un producto
 router.get("/create", productosController.crear);
-router.post("/save",[upload.single('image')], validarProducto, productosController.accionCrear);
+router.post("/save",[upload.single('image')], productosController.accionCrear);
 
 //edicion de un producto
 

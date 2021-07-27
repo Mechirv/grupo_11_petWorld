@@ -115,5 +115,14 @@
     "destacado": "false",
     "image": "image-1626696146110.png",
     "price": "450"
+  },
+  {
+    "id": 14,
+    "name": "Hueso de goma",
+    "description": "Pipeta para perros y gatos. Para pulgas",
+    "type": "1",
+    "category": "1",
+    "image": "image-1627389067170.jpg",
+    "price": ""
   }
 ]

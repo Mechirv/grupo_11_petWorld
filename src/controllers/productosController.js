@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const product = require('../models/products');
 const category = require('../models/categories');
-const type = require('../models/types');
+const types = require('../models/types');
 const { validationResult } = require('express-validator');
 
 
@@ -10,6 +10,7 @@ let productosController = {
     //listado de todos los productos de la base json
     listar: (req,res) => {res.render("products/productList", {products: product.todos() })},
 
+    //lista los prodcutos por categoría
     listarCategoria: (req,res) =>
     {
         res.render("products/productList", {products: product.listarCategoria(req.params.category)})
@@ -18,9 +19,11 @@ let productosController = {
     //muestra el detalle de un solo producto cuyo id se pasa como parametro
     detalle:(req,res) => {
         res.render("products/productDetail", {product: product.buscar(req.params.id)})},
-        
-    crear: (req,res) => {res.render("products/productCreateForm", {categories:category.todos(), types:type.todos()})},
+    
+    //renderiza la vista para crear un producto
+    crear: (req,res) => {res.render("products/productCreateForm", {categorias:category.todos(), tipos:types.todos()})},
 
+    //crear un nuevo producto
     accionCrear: (req,res) => {
         const errores = validationResult(req);
         
@@ -45,7 +48,7 @@ let productosController = {
 		return resultado == true ? res.redirect("/products/") : res.send("Error al cargar la informacion");
     },
         
-    
+    //acción de eliminar un producto
     eliminar: (req,res) => {
         let resultado = product.eliminar(req.params.id);
         return resultado == true ? res.redirect("/products/") : res.send("Error al cargar la informacion");

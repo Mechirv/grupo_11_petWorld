@@ -9,8 +9,9 @@
     
     /*-----ESTILOS DEL MAIN-----*/
 main{
+
     display: block;
-    background-color:#ebebeb;
+    background-color:#f1f1f1;
    padding: 0 20px;
 
 }
@@ -72,8 +73,9 @@ figure{
 }
 
 #button-agregar{
-    border: 1px solid #7c756b;
-    background-color: #7c756b;
+    border-radius: 5px;
+    border: 1px solid #3b9757;
+    background-color: #3b9757;
     border-radius: 2px;
     padding: 5px;
     margin-top: 5px;
@@ -143,6 +145,10 @@ figure{
 }
 
 @media (min-width:769px) {
+
+    main{
+        padding: 20px 100px;
+    }
     .producto{
         max-width: 230px;
     }

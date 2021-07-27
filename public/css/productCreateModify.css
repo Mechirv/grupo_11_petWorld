@@ -38,6 +38,10 @@ color: #a59c93;
 font-size: 25px;
 }
 
+.msg-error{
+    color: red;
+    margin-top: 0;
+}
 
 fieldset{
     border: none;

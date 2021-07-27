@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const path = require('path');
-const user = require('../models/user');
+const userModel = require('../models/user');
+
 
 
 const usersController = {
@@ -11,10 +12,24 @@ const usersController = {
         if(!errors.isEmpty()){
             return res.render("users/login-register", {errors: errors.mapped(), old: req.body});
         }else{
-            let resultado = user.buscarPorEmail(req.body.email)
-            return resultado == true?  res.redirect("/users/perfil") : res.send("Error al cargar la informacion");
+            let usuario = userModel.buscarPorEmail(req.body.user);
+            
+            req.body.nombre = usuario.nombre;
+            req.body.apellido = usuario.apellido;
+            req.body.image = usuario.image;
+
+            req.session.usuario = req.body;
+            console.log(req.session.usuario);
+            console.log(req.body);
+            return  res.redirect("/");
         }
     },
+
+    logout: (req,res) => {
+        
+        delete req.session.usuario;
+        return res.redirect("/");
+      },
 
 
     register: (req,res) => res.render("users/register"),
@@ -25,12 +40,13 @@ const usersController = {
         if(!errors.isEmpty()){
             return res.render("users/register", {errors: errors.mapped(), old: req.body});
         }else{
-            
-        let resultado = user.nuevo(req.body); 
-        return resultado == true?  res.redirect("/users/login") : res.send("Error al cargar la informacion");
+            const resultado = userModel.nuevo(req.body); 
+             return resultado == true?  res.redirect("/users/login") : res.send("Error al cargar la informacion");
        
         }
     },
+
+    perfil: (req,res)=>res.render("users/perfil"),
 }
 
 

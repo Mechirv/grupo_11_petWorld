@@ -4,15 +4,14 @@ const user = require('../models/user');
 
 const validaciones = [
     
-    body("usuario").notEmpty().withMessage("Ingrese un nombre de usuario").bail()
-        .isLength({min:6}).withMessage("Mínimo 6 caracteres"),
     body("email").notEmpty().withMessage("Debes ingresar un correo electrònico").bail()
-        .isEmail().withMessage("Formato de correo electrònico invàlido").bail()
+        .isEmail().withMessage("Formato de correo electrònico inválido").bail()
         .custom(value => {
             let existe = user.buscarPorEmail(value);
             if(existe){
-                return Promise.reject('E-mail already in use')
+                return Promise.reject('El email ya esxiste')
             }
+            return true;
         }),
     body("pass").notEmpty().withMessage("Ingrese una contraseña").bail()
         .isLength({min:8}).withMessage("La contraseña debe tener como mínimo 8 caracteres"),

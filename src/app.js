@@ -4,6 +4,7 @@ const app = express();
 const methodOverride = require('method-override');
 const multer = require('multer');
 const session = require('express-session');
+const cookies = require('cookie-parser')
 
 
 
@@ -28,8 +29,10 @@ app.set('views', path.resolve(__dirname, './views'));
 app.use(express.urlencoded({extended:false})) // add req.body
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(session({secret: "Mensaje"}));
+app.use(cookies()); // add req.cookies and res.cookie()
+app.use(session({secret: "Mensaje", resave: false, saveUninitialized: false}));  //add req.session
 
+app.use(require('./middlewares/usuarioSession'));
 
 //Rutas
 const rutasIndex = require('./routes/index');

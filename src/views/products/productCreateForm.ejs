@@ -15,11 +15,6 @@
         <h1 class="titulo-create-modify">INGRESE UN NUEVO PRODUCTO</h1>
 
         <div class="productCreateModify">
-            <% if(locals && locals.errores){ %>
-                <% for(let error in errores) { %>
-                    <p> <%=errores[error].msg %></p>
-                <% } %>
-            <% } %>
 
             <form id="abmProduct" action="/products/save" method="POST" enctype="multipart/form-data">
                 
@@ -29,17 +24,26 @@
                         <fieldset class=nombreProducto>
                             <label for="nombreProducto">Nombre del Producto: </label>
                             <input type="text" name="name" id="nombreProducto">
+                            <% if(locals.errors && errors.name) { %>
+                                <p class="msg-error"><%= errors.name.msg %></p>
+                            <% } %>
                         </fieldset>
                     
                         <fieldset class="descripcionProducto">
                             <label for="descripcionProducto">Descripcion del Producto: </label>
                             <input type="text" name="description"  id="descripcionProducto">
+                            <% if(locals.errors && errors.description) { %>
+                                <p class="msg-error"><%= errors.description.msg %></p>
+                            <% } %>
                         </fieldset>
                     
                     
                         <fieldset class="precioProducto">
                             <label for="precioProducto">Precio: </label>
                             <input type="number" name="price"  id="precioProducto" >
+                            <% if(locals.errors && errors.price) { %>
+                                <p class="msg-error"><%= errors.price.msg %></p>
+                            <% } %>
                         </fieldset>
                     </fieldset>    
 
@@ -50,26 +54,26 @@
                         </fieldset>
 
                         <fieldset class="tipoProducto">
-                            <label for="tipo">Tipo: </label>
+                            <label for="type">Tipo: </label>
                                     <select name="type" id="type">
                                         <option value="">Elegí una opción</option>
-                                     <% types.forEach(type => { %>
-                                        <option value="<%=type.id%>">
-                                            <%=type.name%>
-                                        </option>
-                                    <% })%>
+                                        <% tipos.forEach(tipo => { %>
+                                            <option value="<%=tipo.id%>">
+                                                <%=tipo.name%>
+                                            </option>
+                                        <% }) %>
                                     </select>
                         </fieldset>
                     
                         <fieldset class="categoriaProducto">
-                            <label for="categoriaProducto">Categoría</label>
+                            <label for="category">Categoría</label>
                                 <select name="category" id="category">
                                     <option value="">Elegí una opción</option>
-                                    <% categories.forEach(category => { %>
-                                        <option value="<%=category.id%>">
-                                            <%=category.name%>
+                                    <% categorias.forEach(cat => { %>
+                                        <option value="<%=cat.id%>">
+                                            <%=cat.name%>
                                         </option>
-                                    <% })%>
+                                    <% }) %>
                                     
                                 </select>
                         </fieldset>
