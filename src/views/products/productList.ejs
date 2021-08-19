@@ -25,25 +25,41 @@
                     <section class="detalle-producto">
                         <p> <span id="description"></span><%=products[i].name %></p>
                         <p> <span id="dolar">$ <%=products[i].price %></span></p>
-                        <p> <span id="category">Producto para <%=products[i].type%></span> </p>
+                        <p> <span id="category">Producto para <%=products[i].types.name%></span> </p>
+                        <% if(usuario){ %>
+                            <%if(usuario.admin){ %>
+                                <div class="botones-editar-eliminar">
+                                    <a href="/products/edit/<%=products[i].id %>" id="button-editar">EDITAR</a>
+                                        <form action="/products/delete/<%=products[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                            <button type="submit" id="button-eliminar">ELIMINAR</button>
+                                        </form>
+                                    </div>
+                            <%}else{ %>
+                                <form id="agregar-carrito" action="products/productCart" method="GET">
+                                    <button id="button-agregar" type="submit">AGREGAR AL CARRITO</button>
+                                </form>
+                            <% } %>
+                            <%}else{%>
+
                         <form id="agregar-carrito" action="products/productCart" method="GET">
                             <button id="button-agregar" type="submit">AGREGAR AL CARRITO</button>
                         </form>
+                        <%} %>
                     </section>
                 </article>
                 <% }%>
                 
-            
-            </section>
-            <% if(usuario){ %>
-                <%if(usuario.admin){ %>
 
-            <section id="button-crear">
-                <button id="crear-producto"><a href="/products/create/">AGREGAR UN PRODUCTO</a></button>
-            </section>
-            <%}}%>
+            
         
         </section>
+        <% if(usuario){ %>
+            <%if(usuario.admin){ %>
+
+        <section id="button-crear">
+            <button id="crear-producto"><a href="/products/create/">AGREGAR UN PRODUCTO</a></button>
+        </section>
+        <%}}%>
         
       </main>  
 

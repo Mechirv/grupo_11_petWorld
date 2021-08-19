@@ -124,5 +124,13 @@
     "category": "1",
     "image": "image-1627389067170.jpg",
     "price": ""
+  },
+  {
+    "id": 15,
+    "name": "Hueso de goma",
+    "description": "Hueso de goma, resistente, para perros pequeños",
+    "destacado": "false",
+    "image": "image-1629206214903.png",
+    "price": "450"
   }
 ]

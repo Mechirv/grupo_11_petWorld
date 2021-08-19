@@ -55,7 +55,7 @@
 
                         <fieldset class="tipoProducto">
                             <label for="type">Tipo: </label>
-                                    <select name="type" id="type">
+                                    <select name="type_id" id="type">
                                         <option value="">Elegí una opción</option>
                                         <% tipos.forEach(tipo => { %>
                                             <option value="<%=tipo.id%>">
@@ -67,7 +67,7 @@
                     
                         <fieldset class="categoriaProducto">
                             <label for="category">Categoría</label>
-                                <select name="category" id="category">
+                                <select name="category_id" id="category">
                                     <option value="">Elegí una opción</option>
                                     <% categorias.forEach(cat => { %>
                                         <option value="<%=cat.id%>">

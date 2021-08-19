@@ -37,8 +37,9 @@
 
                     </section>
 
-                    <% if (usuario && usuario.admin){%>
-                   <div class="botones-editar-emininar">
+
+                  <% if (usuario && usuario.admin){%> 
+                   <div class="botones-editar-eliminar">
                     <a href="/products/edit/<%=product.id %>" id="button-editar">EDITAR</a>
 						<form action="/products/delete/<%=product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
 							<button type="submit" id="button-eliminar">ELIMINAR</button>

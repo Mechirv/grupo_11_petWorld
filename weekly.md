@@ -19,3 +19,5 @@ reunión día 02/07
 tareas:
 Facu: ruta/vista para eliminar un producto
 Mechi: terminar vista productModify
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head.ejs',{css: [ "productCreateModify","footer", "header","general"]}) %> 
+    
+    <title>Create</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+    <main id="formCreate">
+        <h1 class="titulo-create-modify">INGRESE UN NUEVO TIPO DE PRODUCTO</h1>
+
+        <div class="productCreateModify">
+
+            <form id="" action="/types/save" method="POST" enctype="multipart/form-data">
+                
+    
+                <fieldset class=nombreTipo>
+                    <label for="nombreTipo">Nombre del Tipo de Producto:</label>
+                    <input type="text" name="name"  id="nombreTipo">
+                </fieldset>
+                
+                <fieldset class="buttons">
+                    <button id="cancel-modify" type="reset">Cancelar</button>
+                    <button id="accept-modify" type="submit">Guardar</button>
+                </fieldset>
+           
+            
+            </form>
+
+           
+                
+                       
+                    
+            
+               
+            
+        </div>
+    
+    </main>
+        <%- include('../partials/footer.ejs') %>
+    
+</body>
+</html>

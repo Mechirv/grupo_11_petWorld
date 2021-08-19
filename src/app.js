@@ -8,8 +8,6 @@ const cookies = require('cookie-parser')
 
 
 
-
-
 //acceso pub
 app.use(express.static(path.resolve(__dirname,'../public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
 
@@ -44,6 +42,12 @@ app.use("/users", rutasUser);
 
 const rutasProducts = require("./routes/products");
 app.use("/products",rutasProducts);
+
+const rutasCategories = require("./routes/categories");
+app.use("/categories",rutasCategories);
+
+const rutasTypes = require("./routes/types");
+app.use("/types",rutasTypes);
 
 
 module.exports = app;

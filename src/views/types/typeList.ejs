@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs',{css: [ "index","footer", "header"]}) %> 
+
+    </head>
+       
+  
+
+<body>
+    
+    <%- include('../partials/header.ejs') %>
+ 
+    <!--MAIN-->
+    <main>
+        
+            <h2 class="destacados">Tipos de Productos</h2>
+            <section class="grid-destacados">
+                <article class="producto">             
+                <% for(i=0;i<types.length;i++){ %>
+                
+                    <h3><%=types[i].id%>: <%=types[i].name%>  <a href="/types/edit/<%=types[i].id %>" id="button-editar">EDITAR</a>
+                    <form action="/types/delete/<%=types[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                        <button type="submit" id="button-eliminar">ELIMINAR</button>
+                    </form> </h3>
+                    <%}%> 
+                    <section id="button-crear">
+                        <button id="crear-producto"><a href="/types/create/">AGREGAR UN TIPO</a></button>
+                    </section>
+                </article>
+                
+            </section>
+
+
+                
+        
+      </main> 

@@ -45,7 +45,7 @@
                                 <select name="type" id="type">
                                     <option value="">Elegí una opción</option>
                                     <% tipos.forEach(tipo => { %>
-                                        <option value="<%=tipo.id%>">
+                                        <option value="<%=tipo.id%>" <% if (product.type_id == tipo.id){ %> <%= 'selected' %> <% }; %>>
                                             <%=tipo.name%>
                                         </option>
                                     <% }) %>
@@ -57,7 +57,7 @@
                             <select name="category" id="category">
                                 <option value="">Elegí una opción</option>
                                 <% categorias.forEach(cat => { %>
-                                    <option value="<%=cat.id%>">
+                                    <option value="<%=cat.id%>" <% if (product.category_id == cat.id){ %> <%= 'selected' %> <% }; %>>
                                         <%=cat.name%>
                                     </option>
                                 <% }) %>

@@ -43,3 +43,17 @@ Que deberíamos comenzar a hacer:
 ytabajar de manera colaborativa
 mejorar la división de tareas
 
+SPRINT 6:
+Que hicimos mal: 
+nuevamente estuvimos menos coordinados y mas desconectados que en los sprint anteriores.
+
+Que hicimos bien:
+aprovechar las clases prácticas para adelantar trabajo y
+
+Que deberíamos comenzar a hacer:
+-hacer mas reuniones
+-dividir tareas
+-ser mas colaboartivos
+-mejorar la comunicación
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs',{css: [ "productCreateModify","footer", "header"]}) %> 
+    
+    <title>Modify</title>
+</head>
+<body>
+    <%- include('../partials/header.ejs') %>
+
+<main id="formModify">
+    <h1 class="titulo-create-modify"> EDICIÓN DE UN TIPO</h1>
+
+    
+
+        <form id="abmProduct" action="/types/update/<%=type.id%>/?_method=PUT" method="POST" enctype="multipart/form-data">
+            
+                <fieldset id="datos1">
+                    <fieldset class=nombreTipo>
+                        <label for="nombreTipo">Id: <%=type.id%></label>
+                    </fieldset>
+            
+                    <fieldset class=nombreTipo>
+                        <label for="nombreTipo">Nombre:</label>
+                        <input type="text" name="name"  id="name" placeholder="<%=type.name%>">
+                    </fieldset>
+                </fieldset>
+                
+        
+            <fieldset class="buttons">
+                <button id="cancel-modify" type="reset">Cancelar</button>
+                <button id="accept-modify" type="submit">Guardar</button>
+            </fieldset>
+        </form>
+    </div>
+
+</main>
+    <%- include('../partials/footer.ejs') %>
+
+    
+</body>
+</html>
