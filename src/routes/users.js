@@ -32,6 +32,8 @@ routes.get("/register", usersController.register);
 
 routes.post("/save", [upload.single('image')],validaRegister, usersController.guardar);
 
+routes.post("/update", [upload.single('image')],validaRegister, usersController.modificar);
+
 
 
 

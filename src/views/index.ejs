@@ -24,9 +24,27 @@
                     <section class="detalle-producto">
                         <p><%=products[i].name%></p>
                         <p> <span id="dolar">$ <%=products[i].price%></span></p>
+                        
+                        <% if(usuario){ %>
+                            <%if(usuario.admin){ %>
+                                <div class="botones-editar-eliminar">
+                                    <a href="/products/edit/<%=products[i].id %>" id="button-editar">EDITAR</a>
+                                        <form action="/products/delete/<%=products[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                            <button type="submit" id="button-eliminar">ELIMINAR</button>
+                                        </form>
+                                </div>
+                            <%}else{ %>
+                                <form id="agregar-carrito" action="products/productCart" method="GET">
+                                    <button id="button-agregar" type="submit">AGREGAR AL CARRITO</button>
+                                </form>
+                            <% } %>
+                            <%}else{%>
+
                         <form id="agregar-carrito" action="products/productCart" method="GET">
-                            <button id="button-agregar" type="submit"><i class="fas fa-shopping-basket"></i> AGREGAR</button>
+                            <button id="button-agregar" type="submit">AGREGAR AL CARRITO</button>
                         </form>
+                        <%} %>
+
                     </section>
                 </article>
                 <%}%>

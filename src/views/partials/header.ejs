@@ -8,7 +8,7 @@
             <h1 id="titulo">Pet World</h1>
         </section>
         
-        <form id="search-bar">
+        <form id="search-bar" action="/products/search" method="GET" >
             <input id="busqueda" type="search" name="busqueda" placeholder="Buscar"><i class="fas fa-search"></i>
         </form>
         
@@ -39,11 +39,9 @@
 
             <%if(usuario && usuario.admin){%>
                 <ul>
-                    <li><a href="/">HOME</a></li>
                     <li><a href="/types">TIPOS</a></li>
                     <li><a href="/categories">CATEGORIAS</a></li>
                     <li><a href="/products">PRODUCTOS</a></li>
-                    <li><a href="/products/create/">AGREGAR PRODUCTO</a>
                         
                 </ul>
 

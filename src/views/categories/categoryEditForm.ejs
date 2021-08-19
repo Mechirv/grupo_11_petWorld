@@ -9,20 +9,20 @@
     <%- include('../partials/header.ejs') %>
 
 <main id="formModify">
-    <h1 class="titulo-create-modify"> EDICIÓN DE UN TIPO</h1>
+    <h1 class="titulo-create-modify"> EDICIÓN DE UNA CATEGORÍA</h1>
 
     
 
-        <form id="abmProduct" action="/types/update/<%=type.id%>/?_method=PUT" method="POST">
+        <form id="abmProduct" action="/categories/update/<%=category.id%>/?_method=PUT" method="POST" enctype="multipart/form-data">
             
                 <fieldset id="datos1">
-                    <fieldset class=nombreTipo>
-                        <label for="nombreTipo">Id: <%=type.id%></label>
+                    <fieldset class=idCat>
+                        <label for="idCat">Id: <%=category.id%></label>
                     </fieldset>
             
-                    <fieldset class=nombreTipo>
-                        <label for="nombreTipo">Nombre:</label>
-                        <input type="text" name="name"  id="name" placeholder="<%=type.name%>">
+                    <fieldset class=nombreCat>
+                        <label for="nombreCat">Nombre:</label>
+                        <input type="text" name="name"  id="name" placeholder="<%=category.name%>">
                     </fieldset>
                 </fieldset>
                 

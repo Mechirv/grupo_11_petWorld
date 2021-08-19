@@ -14,22 +14,22 @@
     <!--MAIN-->
     <main>
         
-            <h2 class="tipos">Tipos de Productos</h2>
+            <h2 class="tipos">Categorias de Productos</h2>
             <section class="listado-tipos">
                             
-                <% for(i=0;i<types.length;i++){ %>
+                <% for(i=0;i<categories.length;i++){ %>
                 
                     <span id="list">
-                        <p><%=types[i].id%>: <%=types[i].name%> </p>
-                        <a href="/types/edit/<%=types[i].id %>" id="button-editar"> EDITAR </a>
-                        <form action="/types/delete/<%=types[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                        <p><%=categories[i].id%>: <%=categories[i].name%> </p>
+                        <a href="/categories/edit/<%=categories[i].id %>" id="button-editar"> EDITAR </a>
+                        <form action="/categories/delete/<%=categories[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
                             <button type="submit" id="button-eliminar">ELIMINAR</button>
                         </form> 
                     </span>
                 <%}%> 
 
                     <section id="button-crear">
-                        <button id="boton-crear"><a href="/types/create/">AGREGAR UN TIPO</a></button>
+                        <button id="boton-crear"><a href="/categories/create/">AGREGAR UN TIPO</a></button>
                     </section>
              
                 

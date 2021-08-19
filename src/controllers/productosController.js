@@ -9,6 +9,8 @@ const Product = db.Product;
 const sequelize = db.sequelize;
 const Category = db.Category;
 const Type = db.Type;
+const Op = db.sequelize.Op;
+
 
 
 let productosController = {
@@ -16,19 +18,37 @@ let productosController = {
     listar: async (req,res) => {
         res.render("products/productList", {products: await Product.findAll({include: [{association: "types"},{association:"categories"}]}) })},
 
-    //lista los prodcutos por categoría
-    listarCategoria: async (req,res) =>
-    {
-        
-        res.render("products/productList", 
-        {
-            products: await Product.findAll(
-                {include: [{association:"types"}]},
-                { where: {name : await Type.findOne({where:{name:req.params.type}})}}
-            )
-        })
-        //res.render("products/productList", {products: product.listarCategoria(req.params.category)})
+    
+    buscar: async (req,res) => {
+        try{
+            let buscar = req.query.busqueda;
+            console.log(buscar);
+            let productos = await Product.findAll(
+                {where: {
+                    name: {[Op.like]: '%buscar%' }
+                }});
+            res.render("products/productList", {products:productos});
+            }catch(errors){
+                console.log(errors);
+
+                res.send(errors)
+            }
+
     },
+
+        //lista los prodcutos por categoría
+    //listarCategoria: async (req,res) =>
+    //{
+    //    
+    //    res.render("products/productList", 
+    //    {
+    //        products: await Product.findAll(
+    //            {include: [{association:"types"}]},
+    //            { where: {name : await Type.findOne({where:{name:req.params.type}})}}
+    //        )
+    //    })
+    //    //res.render("products/productList", {products: product.listarCategoria(req.params.category)})
+    //},
 
     //muestra el detalle de un solo producto cuyo id se pasa como parametro
     detalle:async (req,res) => {
@@ -44,14 +64,21 @@ let productosController = {
     accionCrear: async (req,res) =>{
         const errores = validationResult(req);
         try{
-            await Product.create(req.body);
+            await Product.create({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.file.filename,
+                destacado: req.body.destacado,
+                category_id: req.body.category_id,
+                type_id: req.body.type_id
+            });
             res.redirect("/products/")
         }catch(errors){
             return res.render("users/register", {errors: errors.mapped(), old: req.body})
 
         }
     },
-
 
 
     //accionCrear: (req,res) => {
@@ -63,7 +90,6 @@ let productosController = {
 	//	    return resultado == true? res.redirect("/products/") : res.send("Error al cargar la informacion");
     //    }else{
     //        return res.render("products/productCreateForm", {errores: errores.mapped(), old: req.body})
-//
     //    }
     //},
 
@@ -86,10 +112,22 @@ let productosController = {
     //},
 
     modificar: async (req,res) =>{
-        let update = await Product.update(req.body,{
-            where: {id:req.params.id}
-        });
-        res.redirect("/products/");
+        try{
+            let update = await Product.update({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.file.filename,
+                destacado: req.body.destacado,
+                category_id: req.body.category_id,
+                type_id: req.body.type_id
+            },{
+                where: {id:req.params.id}
+            });
+            res.redirect("/products/");
+        }catch(errors){
+            res.send(errors);
+        }
 
     },
         

@@ -7,7 +7,6 @@ const session = require('express-session');
 const cookies = require('cookie-parser')
 
 
-
 //acceso pub
 app.use(express.static(path.resolve(__dirname,'../public'))); //DEJO ACCESIBLE LA CARPETA PUBLIC
 
@@ -24,7 +23,7 @@ app.set('views', path.resolve(__dirname, './views'));
 
 
 //config. de datos
-app.use(express.urlencoded({extended:false})) // add req.body
+app.use(express.urlencoded({extended:false})); // add req.body
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(cookies()); // add req.cookies and res.cookie()

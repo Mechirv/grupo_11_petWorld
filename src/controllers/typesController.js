@@ -7,7 +7,6 @@ const sequelize = db.sequelize;
 
 const typesController = {
     listar: async (req,res) =>{
-        let types
         res.render("types/typeList",{types: await Type.findAll()})
     },
     crear: (req,res) =>{
@@ -15,9 +14,8 @@ const typesController = {
     },
 
     accionCrear: async (req,res) =>{
-
             console.log(req.body);
-            await Type.create(req.body);
+            let Nuevo = await Type.create({name:req.body.name});
             res.redirect("/types/")
 
     },

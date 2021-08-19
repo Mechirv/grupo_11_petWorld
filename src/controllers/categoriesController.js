@@ -1,8 +1,6 @@
 const db = require('../database/models/index');
 const { validationResult } = require('express-validator');
 const path = require('path');
-
-
 const Category = db.Category;
 const sequelize = db.sequelize;
 
@@ -13,23 +11,45 @@ const sequelize = db.sequelize;
 
 
 const categoriesController = {
-    listar: (req,res) =>{
-
+    listar: async (req,res) =>{
+        res.render("categories/categoryList",{categories: await Category.findAll()})
     },
     crear: (req,res) =>{
+        res.render("categories/categoryCreateForm")
+    },
+
+    accionCrear: async (req,res) =>{
+            let Nuevo = await Category.create({name:req.body.name});
+            res.redirect("/categories/")
 
     },
-    accionCrear:(req,res) =>{
+
+    //muestra form para editar un tipo
+    editar: async (req,res) =>{
+            let category = await Category.findByPk((req.params.id));
+            res.render("categories/categoryEditForm",{category })
 
     },
-    editar:(req,res) =>{
+    //accion de editar
+    modificar: async (req,res) =>{
+        
+        try{
+            let update = await Category.update(
+                {name: req.body.name},
+                {where: {id:req.params.id}}
+                );
+            res.redirect("/categories/");
+        }catch(errors){
+            
+        }
+        
 
     },
-    modificar: (req,res) =>{
-
-    },
-    eliminar:(req,res) =>{
-
+    eliminar:async (req,res) =>{
+        let eliminado = await Category.destroy({
+            where: {id: req.params.id}});
+        res.redirect("/categories/");
+        
     }
 
 

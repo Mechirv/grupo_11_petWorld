@@ -38,14 +38,20 @@ const usersController = {
 
     guardar: async (req,res) => {
     const errors = validationResult(req)
+    console.log(req.body);
+    let admin = req.body.email.indexOf("@petworld") !=-1 ? true: false;
+    console.log(admin);
        try{
-           if(errors.isEmpty()){
-            let newUser = await User.create(req.body);
-            return res.redirect("users/login")
-           }
-           else{
-            return res.render("users/register", {errors: errors.mapped(), old: req.body});
-           }
+            let newUser = await User.create({
+              nombre: req.body.nombre,
+              apeliido:req.body.apellido,
+              email:req.body.email,
+              pass:req.body.pass,
+              image:req.file.filename,
+              admin: admin
+            }
+          );
+            return res.render("users/login-register")
        }
        catch(errors){
           res.redirect("users/register");
@@ -54,6 +60,18 @@ const usersController = {
             
    
     perfil: (req,res)=>res.render("users/perfil"),
+
+    modificar: async (req,res)=>{
+      let update = await User.update({
+        
+        image: req.file.filename,
+        pass: req.body.pass
+    },{
+        where: {id:req.params.id}
+    });
+    res.redirect("/products/");
+
+    }
 }
 
 
