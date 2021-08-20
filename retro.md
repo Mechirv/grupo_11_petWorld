@@ -46,14 +46,13 @@ mejorar la división de tareas
 SPRINT 6:
 Que hicimos mal: 
 nuevamente estuvimos menos coordinados y mas desconectados que en los sprint anteriores.
+Estuve desorganizada y empecé tarde con el sprint
 
 Que hicimos bien:
-aprovechar las clases prácticas para adelantar trabajo y
+aprovechar las clases prácticas para adelantar trabajo 
 
 Que deberíamos comenzar a hacer:
--hacer mas reuniones
--dividir tareas
--ser mas colaboartivos
--mejorar la comunicación
-
+-Planificar mejor el trabajo
+-No dejar todo para lo último
+-Comenzar el siguiente sprint ni bien termina el anterior
 

@@ -11,7 +11,7 @@ const usersController = {
     
 
     procesarLogin: async (req,res) => {
-        const errors = validationResult(req);
+        const errores = validationResult(req);
         try{
                 let usuario = await User.findOne({where : {email: req.body.email}});
                 if(req.body.remember){
@@ -19,8 +19,9 @@ const usersController = {
                   }
                 req.session.usuario  = usuario;
                 return res.redirect("/");
-        
+                
         }catch(errors){
+          res.send(errores)  
 
         }
     },
@@ -37,11 +38,13 @@ const usersController = {
      
 
     guardar: async (req,res) => {
-    const errors = validationResult(req)
-    console.log(req.body);
+    const errors = validationResult(req);
     let admin = req.body.email.indexOf("@petworld") !=-1 ? true: false;
-    console.log(admin);
        try{
+          if(!errors.isEmpty()){
+             res.render("users/register",{errors: errors.mapped(), old: req.body})
+
+          }else{
             let newUser = await User.create({
               nombre: req.body.nombre,
               apeliido:req.body.apellido,
@@ -52,10 +55,11 @@ const usersController = {
             }
           );
             return res.render("users/login-register")
-       }
-       catch(errors){
-          res.redirect("users/register");
-       }    
+          }
+      }
+     catch(errors){
+        res.redirect("users/register");
+        }    
     },
             
    
@@ -66,7 +70,8 @@ const usersController = {
         
         image: req.file.filename,
         pass: req.body.pass
-    },{
+      },
+      {
         where: {id:req.params.id}
     });
     res.redirect("/products/");

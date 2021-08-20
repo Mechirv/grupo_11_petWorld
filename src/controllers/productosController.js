@@ -9,7 +9,7 @@ const Product = db.Product;
 const sequelize = db.sequelize;
 const Category = db.Category;
 const Type = db.Type;
-const Op = db.sequelize.Op;
+const Op = db.Sequelize.Op;
 
 
 
@@ -21,16 +21,20 @@ let productosController = {
     
     buscar: async (req,res) => {
         try{
-            let buscar = req.query.busqueda;
-            console.log(buscar);
-            let productos = await Product.findAll(
-                {where: {
-                    name: {[Op.like]: '%buscar%' }
-                }});
-            res.render("products/productList", {products:productos});
+           //productos = await Product.findAll(
+           //{where: {
+           //    name: {[Op.like]: `%${req.query.busqueda}%`}
+           //}});
+                
+                return res.render("products/productList", {
+                    products: await Product.findAll(
+                        {include: [{association: "types"}, {association:"categories"}]},
+                        {where: {
+                            name: {[Op.like]: `%${req.query.busqueda}%`}
+                        }}) }, 
+                        );
+                    console.log(productos);
             }catch(errors){
-                console.log(errors);
-
                 res.send(errors)
             }
 
@@ -64,40 +68,32 @@ let productosController = {
     accionCrear: async (req,res) =>{
         const errores = validationResult(req);
         try{
-            await Product.create({
-                name: req.body.name,
-                description: req.body.description,
-                price: req.body.price,
-                image: req.file.filename,
-                destacado: req.body.destacado,
-                category_id: req.body.category_id,
-                type_id: req.body.type_id
-            });
-            res.redirect("/products/")
-        }catch(errors){
-            return res.render("users/register", {errors: errors.mapped(), old: req.body})
+            if(!errores.isEmpty()){
+                res.render("products/productCreateForm",{categorias: await Category.findAll(), 
+                    tipos: await Type.findAll(), errors: errores.mapped(), old: req.body})
+   
+             }else{
+                await Product.create({
+                    name: req.body.name,
+                    description: req.body.description,
+                    price: req.body.price,
+                    image: req.file.filename,
+                    destacado: req.body.destacado,
+                    category_id: req.body.category_id,
+                    type_id: req.body.type_id
+                });
+                res.redirect("/products/") 
+            } 
+        }
+        catch{
 
         }
     },
 
 
-    //accionCrear: (req,res) => {
-    //    const errores = validationResult(req);
-    //    
-    //    if(errores.isEmpty()){
-    //        console.log(req.body);
-    //        let resultado = product.nuevo(req.body,req.file); 
-	//	    return resultado == true? res.redirect("/products/") : res.send("Error al cargar la informacion");
-    //    }else{
-    //        return res.render("products/productCreateForm", {errores: errores.mapped(), old: req.body})
-    //    }
-    //},
-
     cart:(req,res) => {res.render("products/productCart")},
 
     //renderiza vista para editar un producto    
-    //editar: (req,res) => {res.render("products/productEditForm",{product: product.buscar(req.params.id), categorias:category.todos(), tipos: types.todos() })},
-
     editar: async (req, res) =>{
         let product = await Product.findByPk((req.params.id));
         let categorias = await Category.findAll();
@@ -105,12 +101,8 @@ let productosController = {
 
         res.render("products/productEditForm",{product, categorias, tipos })
     },   
+   
     //accion de modificar un producto
-    //modificar:(req,res) => {
-    //    let resultado = product.editar(req.body,req.file,req.params.id);
-	//	return resultado == true ? res.redirect("/products/") : res.send("Error al cargar la informacion");
-    //},
-
     modificar: async (req,res) =>{
         try{
             let update = await Product.update({

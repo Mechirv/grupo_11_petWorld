@@ -18,8 +18,8 @@
                     <fieldset class="usuario">
                         <label for="user">Usuario</label>
                         <input type="text"  name="email" id="usuario" placeholder="Ingrese su email" value="<%= locals.old && old.user ? old.user : '' %>"/><br>
-                         <% if(locals.errors && errors.user) { %>
-                            <p class="msg-error"><%= errors.user.msg %></p>
+                         <% if(locals.errors && errors.email) { %>
+                            <p class="msg-error"><%= errors.email.msg %></p>
                         <% } %>
                     </fieldset>
 

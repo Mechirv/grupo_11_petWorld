@@ -20,4 +20,7 @@ tareas:
 Facu: ruta/vista para eliminar un producto
 Mechi: terminar vista productModify
 
+SPRINT 6:
+no hubo reuniones ya que quedé sola en el grupo
+
 
