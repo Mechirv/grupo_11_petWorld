@@ -265,7 +265,7 @@ figure#menu i{
         position: absolute;
         flex-grow: 1; 
         border: solid 1px rgb(209, 205, 205);
-        background-color: white;
+        background-color: #3b9757;
         margin: 0;
     }
     

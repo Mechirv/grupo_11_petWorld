@@ -21,15 +21,10 @@ let productosController = {
     
     buscar: async (req,res) => {
         try{
-           //productos = await Product.findAll(
-           //{where: {
-           //    name: {[Op.like]: `%${req.query.busqueda}%`}
-           //}});
-                
-                return res.render("products/productList", {
+                res.render("products/productList", {
                     products: await Product.findAll(
-                        {include: [{association: "types"}, {association:"categories"}]},
-                        {where: {
+                        {include: [{association: "types"}, {association:"categories"}],
+                        where: {
                             name: {[Op.like]: `%${req.query.busqueda}%`}
                         }}) }, 
                         );
@@ -40,19 +35,38 @@ let productosController = {
 
     },
 
-        //lista los prodcutos por categoría
-    //listarCategoria: async (req,res) =>
-    //{
-    //    
-    //    res.render("products/productList", 
-    //    {
-    //        products: await Product.findAll(
-    //            {include: [{association:"types"}]},
-    //            { where: {name : await Type.findOne({where:{name:req.params.type}})}}
-    //        )
-    //    })
-    //    //res.render("products/productList", {products: product.listarCategoria(req.params.category)})
-    //},
+    //lista los prodcutos por tipos, menu despegable
+    listarTipo: async (req,res) =>
+    {
+        try{
+            let tipo = await Type.findOne({where: {name: req.params.type}});
+        res.render("products/productList", {
+            products: await Product.findAll(
+                {include: [{association:"types"}, {association:"categories"}],
+                where: {type_id : tipo.id}}
+            )
+        })
+        }catch(errors){
+            res.send(errors)
+        }
+    },
+
+    listarTipoCategoria: async (req,res) =>{
+        try{
+            let tipo = await Type.findOne({where: {name: req.params.type}});
+            let category = await Category.findOne({where: {name: {[Op.like]: `%${req.params.category}%`}}});
+           
+            res.render("products/productList", {products: await Product.findAll(
+                    {include: [{association:"types"}, {association:"categories"}], 
+                    where: {type_id : tipo.id,category_id: category.id}}
+                    )});
+        
+
+        }catch(errors){
+
+        }
+
+    },
 
     //muestra el detalle de un solo producto cuyo id se pasa como parametro
     detalle:async (req,res) => {
