@@ -69,7 +69,7 @@ let productosController = {
     },
 
     //muestra el detalle de un solo producto cuyo id se pasa como parametro
-    detalle:async (req,res) => {
+    detalle: async (req,res) => {
         res.render("products/productDetail", {product: await Product.findByPk(req.params.id)})},
     
     //renderiza la vista para crear un producto

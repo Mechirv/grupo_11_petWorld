@@ -37,7 +37,7 @@ router.post("/save",[upload.single('image')], validarProducto, productosControll
 //edicion de un producto
 
 router.get("/edit/:id",productosController.editar);
-router.put("/update/:id",[upload.single('image')], productosController.modificar);
+router.put("/update/:id",[upload.single('image')], validarProducto, productosController.modificar);
 
 //eliminación de un producto
 router.delete("/delete/:id", productosController.eliminar);

@@ -13,12 +13,17 @@ const usersController = {
     procesarLogin: async (req,res) => {
         const errores = validationResult(req);
         try{
+            if(errores.isEmpty()){
                 let usuario = await User.findOne({where : {email: req.body.email}});
                 if(req.body.remember){
                     res.cookie("email",req.body.email,{maxAge:300000})
                   }
                 req.session.usuario  = usuario;
                 return res.redirect("/");
+                }
+                else{
+                  res.render("users/login-register",{errors: errores.mapped(), old: req.body})
+                }
                 
         }catch(errors){
           res.send(errores)  
@@ -39,12 +44,13 @@ const usersController = {
 
     guardar: async (req,res) => {
     const errors = validationResult(req);
-    let admin = req.body.email.indexOf("@petworld") !=-1 ? true: false;
+    
        try{
           if(!errors.isEmpty()){
              res.render("users/register",{errors: errors.mapped(), old: req.body})
 
           }else{
+            let admin = req.body.email.indexOf("@petworld") !=-1 ? true: false;
             let newUser = await User.create({
               nombre: req.body.nombre,
               apeliido:req.body.apellido,
