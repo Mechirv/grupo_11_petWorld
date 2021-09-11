@@ -96,6 +96,15 @@ fieldset{
     margin-top: 0;
 }
 
+.alert-warning{
+    color:#842029;
+    background-color: #ece5e5;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .errores li{
+      list-style-type: none;
+  }
 
 #button-register, #cancel{
     padding: 5px;

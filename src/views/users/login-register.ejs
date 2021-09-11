@@ -14,6 +14,7 @@
             
             <section id="block-login">
                 <h1>CLIENTES REGISTRADOS</h1>
+                <ul class="errores"></ul>
                 <form id="form-login" method="POST" action="/users/login">
                     <fieldset class="usuario">
                         <label for="user">Usuario</label>
@@ -68,6 +69,7 @@
     <footer>
         <%- include('../partials/footer.ejs') %>
     </footer>
+    <script src="/js/validaLogin.js"></script>
 
 </body>
 </html>

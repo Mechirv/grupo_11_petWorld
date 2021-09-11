@@ -56,3 +56,17 @@ Que deberíamos comenzar a hacer:
 -No dejar todo para lo último
 -Comenzar el siguiente sprint ni bien termina el anterior
 
+SPRINT 7:
+Que hicimos mal:
+mala gestión del tiempo
+
+Que hicimos bien:
+mejor organización con las tareas
+
+
+
+Que deberíamos empezar a hacer:
+mejorar la gestión del tiempo
+Planificar mejor el trabajo
+
+

@@ -138,7 +138,16 @@ background:white;
      
       width: 100%;
   }
- 
+  
+  .alert-warning{
+    color:#842029;
+    background-color: #ece5e5;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .errores li{
+      list-style-type: none;
+  }
 
 
   @media (min-width:481px){
