@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
     let formulario = document.querySelector('#abmProduct');
-    let btnSubmit = document.querySelector('#accept-create');
+    let btnSubmit = document.querySelector('#accept-modify');
 
     btnSubmit.addEventListener('click', function(event){
         event.preventDefault();
@@ -26,10 +26,8 @@ window.addEventListener('load', function() {
         }else if(precio.value <=0){
             errores.length('El precio debe ser un número mayor que cero')
         }
-        
         if(!((/\.(jpg|jpeg|png|gif)$/i).test(imagen.name))){
             errores.push('formato de imagen incorrecto')
-
         }
 
 
@@ -48,5 +46,3 @@ window.addEventListener('load', function() {
     })
 
 })
-
-

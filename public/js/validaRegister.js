@@ -9,6 +9,7 @@ window.addEventListener('load', function() {
         let pass2 = document.querySelector('#confirm-pass');
         let nombre = document.querySelector('#nombre');
         let apellido = document.querySelector('#apellido');
+        let imagen = document.querySelector('#imagenUsuario')
 
         let errores = [];
 
@@ -41,6 +42,10 @@ window.addEventListener('load', function() {
             errores.push('Ingrese su apellido')
         }else if(apellido.value.length<3){
             errores.push('El apellido debe tener al menos 2 caracteres')
+        }
+        if(!((/\.(jpg|jpeg|png|gif)$/i).test(imagen.name))){
+            errores.push('formato de imagen incorrecto')
+
         }
         
 

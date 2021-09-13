@@ -30,8 +30,9 @@
                             <%if(usuario.admin){ %>
                                 <div class="botones-editar-eliminar">
                                     <a href="/products/edit/<%=products[i].id %>" id="button-editar">EDITAR</a>
-                                        <form action="/products/delete/<%=products[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                                        <form action="/products/delete/<%=products[i].id %>?_method=DELETE" method="POST" enctype="multipart/form-data" id="eliminar">
                                             <button type="submit" id="button-eliminar">ELIMINAR</button>
+                                            
                                         </form>
                                 </div>
                             <%}else{ %>
@@ -66,6 +67,7 @@
 
     <!--FOOTER -->
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/validaEliminar.js"></script>
     
 </body>
 </html>

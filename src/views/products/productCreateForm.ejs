@@ -15,6 +15,7 @@
         <h1 class="titulo-create-modify">INGRESE UN NUEVO PRODUCTO</h1>
 
         <div class="productCreateModify">
+            <ul class="errores"></ul>
 
             <form id="abmProduct" action="/products/save" method="POST" enctype="multipart/form-data">
                 
@@ -97,6 +98,8 @@
     
     </main>
         <%- include('../partials/footer.ejs') %>
+
+        <script src="/js/validaProducto.js"></script>
     
 </body>
 </html>

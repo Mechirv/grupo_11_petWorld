@@ -13,7 +13,7 @@
 
     <div class="productCreateModify">
 
-
+        <ul class="errores"></ul>
         <form id="abmProduct" action="/products/update/<%=product.id%>/?_method=PUT" method="POST" enctype="multipart/form-data">
             <fieldset id="datos">
                 <fieldset id="datos1">
@@ -84,7 +84,7 @@
 
 </main>
     <%- include('../partials/footer.ejs') %>
-
+    <script src="/js/validaEdicion.js"></script>
     
 </body>
 </html>

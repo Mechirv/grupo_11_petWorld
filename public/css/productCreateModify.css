@@ -27,6 +27,18 @@ main{
     align-content: center;
     margin-bottom: 20px;
 }
+
+
+.alert-warning{
+    color:#842029;
+    background-color: #ece5e5;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .errores li{
+      list-style-type: none;
+  }
+  
 .titulo-create-modify{
     font-weight: 100;
     font-size: 24px;
