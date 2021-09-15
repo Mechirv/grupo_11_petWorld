@@ -23,7 +23,14 @@ const validaciones = [
     body("nombre").notEmpty().withMessage("Ingrese su nombre")
     .isLength({min:2}).withMessage("El nombre debe tener al menos 2 caracteres"),
     body("apellido").notEmpty().withMessage("Ingrese su apellido")
-    .isLength({min:2}).withMessage("el apellido debe tener al menos 2 caracteres")
+    .isLength({min:2}).withMessage("el apellido debe tener al menos 2 caracteres"),
+    body("image").custom( (value, {req})=>{
+        
+        if(!(req.file.mimetype == "image/jpeg" || req.file.mimetype == "image/jpg" || req.file.mimetype == "image/png" || req.file.mimetype == "image/gif")){
+            return Promise.reject('Formato inválido')
+        }
+        return true;
+    })
 
 ]
 

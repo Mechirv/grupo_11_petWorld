@@ -33,6 +33,7 @@ window.addEventListener('load', function() {
         }else if(pass.value != pass2.value){
             errores.push("Las contraseñas deben ser iguales")
         }
+        
         if(nombre.value == ''){
             errores.push('Ingrese su nombre')
         }else if(nombre.value.length <3){
@@ -43,9 +44,12 @@ window.addEventListener('load', function() {
         }else if(apellido.value.length<3){
             errores.push('El apellido debe tener al menos 2 caracteres')
         }
-        if(!((/\.(jpg|jpeg|png|gif)$/i).test(imagen.name))){
-            errores.push('formato de imagen incorrecto')
 
+
+        if(!((/(.jpg|.jpeg|.png|.gif)$/i).test(imagen.value))){
+        
+            errores.push('formato de imagen incorrecto')
+            
         }
         
 
