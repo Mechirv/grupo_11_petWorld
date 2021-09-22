@@ -82,7 +82,9 @@ const usersController = {
     });
     res.redirect("/products/");
 
-    }
+    },
+
+   
 }
 
 
