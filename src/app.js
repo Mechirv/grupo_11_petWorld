@@ -48,5 +48,11 @@ app.use("/categories",rutasCategories);
 const rutasTypes = require("./routes/types");
 app.use("/types",rutasTypes);
 
+const apiProducts = require("./routes/api/products");
+app.use("/api",apiProducts);
+
+const apiUsers = require("./routes/api/users");
+app.use("/api",apiUsers);
+
 
 module.exports = app;

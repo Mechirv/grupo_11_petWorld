@@ -9,7 +9,7 @@ const Op = db.Sequelize.Op;
 
 module.exports = {
     list: async (req,res)=>{
-        let productos = await Product.findAll( {include: [{association: "types"},{association:"categories"}]});
+        let productos = await Product.findAll( {include: [ "types", "categories"]});
         let nuevo = productos.map(function(prod){
             return{
                 id: prod.id,
@@ -21,6 +21,11 @@ module.exports = {
         })
         return res.json({
             cantidad: productos.length,
+            porCategoria: {
+                Alimentos: productos.filter(category => category.categories.name == "Alimentos").length,
+                EsteticaHigiene: productos.filter(category => category.categories.name == "Estética e Higiene").length,
+                JuguetesAccesorios: productos.filter(category => category.categories.name == "Juguetes y Accesorios").length,
+            },
             data: nuevo
         }
 

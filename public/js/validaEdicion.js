@@ -26,8 +26,12 @@ window.addEventListener('load', function() {
         }else if(precio.value <=0){
             errores.length('El precio debe ser un número mayor que cero')
         }
-        if(!((/\.(jpg|jpeg|png|gif)$/i).test(imagen.name))){
+        
+        if(!((/(.jpg|.jpeg|.png|.gif)$/i).test(imagen.value))){
+        
             errores.push('formato de imagen incorrecto')
+
+            
         }
 
 
